@@ -45,6 +45,12 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     }
     
     @objc func onClickSubmit() {
+        let otpStr = "\(firstTF.text ?? "")\(secondTF.text ?? "")\(thirdTF.text ?? "")\(fourthTF.text ?? "")"
+        print(otpStr)
+        if !otpStr.contains("") && otpStr.count == 4 {
+            let vc = RegisterViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
     }
     

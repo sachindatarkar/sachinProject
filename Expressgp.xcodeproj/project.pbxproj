@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03181936227EE2FC00F3B03D /* GenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181934227EE2FC00F3B03D /* GenderCell.swift */; };
+		03181937227EE2FC00F3B03D /* GenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03181935227EE2FC00F3B03D /* GenderCell.xib */; };
+		0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181938227EE36500F3B03D /* GeneralRegisterCell.swift */; };
+		0318193B227EE36500F3B03D /* GeneralRegisterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03181939227EE36500F3B03D /* GeneralRegisterCell.xib */; };
+		0318193E227EE6A200F3B03D /* FirstNameLastNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318193C227EE6A200F3B03D /* FirstNameLastNameCell.swift */; };
+		0318193F227EE6A200F3B03D /* FirstNameLastNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0318193D227EE6A200F3B03D /* FirstNameLastNameCell.xib */; };
+		03181942227EF10400F3B03D /* TermAndConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181940227EF10400F3B03D /* TermAndConditionCell.swift */; };
+		03181943227EF10400F3B03D /* TermAndConditionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03181941227EF10400F3B03D /* TermAndConditionCell.xib */; };
+		03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181944227EF4F100F3B03D /* CompanyProfileModal.swift */; };
 		0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3832276B05B0014B568 /* AppDelegate.swift */; };
 		0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0319C38A2276B05D0014B568 /* Assets.xcassets */; };
 		0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0319C38C2276B05D0014B568 /* LaunchScreen.storyboard */; };
@@ -22,6 +31,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03181934227EE2FC00F3B03D /* GenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCell.swift; sourceTree = "<group>"; };
+		03181935227EE2FC00F3B03D /* GenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderCell.xib; sourceTree = "<group>"; };
+		03181938227EE36500F3B03D /* GeneralRegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRegisterCell.swift; sourceTree = "<group>"; };
+		03181939227EE36500F3B03D /* GeneralRegisterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralRegisterCell.xib; sourceTree = "<group>"; };
+		0318193C227EE6A200F3B03D /* FirstNameLastNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameLastNameCell.swift; sourceTree = "<group>"; };
+		0318193D227EE6A200F3B03D /* FirstNameLastNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstNameLastNameCell.xib; sourceTree = "<group>"; };
+		03181940227EF10400F3B03D /* TermAndConditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionCell.swift; sourceTree = "<group>"; };
+		03181941227EF10400F3B03D /* TermAndConditionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermAndConditionCell.xib; sourceTree = "<group>"; };
+		03181944227EF4F100F3B03D /* CompanyProfileModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileModal.swift; sourceTree = "<group>"; };
 		0319C3802276B05B0014B568 /* Expressgp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expressgp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0319C3832276B05B0014B568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0319C38A2276B05D0014B568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0318192F227EE26100F3B03D /* RegisterCellFile */ = {
+			isa = PBXGroup;
+			children = (
+				03181934227EE2FC00F3B03D /* GenderCell.swift */,
+				03181935227EE2FC00F3B03D /* GenderCell.xib */,
+				03181938227EE36500F3B03D /* GeneralRegisterCell.swift */,
+				03181939227EE36500F3B03D /* GeneralRegisterCell.xib */,
+				0318193C227EE6A200F3B03D /* FirstNameLastNameCell.swift */,
+				0318193D227EE6A200F3B03D /* FirstNameLastNameCell.xib */,
+				03181940227EF10400F3B03D /* TermAndConditionCell.swift */,
+				03181941227EF10400F3B03D /* TermAndConditionCell.xib */,
+			);
+			path = RegisterCellFile;
+			sourceTree = "<group>";
+		};
 		0319C3772276B05B0014B568 = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +160,10 @@
 		037E342F227CA11E0066EC3B /* RegisterFile */ = {
 			isa = PBXGroup;
 			children = (
+				0318192F227EE26100F3B03D /* RegisterCellFile */,
 				037E3430227CA1430066EC3B /* RegisterViewController.swift */,
 				037E3431227CA1430066EC3B /* RegisterViewController.xib */,
+				03181944227EF4F100F3B03D /* CompanyProfileModal.swift */,
 			);
 			path = RegisterFile;
 			sourceTree = "<group>";
@@ -191,10 +226,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03181943227EF10400F3B03D /* TermAndConditionCell.xib in Resources */,
+				0318193F227EE6A200F3B03D /* FirstNameLastNameCell.xib in Resources */,
 				0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */,
 				037E3433227CA1430066EC3B /* RegisterViewController.xib in Resources */,
 				0319C3992276B0F50014B568 /* LoginViewController.xib in Resources */,
+				0318193B227EE36500F3B03D /* GeneralRegisterCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
+				03181937227EE2FC00F3B03D /* GenderCell.xib in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,11 +246,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0319C3A62276C6080014B568 /* OTPViewController.swift in Sources */,
+				0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */,
+				03181936227EE2FC00F3B03D /* GenderCell.swift in Sources */,
+				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
 				0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */,
 				0319C3982276B0F50014B568 /* LoginViewController.swift in Sources */,
+				03181942227EF10400F3B03D /* TermAndConditionCell.swift in Sources */,
+				0318193E227EE6A200F3B03D /* FirstNameLastNameCell.swift in Sources */,
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
