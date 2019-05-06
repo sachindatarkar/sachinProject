@@ -16,7 +16,7 @@ struct CompleteProfile {
     var iconImg :String?
 }
 
-class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
 
     @IBOutlet weak var registerTV: UITableView!
     @IBOutlet weak var logo_img: UIImageView!
@@ -76,38 +76,51 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstNameLastNameCell") as? FirstNameLastNameCell
+            cell?.firstNameTF.delegate = self
+            cell?.lastNameTF.delegate = self
             cell?.firstNameTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.lastNameTF.placeholder = completeProfileArry[indexPath.row].secondPlaceHolder
+            cell?.firstNameTF.text = companyProfileObj.firstName
+            cell?.lastNameTF.text = companyProfileObj.lastName
             return cell!
         }else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.text = companyProfileObj.mobileNo
             return cell!
         }else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.text = companyProfileObj.emailId
             return cell!
         }else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenderCell") as? GenderCell
             return cell!
         }else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             return cell!
         }else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             return cell!
         }else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             return cell!
         }else if indexPath.row == 7 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             return cell!
         }else if indexPath.row == 8 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
+            cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             return cell!
         }else if indexPath.row == 9 {
@@ -141,5 +154,37 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @objc func onClickSubmit() {
         
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let position: CGPoint = textField.convert(CGPoint.zero, to: self.registerTV)
+        if let indexPath = self.registerTV.indexPathForRow(at: position) {
+            let section = indexPath.section
+            let row = indexPath.row
+            print("\(section) - \(row)")
+            if textField.placeholder == "First Name" {
+                companyProfileObj.firstName = textField.text ?? ""
+            }else if textField.placeholder == "Last Name" {
+               companyProfileObj.lastName = textField.text
+            }else if textField.placeholder == "Mobile Number" {
+               companyProfileObj.mobileNo = textField.text
+            }else if textField.placeholder == "Email Id" {
+               companyProfileObj.emailId = textField.text
+            }else if textField.placeholder == "Language" {
+               companyProfileObj.language = textField.text
+            }else if textField.placeholder == "Language" {
+                companyProfileObj.language = textField.text
+            }else if textField.placeholder == "Existing Illness" {
+                companyProfileObj.existingIllness = textField.text
+            }else if textField.placeholder == "Existing Allergies" {
+                companyProfileObj.existingAllergies = textField.text
+            }
+        }
+        registerTV.reloadData()
+    }
+    @objc func didChangeFirstText(textField:UITextField) {
+        if(textField.text == " "){
+            textField.text = ""
+        }
     }
 }
