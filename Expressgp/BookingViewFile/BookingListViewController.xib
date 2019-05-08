@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingListViewController" customModule="Expressgp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-EG-wPp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJj-ld-LNq">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iae-Aj-tk9">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="59"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                    <state key="normal" title="Active"/>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-S7-A7G">
+                                    <rect key="frame" x="0.0" y="59" width="207" height="1"/>
+                                    <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="4c7-fX-ZcU"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ly6-S7-A7G" firstAttribute="top" secondItem="iae-Aj-tk9" secondAttribute="bottom" id="73x-P5-wh9"/>
+                                <constraint firstAttribute="bottom" secondItem="ly6-S7-A7G" secondAttribute="bottom" id="8Ud-bH-ZQp"/>
+                                <constraint firstItem="iae-Aj-tk9" firstAttribute="top" secondItem="TJj-ld-LNq" secondAttribute="top" id="J6f-GK-s5c"/>
+                                <constraint firstAttribute="trailing" secondItem="iae-Aj-tk9" secondAttribute="trailing" id="g3D-7m-ykr"/>
+                                <constraint firstItem="ly6-S7-A7G" firstAttribute="leading" secondItem="TJj-ld-LNq" secondAttribute="leading" id="pJ0-Kq-h5O"/>
+                                <constraint firstItem="iae-Aj-tk9" firstAttribute="leading" secondItem="TJj-ld-LNq" secondAttribute="leading" id="vK6-s4-BOz"/>
+                                <constraint firstAttribute="trailing" secondItem="ly6-S7-A7G" secondAttribute="trailing" id="vT5-s9-lhI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-ia-rHM">
+                            <rect key="frame" x="207" y="0.0" width="207" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-yl-icX">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="59"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                    <state key="normal" title="History">
+                                        <color key="titleColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYR-UQ-An6">
+                                    <rect key="frame" x="0.0" y="59" width="207" height="1"/>
+                                    <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Fer-84-a2y"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="hYR-UQ-An6" firstAttribute="top" secondItem="uh1-yl-icX" secondAttribute="bottom" id="5im-C1-80Q"/>
+                                <constraint firstItem="uh1-yl-icX" firstAttribute="top" secondItem="wGO-ia-rHM" secondAttribute="top" id="F82-oH-71x"/>
+                                <constraint firstAttribute="trailing" secondItem="uh1-yl-icX" secondAttribute="trailing" id="WEO-I6-Xsk"/>
+                                <constraint firstAttribute="bottom" secondItem="hYR-UQ-An6" secondAttribute="bottom" id="fLZ-2g-ldH"/>
+                                <constraint firstItem="uh1-yl-icX" firstAttribute="leading" secondItem="wGO-ia-rHM" secondAttribute="leading" id="gfg-WE-cWT"/>
+                                <constraint firstItem="hYR-UQ-An6" firstAttribute="leading" secondItem="wGO-ia-rHM" secondAttribute="leading" id="kGF-q4-1s9"/>
+                                <constraint firstAttribute="trailing" secondItem="hYR-UQ-An6" secondAttribute="trailing" id="vA3-rO-hGD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FNu-Jv-Sbr"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kgC-EG-wPp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="75z-Gz-pfI"/>
+                <constraint firstItem="kgC-EG-wPp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zn9-KG-mlS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kgC-EG-wPp" secondAttribute="trailing" id="xaP-bI-CW3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

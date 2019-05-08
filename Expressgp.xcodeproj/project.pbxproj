@@ -28,6 +28,8 @@
 		0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0319C3A52276C6080014B568 /* OTPViewController.xib */; };
 		037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E3430227CA1430066EC3B /* RegisterViewController.swift */; };
 		037E3433227CA1430066EC3B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037E3431227CA1430066EC3B /* RegisterViewController.xib */; };
+		038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
+		038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		0319C3A52276C6080014B568 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
 		037E3430227CA1430066EC3B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		037E3431227CA1430066EC3B /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
+		038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		0319C3822276B05B0014B568 /* Expressgp */ = {
 			isa = PBXGroup;
 			children = (
+				038FD8EC2281F30A00CAA522 /* BookingViewFile */,
 				037E342F227CA11E0066EC3B /* RegisterFile */,
 				0319C3A32276C5DC0014B568 /* OTPViewFile */,
 				0319C3952276B09B0014B568 /* LoginFile */,
@@ -168,6 +173,15 @@
 			path = RegisterFile;
 			sourceTree = "<group>";
 		};
+		038FD8EC2281F30A00CAA522 /* BookingViewFile */ = {
+			isa = PBXGroup;
+			children = (
+				038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */,
+				038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */,
+			);
+			path = BookingViewFile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */,
 				03181943227EF10400F3B03D /* TermAndConditionCell.xib in Resources */,
 				0318193F227EE6A200F3B03D /* FirstNameLastNameCell.xib in Resources */,
 				0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */,
@@ -246,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0319C3A62276C6080014B568 /* OTPViewController.swift in Sources */,
+				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */,
