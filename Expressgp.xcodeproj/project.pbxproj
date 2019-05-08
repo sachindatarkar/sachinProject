@@ -28,6 +28,13 @@
 		0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0319C3A52276C6080014B568 /* OTPViewController.xib */; };
 		037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E3430227CA1430066EC3B /* RegisterViewController.swift */; };
 		037E3433227CA1430066EC3B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037E3431227CA1430066EC3B /* RegisterViewController.xib */; };
+		E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337946227EE4480074D1B3 /* SearchViewController.swift */; };
+		E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3337947227EE4480074D1B3 /* SearchViewController.xib */; };
+		E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */; };
+		E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337951227EFFE00074D1B3 /* BaseViewController.swift */; };
+		E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */; };
+		E357BCE4228073850056568E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357BCE3228073850056568E /* HomeViewController.swift */; };
+		E380AE5122835265001206D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380AE5022835265001206D2 /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +61,13 @@
 		0319C3A52276C6080014B568 /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
 		037E3430227CA1430066EC3B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		037E3431227CA1430066EC3B /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		E3337946227EE4480074D1B3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E3337947227EE4480074D1B3 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E3337951227EFFE00074D1B3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
+		E357BCE3228073850056568E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E380AE5022835265001206D2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +115,9 @@
 		0319C3822276B05B0014B568 /* Expressgp */ = {
 			isa = PBXGroup;
 			children = (
-				037E342F227CA11E0066EC3B /* RegisterFile */,
-				0319C3A32276C5DC0014B568 /* OTPViewFile */,
-				0319C3952276B09B0014B568 /* LoginFile */,
+				E333794C227EE4920074D1B3 /* Model */,
+				E333794B227EE4680074D1B3 /* ModelView */,
+				E333794A227EE45E0074D1B3 /* View */,
 				0319C39C2276B7620014B568 /* CommonFile */,
 				0319C39B2276B2510014B568 /* AppDelegateFile */,
 				0319C39A2276B1980014B568 /* SupportFile */,
@@ -144,6 +158,7 @@
 				0319C39D2276B7820014B568 /* UIViewExtension.swift */,
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
 				0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */,
+				E380AE5022835265001206D2 /* Style.swift */,
 			);
 			path = CommonFile;
 			sourceTree = "<group>";
@@ -166,6 +181,60 @@
 				03181944227EF4F100F3B03D /* CompanyProfileModal.swift */,
 			);
 			path = RegisterFile;
+			sourceTree = "<group>";
+		};
+		E3337943227EE39B0074D1B3 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				E3337946227EE4480074D1B3 /* SearchViewController.swift */,
+				E3337947227EE4480074D1B3 /* SearchViewController.xib */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		E333794A227EE45E0074D1B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E357BCE2228073650056568E /* HomeView */,
+				E3337950227EFF670074D1B3 /* BaseView */,
+				E3337943227EE39B0074D1B3 /* SearchView */,
+				037E342F227CA11E0066EC3B /* RegisterFile */,
+				0319C3A32276C5DC0014B568 /* OTPViewFile */,
+				0319C3952276B09B0014B568 /* LoginFile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E333794B227EE4680074D1B3 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		E333794C227EE4920074D1B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3337950227EFF670074D1B3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				E3337951227EFFE00074D1B3 /* BaseViewController.swift */,
+				E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		E357BCE2228073650056568E /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E357BCE3228073850056568E /* HomeViewController.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +298,9 @@
 				03181943227EF10400F3B03D /* TermAndConditionCell.xib in Resources */,
 				0318193F227EE6A200F3B03D /* FirstNameLastNameCell.xib in Resources */,
 				0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */,
+				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
 				037E3433227CA1430066EC3B /* RegisterViewController.xib in Resources */,
+				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
 				0319C3992276B0F50014B568 /* LoginViewController.xib in Resources */,
 				0318193B227EE36500F3B03D /* GeneralRegisterCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
@@ -248,11 +319,16 @@
 				0319C3A62276C6080014B568 /* OTPViewController.swift in Sources */,
 				0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
+				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */,
 				03181936227EE2FC00F3B03D /* GenderCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
+				E357BCE4228073850056568E /* HomeViewController.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
+				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
+				E380AE5122835265001206D2 /* Style.swift in Sources */,
 				0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */,
+				E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */,
 				0319C3982276B0F50014B568 /* LoginViewController.swift in Sources */,
 				03181942227EF10400F3B03D /* TermAndConditionCell.swift in Sources */,
 				0318193E227EE6A200F3B03D /* FirstNameLastNameCell.swift in Sources */,
