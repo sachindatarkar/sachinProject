@@ -159,7 +159,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func onClickSubmit() {
-        
+        let vc = BookingListViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- UITextField Delegate

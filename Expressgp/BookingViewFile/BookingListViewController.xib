@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingListViewController" customModule="Expressgp" customModuleProvider="target">
             <connections>
+                <outlet property="active_border" destination="ly6-S7-A7G" id="aTd-fl-smS"/>
+                <outlet property="bookingListTV" destination="V2F-SL-dDh" id="ffe-Dt-KXr"/>
+                <outlet property="btn_active" destination="iae-Aj-tk9" id="3O2-tO-oE6"/>
+                <outlet property="btn_history" destination="uh1-yl-icX" id="LM9-7R-MGd"/>
+                <outlet property="historyBorder" destination="hYR-UQ-An6" id="8VI-cI-efQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,16 +32,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iae-Aj-tk9">
-                                    <rect key="frame" x="0.0" y="0.0" width="207" height="59"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="57"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                     <state key="normal" title="Active"/>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-S7-A7G">
-                                    <rect key="frame" x="0.0" y="59" width="207" height="1"/>
+                                    <rect key="frame" x="0.0" y="57" width="207" height="3"/>
                                     <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="tintColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="1" id="4c7-fX-ZcU"/>
+                                        <constraint firstAttribute="height" constant="3" id="4c7-fX-ZcU"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -55,17 +60,17 @@
                             <rect key="frame" x="207" y="0.0" width="207" height="60"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-yl-icX">
-                                    <rect key="frame" x="0.0" y="0.0" width="207" height="59"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="57"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                     <state key="normal" title="History">
                                         <color key="titleColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYR-UQ-An6">
-                                    <rect key="frame" x="0.0" y="59" width="207" height="1"/>
+                                    <rect key="frame" x="0.0" y="57" width="207" height="3"/>
                                     <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="1" id="Fer-84-a2y"/>
+                                        <constraint firstAttribute="height" constant="3" id="Fer-84-a2y"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -85,12 +90,24 @@
                         <constraint firstAttribute="height" constant="60" id="FNu-Jv-Sbr"/>
                     </constraints>
                 </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V2F-SL-dDh">
+                    <rect key="frame" x="0.0" y="112" width="414" height="750"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MJj-JD-U3j"/>
+                        <outlet property="delegate" destination="-1" id="aTa-NK-ecf"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V2F-SL-dDh" secondAttribute="trailing" id="57n-yp-ykb"/>
                 <constraint firstItem="kgC-EG-wPp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="75z-Gz-pfI"/>
                 <constraint firstItem="kgC-EG-wPp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zn9-KG-mlS"/>
+                <constraint firstItem="V2F-SL-dDh" firstAttribute="top" secondItem="kgC-EG-wPp" secondAttribute="bottom" constant="8" id="Zqv-8Y-YXU"/>
+                <constraint firstItem="V2F-SL-dDh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="emy-1D-lEc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kgC-EG-wPp" secondAttribute="trailing" id="xaP-bI-CW3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="V2F-SL-dDh" secondAttribute="bottom" id="zPE-kY-BTN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
