@@ -22,7 +22,6 @@
 		038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
 		03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */; };
 		03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */; };
-		03C37A052285E9C600D3D0B4 /* StarRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */; };
 		03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */; };
 		E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337946227EE4480074D1B3 /* SearchViewController.swift */; };
 		E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3337947227EE4480074D1B3 /* SearchViewController.xib */; };
@@ -30,10 +29,22 @@
 		E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337951227EFFE00074D1B3 /* BaseViewController.swift */; };
 		E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */; };
 		E380AE5122835265001206D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380AE5022835265001206D2 /* Style.swift */; };
-		E3893C55228737C800691449 /* HomeView in Resources */ = {isa = PBXBuildFile; fileRef = E3893C51228737C700691449 /* HomeView */; };
-		E3893C56228737C800691449 /* RegisterFile in Resources */ = {isa = PBXBuildFile; fileRef = E3893C52228737C700691449 /* RegisterFile */; };
-		E3893C57228737C800691449 /* LoginFile in Resources */ = {isa = PBXBuildFile; fileRef = E3893C53228737C700691449 /* LoginFile */; };
-		E3893C58228737C800691449 /* OTPViewFile in Resources */ = {isa = PBXBuildFile; fileRef = E3893C54228737C700691449 /* OTPViewFile */; };
+		E3893C5C22873BC700691449 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C5B22873BC700691449 /* HomeViewController.swift */; };
+		E3893C5D22873BF600691449 /* StarRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */; };
+		E3893C6122873C4700691449 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C5F22873C4700691449 /* LoginViewController.swift */; };
+		E3893C6222873C4700691449 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C6022873C4700691449 /* LoginViewController.xib */; };
+		E3893C6622873C6900691449 /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C6422873C6900691449 /* OTPViewController.xib */; };
+		E3893C6722873C6900691449 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C6522873C6900691449 /* OTPViewController.swift */; };
+		E3893C6D22873CC600691449 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C6B22873CC600691449 /* RegisterViewController.xib */; };
+		E3893C6E22873CC600691449 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C6C22873CC600691449 /* RegisterViewController.swift */; };
+		E3893C7822873CDF00691449 /* FirstNameLastNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C7022873CDF00691449 /* FirstNameLastNameCell.xib */; };
+		E3893C7922873CDF00691449 /* GenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C7122873CDF00691449 /* GenderCell.swift */; };
+		E3893C7A22873CDF00691449 /* GeneralRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C7222873CDF00691449 /* GeneralRegisterCell.swift */; };
+		E3893C7B22873CDF00691449 /* TermAndConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C7322873CDF00691449 /* TermAndConditionCell.swift */; };
+		E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C7422873CDF00691449 /* TermAndConditionCell.xib */; };
+		E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C7522873CDF00691449 /* FirstNameLastNameCell.swift */; };
+		E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C7622873CDF00691449 /* GenderCell.xib */; };
+		E3893C7F22873CDF00691449 /* GeneralRegisterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C7722873CDF00691449 /* GeneralRegisterCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,10 +73,21 @@
 		E3337951227EFFE00074D1B3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
 		E380AE5022835265001206D2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		E3893C51228737C700691449 /* HomeView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HomeView; sourceTree = "<group>"; };
-		E3893C52228737C700691449 /* RegisterFile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RegisterFile; sourceTree = "<group>"; };
-		E3893C53228737C700691449 /* LoginFile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginFile; sourceTree = "<group>"; };
-		E3893C54228737C700691449 /* OTPViewFile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OTPViewFile; sourceTree = "<group>"; };
+		E3893C5B22873BC700691449 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E3893C5F22873C4700691449 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E3893C6022873C4700691449 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E3893C6422873C6900691449 /* OTPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		E3893C6522873C6900691449 /* OTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		E3893C6B22873CC600691449 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		E3893C6C22873CC600691449 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E3893C7022873CDF00691449 /* FirstNameLastNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstNameLastNameCell.xib; sourceTree = "<group>"; };
+		E3893C7122873CDF00691449 /* GenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderCell.swift; sourceTree = "<group>"; };
+		E3893C7222873CDF00691449 /* GeneralRegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRegisterCell.swift; sourceTree = "<group>"; };
+		E3893C7322873CDF00691449 /* TermAndConditionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermAndConditionCell.swift; sourceTree = "<group>"; };
+		E3893C7422873CDF00691449 /* TermAndConditionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermAndConditionCell.xib; sourceTree = "<group>"; };
+		E3893C7522873CDF00691449 /* FirstNameLastNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameLastNameCell.swift; sourceTree = "<group>"; };
+		E3893C7622873CDF00691449 /* GenderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenderCell.xib; sourceTree = "<group>"; };
+		E3893C7722873CDF00691449 /* GeneralRegisterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralRegisterCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,10 +211,10 @@
 		E333794A227EE45E0074D1B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E3893C51228737C700691449 /* HomeView */,
-				E3893C53228737C700691449 /* LoginFile */,
-				E3893C54228737C700691449 /* OTPViewFile */,
-				E3893C52228737C700691449 /* RegisterFile */,
+				E3893C6822873C6C00691449 /* RegisterView */,
+				E3893C6322873C5300691449 /* OTPView */,
+				E3893C5E22873C3400691449 /* LoginView */,
+				E3893C5A22873BB400691449 /* HomeView */,
 				030A8C772283479200691E43 /* BookingDetailFile */,
 				038FD8EC2281F30A00CAA522 /* BookingViewFile */,
 				E3337950227EFF670074D1B3 /* BaseView */,
@@ -224,6 +246,58 @@
 				E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		E3893C5A22873BB400691449 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E3893C5B22873BC700691449 /* HomeViewController.swift */,
+			);
+			name = HomeView;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E3893C5E22873C3400691449 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				E3893C5F22873C4700691449 /* LoginViewController.swift */,
+				E3893C6022873C4700691449 /* LoginViewController.xib */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		E3893C6322873C5300691449 /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				E3893C6522873C6900691449 /* OTPViewController.swift */,
+				E3893C6422873C6900691449 /* OTPViewController.xib */,
+			);
+			path = OTPView;
+			sourceTree = "<group>";
+		};
+		E3893C6822873C6C00691449 /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				E3893C6F22873CD000691449 /* CellView */,
+				E3893C6C22873CC600691449 /* RegisterViewController.swift */,
+				E3893C6B22873CC600691449 /* RegisterViewController.xib */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		E3893C6F22873CD000691449 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				E3893C7522873CDF00691449 /* FirstNameLastNameCell.swift */,
+				E3893C7022873CDF00691449 /* FirstNameLastNameCell.xib */,
+				E3893C7122873CDF00691449 /* GenderCell.swift */,
+				E3893C7622873CDF00691449 /* GenderCell.xib */,
+				E3893C7222873CDF00691449 /* GeneralRegisterCell.swift */,
+				E3893C7722873CDF00691449 /* GeneralRegisterCell.xib */,
+				E3893C7322873CDF00691449 /* TermAndConditionCell.swift */,
+				E3893C7422873CDF00691449 /* TermAndConditionCell.xib */,
+			);
+			path = CellView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,18 +359,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */,
-				E3893C57228737C800691449 /* LoginFile in Resources */,
-				E3893C55228737C800691449 /* HomeView in Resources */,
+				E3893C7822873CDF00691449 /* FirstNameLastNameCell.xib in Resources */,
 				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
 				03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */,
+				E3893C6622873C6900691449 /* OTPViewController.xib in Resources */,
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
-				E3893C56228737C800691449 /* RegisterFile in Resources */,
+				E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */,
+				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
+				E3893C6222873C4700691449 /* LoginViewController.xib in Resources */,
+				E3893C7F22873CDF00691449 /* GeneralRegisterCell.xib in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
-				E3893C58228737C800691449 /* OTPViewFile in Resources */,
 				030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */,
+				E3893C6D22873CC600691449 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,18 +384,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C37A052285E9C600D3D0B4 /* StarRatingCell.swift in Sources */,
+				E3893C5D22873BF600691449 /* StarRatingCell.swift in Sources */,
 				030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */,
 				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */,
+				E3893C5C22873BC700691449 /* HomeViewController.swift in Sources */,
+				E3893C7922873CDF00691449 /* GenderCell.swift in Sources */,
 				030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
+				E3893C6E22873CC600691449 /* RegisterViewController.swift in Sources */,
+				E3893C7A22873CDF00691449 /* GeneralRegisterCell.swift in Sources */,
+				E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
 				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
 				E380AE5122835265001206D2 /* Style.swift in Sources */,
+				E3893C6122873C4700691449 /* LoginViewController.swift in Sources */,
 				0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */,
+				E3893C6722873C6900691449 /* OTPViewController.swift in Sources */,
+				E3893C7B22873CDF00691449 /* TermAndConditionCell.swift in Sources */,
 				E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */,
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
 			);

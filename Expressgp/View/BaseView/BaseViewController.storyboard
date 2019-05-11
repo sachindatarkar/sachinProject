@@ -103,7 +103,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="ExpressGP" id="eki-St-qhQ"/>
                     <connections>
-                        <outlet property="mapView" destination="LHc-XK-vEd" id="UKn-pI-FK8"/>
+                        <outlet property="mapView" destination="LHc-XK-vEd" id="JeA-5S-JHv"/>
                         <outlet property="searchView" destination="cOR-C1-ydY" id="idB-8r-n2x"/>
                     </connections>
                 </viewController>
@@ -171,8 +171,6 @@
         <!--Home-->
         <scene sceneID="kEB-uS-tQf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="odE-4x-jT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationItem title="ExpressGP" id="bBQ-08-g0B"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9dc-lO-xK6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" selectedImage="homeIcon" id="39o-Xv-CS9"/>
                     <toolbarItems/>
@@ -188,6 +186,8 @@
                         <segue destination="5AQ-G9-uGp" kind="relationship" relationship="rootViewController" id="pSc-u6-jMZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odE-4x-jT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="ExpressGP" id="bBQ-08-g0B"/>
             </objects>
             <point key="canvasLocation" x="-2288.4057971014495" y="468.75"/>
         </scene>
