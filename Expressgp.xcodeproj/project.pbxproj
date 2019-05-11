@@ -39,9 +39,13 @@
 		E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */; };
 		E357BCE4228073850056568E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357BCE3228073850056568E /* HomeViewController.swift */; };
 		E380AE5122835265001206D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380AE5022835265001206D2 /* Style.swift */; };
-		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
 
-        038FD8EE2281F33F00CAA522 /* BookingListViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
+		038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
+		038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
+		03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */; };
+		03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */; };
+		03C37A052285E9C600D3D0B4 /* StarRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */; };
+		03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +84,11 @@
 		E357BCE3228073850056568E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E380AE5022835265001206D2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
-        038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListViewController.xib; sourceTree = "<group>"; };
+		038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListViewController.xib; sourceTree = "<group>"; };
+		03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailDrInfoCell.swift; sourceTree = "<group>"; };
+		03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailDrInfoCell.xib; sourceTree = "<group>"; };
+		03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingCell.swift; sourceTree = "<group>"; };
+		03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRatingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		030A8C772283479200691E43 /* BookingDetailFile */ = {
 			isa = PBXGroup;
 			children = (
+				03C379FE2285E2BC00D3D0B4 /* BookingDetailCellFile */,
 				030A8C78228347B500691E43 /* BookingDetailViewController.swift */,
 				030A8C79228347B500691E43 /* BookingDetailViewController.xib */,
 			);
@@ -283,6 +292,17 @@
 			path = BookingViewFile;
 			sourceTree = "<group>";
 		};
+		03C379FE2285E2BC00D3D0B4 /* BookingDetailCellFile */ = {
+			isa = PBXGroup;
+			children = (
+				03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */,
+				03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */,
+				03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */,
+				03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */,
+			);
+			path = BookingDetailCellFile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,10 +366,12 @@
 				0318193F227EE6A200F3B03D /* FirstNameLastNameCell.xib in Resources */,
 				0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */,
 				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
+				03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */,
 				037E3433227CA1430066EC3B /* RegisterViewController.xib in Resources */,
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
 				0319C3992276B0F50014B568 /* LoginViewController.xib in Resources */,
 				0318193B227EE36500F3B03D /* GeneralRegisterCell.xib in Resources */,
+				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
 				03181937227EE2FC00F3B03D /* GenderCell.xib in Resources */,
@@ -366,12 +388,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0319C3A62276C6080014B568 /* OTPViewController.swift in Sources */,
+				03C37A052285E9C600D3D0B4 /* StarRatingCell.swift in Sources */,
 				030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */,
 				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */,
+				03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */,
 				030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */,
 				03181936227EE2FC00F3B03D /* GenderCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,

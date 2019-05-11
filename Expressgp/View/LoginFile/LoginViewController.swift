@@ -15,11 +15,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
+    }
+    
+    override func viewDidLayoutSubviews() {
         self.btn_getStarted?.tintColor = UIColor.white
         self.btn_getStarted?.applyGradient(colours: [UIColor.white])
         btn_getStarted.layer.cornerRadius = 24
         btn_getStarted.layer.masksToBounds = true
-        self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
