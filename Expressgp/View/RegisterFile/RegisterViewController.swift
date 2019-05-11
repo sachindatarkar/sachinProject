@@ -22,8 +22,12 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var logo_img: UIImageView!
     var completeProfileArry = [CompleteProfile]()
     var companyProfileObj = CompanyProfileModal()
+    let datePicker = UIDatePicker()
+    var dateTextField : UITextField?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         registerCell()
         logo_img.layer.cornerRadius = logo_img.frame.size.width/2
         logo_img.layer.masksToBounds = true
@@ -101,7 +105,9 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            dateTextField = cell?.titleTF
+            cell?.titleTF.text = companyProfileObj.dateOfBirth
             return cell!
         }else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
@@ -153,7 +159,17 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func onClickSubmit() {
-        
+        let vc = BookingListViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK:- UITextField Delegate
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.placeholder == "Date Of Birth" {
+            //textField.resignFirstResponder()
+            showDatePicker()
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -186,5 +202,36 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         if(textField.text == " "){
             textField.text = ""
         }
+    }
+    
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+        
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+        
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        
+        dateTextField?.inputAccessoryView = toolbar
+        dateTextField?.inputView = datePicker
+        
+    }
+    
+    @objc func donedatePicker(){
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        dateTextField?.text = formatter.string(from: datePicker.date)
+        companyProfileObj.dateOfBirth = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
     }
 }

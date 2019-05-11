@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C73228332BB00691E43 /* BookingListCell.swift */; };
+		030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C74228332BB00691E43 /* BookingListCell.xib */; };
+		030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C78228347B500691E43 /* BookingDetailViewController.swift */; };
+		030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C79228347B500691E43 /* BookingDetailViewController.xib */; };
 		03181936227EE2FC00F3B03D /* GenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181934227EE2FC00F3B03D /* GenderCell.swift */; };
 		03181937227EE2FC00F3B03D /* GenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03181935227EE2FC00F3B03D /* GenderCell.xib */; };
 		0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181938227EE36500F3B03D /* GeneralRegisterCell.swift */; };
@@ -35,9 +39,16 @@
 		E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */; };
 		E357BCE4228073850056568E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357BCE3228073850056568E /* HomeViewController.swift */; };
 		E380AE5122835265001206D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380AE5022835265001206D2 /* Style.swift */; };
+		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
+
+        038FD8EE2281F33F00CAA522 /* BookingListViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030A8C73228332BB00691E43 /* BookingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListCell.swift; sourceTree = "<group>"; };
+		030A8C74228332BB00691E43 /* BookingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListCell.xib; sourceTree = "<group>"; };
+		030A8C78228347B500691E43 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
+		030A8C79228347B500691E43 /* BookingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailViewController.xib; sourceTree = "<group>"; };
 		03181934227EE2FC00F3B03D /* GenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCell.swift; sourceTree = "<group>"; };
 		03181935227EE2FC00F3B03D /* GenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderCell.xib; sourceTree = "<group>"; };
 		03181938227EE36500F3B03D /* GeneralRegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRegisterCell.swift; sourceTree = "<group>"; };
@@ -68,6 +79,8 @@
 		E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
 		E357BCE3228073850056568E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E380AE5022835265001206D2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
+        038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030A8C722283329300691E43 /* BookingListCellFile */ = {
+			isa = PBXGroup;
+			children = (
+				030A8C73228332BB00691E43 /* BookingListCell.swift */,
+				030A8C74228332BB00691E43 /* BookingListCell.xib */,
+			);
+			path = BookingListCellFile;
+			sourceTree = "<group>";
+		};
+		030A8C772283479200691E43 /* BookingDetailFile */ = {
+			isa = PBXGroup;
+			children = (
+				030A8C78228347B500691E43 /* BookingDetailViewController.swift */,
+				030A8C79228347B500691E43 /* BookingDetailViewController.xib */,
+			);
+			path = BookingDetailFile;
+			sourceTree = "<group>";
+		};
 		0318192F227EE26100F3B03D /* RegisterCellFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +149,11 @@
 				E333794C227EE4920074D1B3 /* Model */,
 				E333794B227EE4680074D1B3 /* ModelView */,
 				E333794A227EE45E0074D1B3 /* View */,
+				030A8C772283479200691E43 /* BookingDetailFile */,
+				038FD8EC2281F30A00CAA522 /* BookingViewFile */,
+				037E342F227CA11E0066EC3B /* RegisterFile */,
+				0319C3A32276C5DC0014B568 /* OTPViewFile */,
+				0319C3952276B09B0014B568 /* LoginFile */,
 				0319C39C2276B7620014B568 /* CommonFile */,
 				0319C39B2276B2510014B568 /* AppDelegateFile */,
 				0319C39A2276B1980014B568 /* SupportFile */,
@@ -235,6 +271,16 @@
 				E357BCE3228073850056568E /* HomeViewController.swift */,
 			);
 			path = HomeView;
+
+        };
+        038FD8EC2281F30A00CAA522 /* BookingViewFile */ = {
+			isa = PBXGroup;
+			children = (
+				030A8C722283329300691E43 /* BookingListCellFile */,
+				038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */,
+				038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */,
+			);
+			path = BookingViewFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */,
 				03181943227EF10400F3B03D /* TermAndConditionCell.xib in Resources */,
 				0318193F227EE6A200F3B03D /* FirstNameLastNameCell.xib in Resources */,
 				0319C3A72276C6080014B568 /* OTPViewController.xib in Resources */,
@@ -303,9 +350,11 @@
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
 				0319C3992276B0F50014B568 /* LoginViewController.xib in Resources */,
 				0318193B227EE36500F3B03D /* GeneralRegisterCell.xib in Resources */,
+				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
 				03181937227EE2FC00F3B03D /* GenderCell.xib in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
+				030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,10 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0319C3A62276C6080014B568 /* OTPViewController.swift in Sources */,
+				030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */,
+				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				0318193A227EE36500F3B03D /* GeneralRegisterCell.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				037E3432227CA1430066EC3B /* RegisterViewController.swift in Sources */,
+				030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */,
 				03181936227EE2FC00F3B03D /* GenderCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
 				E357BCE4228073850056568E /* HomeViewController.swift in Sources */,
