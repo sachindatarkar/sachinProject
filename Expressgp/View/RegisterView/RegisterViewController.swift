@@ -16,7 +16,7 @@ struct CompleteProfile {
     var iconImg :String?
 }
 
-class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
+class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,LanguageSearchViewDelegate {
 
     @IBOutlet weak var registerTV: UITableView!
     @IBOutlet weak var logo_img: UIImageView!
@@ -24,6 +24,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var companyProfileObj = CompanyProfileModal()
     let datePicker = UIDatePicker()
     var dateTextField : UITextField?
+    var registerViewModalObj = RegisterViewModal()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         logo_img.layer.borderColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0).cgColor
         registerTV.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "First Name", secondPlaceHolder: "Last Name", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: ConstantClass.sharedInstance.mobileNo, secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Email Id", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Men", secondPlaceHolder: "Women", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Date Of Birth", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
@@ -86,21 +87,26 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.lastNameTF.placeholder = completeProfileArry[indexPath.row].secondPlaceHolder
             cell?.firstNameTF.text = companyProfileObj.firstName
             cell?.lastNameTF.text = companyProfileObj.lastName
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
-            cell?.titleTF.text = companyProfileObj.mobileNo
+            cell?.titleTF.text = ConstantClass.sharedInstance.mobileNo
+            cell?.titleTF.isUserInteractionEnabled = false
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
              cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = companyProfileObj.emailId
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenderCell") as? GenderCell
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
@@ -108,29 +114,38 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             dateTextField = cell?.titleTF
             cell?.titleTF.text = companyProfileObj.dateOfBirth
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.text = companyProfileObj.language
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+             cell?.titleTF.text = companyProfileObj.existingIllness
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 7 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.text = companyProfileObj.existingAllergies
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 8 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 9 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TermAndConditionCell") as? TermAndConditionCell
+            cell?.selectionStyle = .none
             return cell!
         }
         return UITableViewCell()
@@ -159,8 +174,9 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func onClickSubmit() {
-        let vc = BookingListViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        registerViewModalObj.registerUser(userObj: companyProfileObj)
+//        let vc = BookingListViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- UITextField Delegate
@@ -169,6 +185,21 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         if textField.placeholder == "Date Of Birth" {
             //textField.resignFirstResponder()
             showDatePicker()
+        }else if textField.placeholder == "Language" {
+            let vc = LanguageSearchView()
+            vc.fromText = "Language"
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+        }else if textField.placeholder == "Existing Illness" {
+            let vc = LanguageSearchView()
+             vc.delegate = self
+            vc.fromText = "Existing Illness"
+            self.present(vc, animated: true, completion: nil)
+        }else if textField.placeholder == "Existing Allergies" {
+            let vc = LanguageSearchView()
+             vc.delegate = self
+            vc.fromText = "Existing Allergies"
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
@@ -183,7 +214,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             }else if textField.placeholder == "Last Name" {
                companyProfileObj.lastName = textField.text
             }else if textField.placeholder == "Mobile Number" {
-               companyProfileObj.mobileNo = textField.text
+               companyProfileObj.mobileNo = ConstantClass.sharedInstance.mobileNo
             }else if textField.placeholder == "Email Id" {
                companyProfileObj.emailId = textField.text
             }else if textField.placeholder == "Language" {
@@ -233,5 +264,21 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @objc func cancelDatePicker(){
         self.view.endEditing(true)
+    }
+    
+    func didSelectlanguage(languageObj:LanguageData) {
+        companyProfileObj.language = languageObj.language_name
+        //companyProfileObj.
+        registerTV.reloadData()
+    }
+    func didSelectillness(illnessObj:IllnessData) {
+        companyProfileObj.Illness_id = illnessObj.specialty_id
+        companyProfileObj.existingIllness = illnessObj.reason
+        registerTV.reloadData()
+    }
+    func didSelectiAllergies(AllergiesObj:AllergiesData) {
+        companyProfileObj.allergies_id = AllergiesObj.allergy_id
+        companyProfileObj.existingAllergies = AllergiesObj.allergy
+        registerTV.reloadData()
     }
 }

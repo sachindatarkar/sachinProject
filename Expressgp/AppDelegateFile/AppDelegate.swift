@@ -23,7 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = Style.Color.Background.primaryColor
         UINavigationBar.appearance().backgroundColor = Style.Color.Background.primaryColor
 
-        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+       /* let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+        let navView = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navView
+        window?.makeKeyAndVisible()
+        return true*/
+        let vc = LoginViewController()
         let navView = UINavigationController(rootViewController: vc)
         window?.rootViewController = navView
         window?.makeKeyAndVisible()

@@ -12,11 +12,15 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var mobileNoTF: UITextField!
     @IBOutlet weak var btn_getStarted: UIButton!
+    var loginViewModalObj = LoginViewModal()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
+        loginViewModalObj.pushToHomeView = { (otpStr) in
+            let otpView = OTPViewController()
+            otpView.otpStr = otpStr
+            self.navigationController?.pushViewController(otpView, animated: true)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -41,8 +45,7 @@ class LoginViewController: UIViewController {
     
     @objc func onClickGetStarted() {
         if mobileNoTF.text != "" {
-            let otpView = OTPViewController()
-            self.navigationController?.pushViewController(otpView, animated: true)
+            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
         }else{
             MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
         }

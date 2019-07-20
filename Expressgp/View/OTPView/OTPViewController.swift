@@ -18,6 +18,8 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var firstTF: UITextField!
     @IBOutlet weak var waitingText_lbl: UILabel!
     var count : Int = 45
+    var otpStr : Int?
+    var otpViewModalObj = OtpViewModal()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,16 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         secondTF.setBottomBorder()
         thirdTF.setBottomBorder()
         fourthTF.setBottomBorder()
+        
+        otpViewModalObj.pushToHomeView = {
+            let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+           self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        otpViewModalObj.pushToRegistartion = {
+            let vc = RegisterViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,11 +70,12 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     }
     
     @objc func onClickSubmit() {
-        let otpStr = "\(firstTF.text ?? "")\(secondTF.text ?? "")\(thirdTF.text ?? "")\(fourthTF.text ?? "")"
-        print(otpStr)
-        if !otpStr.contains("") && otpStr.count == 4 {
-            let vc = RegisterViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+        let otpStrings = "\(firstTF.text ?? "")\(secondTF.text ?? "")\(thirdTF.text ?? "")\(fourthTF.text ?? "")"
+        print(otpStrings)
+        if !otpStrings.contains("") && otpStrings.count == 4 {
+            otpViewModalObj.checkOtp(otpText: otpStr ?? 0)
+//            let vc = RegisterViewController()
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }
