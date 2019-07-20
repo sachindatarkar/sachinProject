@@ -25,6 +25,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let datePicker = UIDatePicker()
     var dateTextField : UITextField?
     var registerViewModalObj = RegisterViewModal()
+    var isMenselected : Bool = false
+    var iswomenSelected : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,9 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Allergies", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
+        registerViewModalObj.pushToHomeView = {
+            
+        }
         
     }
 
@@ -100,12 +105,26 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = companyProfileObj.emailId
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenderCell") as? GenderCell
+            cell?.btn_women.addTarget(self, action: #selector(OnClickWomen), for: .touchUpInside)
+            cell?.btn_men.addTarget(self, action: #selector(OnClickMen), for: .touchUpInside)
+            if !isMenselected && !iswomenSelected {
+                cell?.womenImageView.image = UIImage(named: "optionUnselect.png")
+                cell?.menImageView.image = UIImage(named: "optionUnselect.png")
+            }else{
+                if isMenselected {
+                    cell?.womenImageView.image = UIImage(named: "optionUnselect.png")
+                    cell?.menImageView.image = UIImage(named: "optionSelect.png")
+                }else{
+                    cell?.menImageView.image = UIImage(named: "optionUnselect.png")
+                    cell?.womenImageView.image = UIImage(named: "optionSelect.png")
+                }
+            }
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 4 {
@@ -175,8 +194,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @objc func onClickSubmit() {
         registerViewModalObj.registerUser(userObj: companyProfileObj)
-//        let vc = BookingListViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- UITextField Delegate
@@ -200,6 +219,14 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
              vc.delegate = self
             vc.fromText = "Existing Allergies"
             self.present(vc, animated: true, completion: nil)
+        }else if textField.placeholder == "Upload Insurance" {
+            ImagePickerManager().pickImage(self){ image in
+                //here is the image
+                let imgStr = image.toBase64()
+                self.companyProfileObj.insurance = imgStr
+                print("Image Found")
+            }
+             self.view.endEditing(true)
         }
     }
     
@@ -256,7 +283,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "yyyy-dd-MM"
         dateTextField?.text = formatter.string(from: datePicker.date)
         companyProfileObj.dateOfBirth = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
@@ -281,4 +308,21 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         companyProfileObj.existingAllergies = AllergiesObj.allergy
         registerTV.reloadData()
     }
+    
+    
+    @objc func OnClickWomen() {
+        isMenselected = false
+        iswomenSelected = true
+        companyProfileObj.gender = "Women"
+        registerTV.reloadData()
+    }
+    
+    @objc func OnClickMen() {
+        isMenselected = true
+        iswomenSelected = false
+        companyProfileObj.gender = "Men"
+        registerTV.reloadData()
+       
+    }
+    
 }

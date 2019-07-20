@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030A2B3B22E389F1007DC1A2 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */; };
+		030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A2B3C22E38F14007DC1A2 /* optionSelect.png */; };
+		030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A2B3D22E38F14007DC1A2 /* optionUnselect.png */; };
 		030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C73228332BB00691E43 /* BookingListCell.swift */; };
 		030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C74228332BB00691E43 /* BookingListCell.xib */; };
 		030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C78228347B500691E43 /* BookingDetailViewController.swift */; };
@@ -62,6 +65,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		030A2B3C22E38F14007DC1A2 /* optionSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionSelect.png; sourceTree = "<group>"; };
+		030A2B3D22E38F14007DC1A2 /* optionUnselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionUnselect.png; sourceTree = "<group>"; };
 		030A8C73228332BB00691E43 /* BookingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListCell.swift; sourceTree = "<group>"; };
 		030A8C74228332BB00691E43 /* BookingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListCell.xib; sourceTree = "<group>"; };
 		030A8C78228347B500691E43 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,9 @@
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
 				0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */,
 				E380AE5022835265001206D2 /* Style.swift */,
+				030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */,
+				030A2B3C22E38F14007DC1A2 /* optionSelect.png */,
+				030A2B3D22E38F14007DC1A2 /* optionUnselect.png */,
 			);
 			path = CommonFile;
 			sourceTree = "<group>";
@@ -465,7 +474,9 @@
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
 				E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */,
 				0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */,
+				030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */,
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
+				030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
@@ -551,6 +562,7 @@
 				030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
 				E3893C6E22873CC600691449 /* RegisterViewController.swift in Sources */,
+				030A2B3B22E389F1007DC1A2 /* ImagePickerManager.swift in Sources */,
 				E3893C7A22873CDF00691449 /* GeneralRegisterCell.swift in Sources */,
 				E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */,
 				030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */,

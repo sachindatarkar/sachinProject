@@ -23,6 +23,7 @@ class OtpViewModal: NSObject {
             do {
                 if let status : Int = dictionary?.value(forKey: "success") as? Int{
                     if status == 1 {
+                        UserDefaults.standard.setValue(dictionary, forKey: "UserResponse")
                         self.pushToHomeView?()
                     }else if status == 2 {
                         self.pushToRegistartion?()

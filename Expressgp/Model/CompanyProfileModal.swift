@@ -21,4 +21,5 @@ struct CompanyProfileModal : Decodable {
     var existingAllergies : String?
     var allergies_id : String?
     var acceptCondition : Bool = false
+    var insurance : String?
 }

@@ -52,18 +52,27 @@
                                             <constraint firstAttribute="width" constant="30" id="kV9-B7-lwL"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBl-CM-KBP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBl-CM-KBP">
                                         <rect key="frame" x="46" y="5" width="105.5" height="31.5"/>
                                         <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
                                         <state key="normal" title="Men">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionUnselect.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qts-6I-Ifb">
+                                        <rect key="frame" x="109.5" y="11" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="2qv-Td-Nub"/>
+                                            <constraint firstAttribute="height" constant="20" id="R0r-Ry-zpB"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Qts-6I-Ifb" secondAttribute="trailing" constant="30" id="0c4-Of-cJd"/>
                                     <constraint firstItem="4ZT-H9-dOw" firstAttribute="leading" secondItem="5Iy-D6-aqp" secondAttribute="leading" constant="8" id="EUC-Qb-Vjr"/>
                                     <constraint firstItem="UBl-CM-KBP" firstAttribute="top" secondItem="5Iy-D6-aqp" secondAttribute="top" constant="5" id="UVz-rb-qyZ"/>
+                                    <constraint firstItem="Qts-6I-Ifb" firstAttribute="centerY" secondItem="5Iy-D6-aqp" secondAttribute="centerY" id="bcu-tC-j9b"/>
                                     <constraint firstItem="4ZT-H9-dOw" firstAttribute="centerY" secondItem="5Iy-D6-aqp" secondAttribute="centerY" id="mjV-nT-7pt"/>
                                     <constraint firstItem="UBl-CM-KBP" firstAttribute="leading" secondItem="4ZT-H9-dOw" secondAttribute="trailing" constant="8" id="nfc-zZ-j91"/>
                                     <constraint firstAttribute="trailing" secondItem="UBl-CM-KBP" secondAttribute="trailing" constant="8" id="op7-6L-pgk"/>
@@ -88,14 +97,23 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionUnselect.png" translatesAutoresizingMaskIntoConstraints="NO" id="vBL-xW-aDQ">
+                                        <rect key="frame" x="109.5" y="11" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="5zc-8Q-EPw"/>
+                                            <constraint firstAttribute="height" constant="20" id="z2U-TW-MW9"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GTe-wy-SdS" secondAttribute="bottom" constant="5" id="ASo-Wu-fWT"/>
                                     <constraint firstItem="bTx-Jp-uiC" firstAttribute="leading" secondItem="2VK-b8-hPa" secondAttribute="leading" constant="8" id="Rt7-sp-Fxk"/>
+                                    <constraint firstAttribute="trailing" secondItem="vBL-xW-aDQ" secondAttribute="trailing" constant="30" id="b43-Hk-v1g"/>
                                     <constraint firstItem="GTe-wy-SdS" firstAttribute="top" secondItem="2VK-b8-hPa" secondAttribute="top" constant="5" id="d4E-Ja-2cI"/>
                                     <constraint firstItem="bTx-Jp-uiC" firstAttribute="centerY" secondItem="2VK-b8-hPa" secondAttribute="centerY" id="hdt-9y-IjC"/>
                                     <constraint firstItem="GTe-wy-SdS" firstAttribute="leading" secondItem="bTx-Jp-uiC" secondAttribute="trailing" constant="8" id="kWR-nR-tGy"/>
+                                    <constraint firstItem="vBL-xW-aDQ" firstAttribute="centerY" secondItem="2VK-b8-hPa" secondAttribute="centerY" id="nOU-6j-7rw"/>
                                     <constraint firstAttribute="trailing" secondItem="GTe-wy-SdS" secondAttribute="trailing" constant="8" id="u6X-sP-pkw"/>
                                 </constraints>
                             </view>
@@ -119,8 +137,13 @@
             <connections>
                 <outlet property="btn_men" destination="UBl-CM-KBP" id="9js-Bs-dlL"/>
                 <outlet property="btn_women" destination="GTe-wy-SdS" id="aHB-1u-ebY"/>
+                <outlet property="menImageView" destination="Qts-6I-Ifb" id="Ayu-Uq-D6c"/>
+                <outlet property="womenImageView" destination="vBL-xW-aDQ" id="hkW-SK-Ulm"/>
             </connections>
             <point key="canvasLocation" x="52.799999999999997" y="52.173913043478265"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="optionUnselect.png" width="128" height="128"/>
+    </resources>
 </document>
