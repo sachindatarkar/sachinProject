@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,6 +29,13 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="0qN-wQ-jIA"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBI-rt-9ke">
+                        <rect key="frame" x="159.5" y="3" width="1" height="40.5"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.81960784310000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="uNb-3o-Rx5"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Baq-pH-T4U">
@@ -42,6 +54,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBl-CM-KBP">
                                         <rect key="frame" x="46" y="5" width="105.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
                                         <state key="normal" title="Men">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -70,6 +83,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTe-wy-SdS">
                                         <rect key="frame" x="46" y="5" width="105.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
                                         <state key="normal" title="Women">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -89,6 +103,8 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WBI-rt-9ke" secondAttribute="bottom" id="5Tq-eD-nwG"/>
+                    <constraint firstItem="WBI-rt-9ke" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="9fI-8r-k8c"/>
                     <constraint firstItem="Baq-pH-T4U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Buo-rg-YrG"/>
                     <constraint firstAttribute="trailing" secondItem="Baq-pH-T4U" secondAttribute="trailing" id="D8f-hf-Kva"/>
                     <constraint firstAttribute="trailing" secondItem="bSi-rA-YM6" secondAttribute="trailing" constant="8" id="IC5-XE-wJd"/>
@@ -96,6 +112,7 @@
                     <constraint firstItem="Baq-pH-T4U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WxQ-5V-O6O"/>
                     <constraint firstItem="bSi-rA-YM6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="bmj-KU-KeD"/>
                     <constraint firstAttribute="bottom" secondItem="bSi-rA-YM6" secondAttribute="bottom" id="oaZ-sV-cP8"/>
+                    <constraint firstItem="WBI-rt-9ke" firstAttribute="centerX" secondItem="Baq-pH-T4U" secondAttribute="centerX" id="vK7-zi-brR"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

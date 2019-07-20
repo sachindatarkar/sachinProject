@@ -64,3 +64,12 @@ extension UITextField {
         self.layer.shadowRadius = 0.0
     }
 }
+
+extension NSObject {
+    func GetCommonParrameter() -> [String:Any] {
+        var params: [String:Any] = [:]
+        params["imei_no"] = ConstantClass.sharedInstance.DEVICE_ID
+        params["fcm_id"] = "87499"
+        return params
+    }
+}

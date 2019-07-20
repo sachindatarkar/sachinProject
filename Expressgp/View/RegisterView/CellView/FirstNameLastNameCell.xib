@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,7 +41,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUw-cO-3or">
                                         <rect key="frame" x="46" y="5" width="105.5" height="31.5"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
                                             <outlet property="delegate" destination="KGk-i7-Jjw" id="SEO-ch-DXg"/>
@@ -67,7 +72,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0NV-3y-8AP">
                                         <rect key="frame" x="46" y="5" width="105.5" height="31.5"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
                                             <outlet property="delegate" destination="KGk-i7-Jjw" id="vfA-b4-A36"/>
@@ -88,6 +93,13 @@
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gif-vK-Y6I">
+                        <rect key="frame" x="159.5" y="3" width="1" height="40.5"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.81960784310000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="NHs-zt-l5b"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-ng-FAp">
                         <rect key="frame" x="8" y="42.5" width="304" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,8 +112,11 @@
                     <constraint firstAttribute="bottom" secondItem="S0S-ng-FAp" secondAttribute="bottom" id="C3Q-e9-W2s"/>
                     <constraint firstItem="As8-WY-lZj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DvI-xc-QZc"/>
                     <constraint firstAttribute="bottom" secondItem="As8-WY-lZj" secondAttribute="bottom" constant="2" id="Teq-tZ-47L"/>
+                    <constraint firstItem="Gif-vK-Y6I" firstAttribute="centerX" secondItem="As8-WY-lZj" secondAttribute="centerX" id="aIW-UY-02h"/>
                     <constraint firstItem="S0S-ng-FAp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="bhZ-Qk-3Tz"/>
+                    <constraint firstItem="Gif-vK-Y6I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="lgG-BQ-oaN"/>
                     <constraint firstAttribute="trailing" secondItem="S0S-ng-FAp" secondAttribute="trailing" constant="8" id="mXy-Vh-nj2"/>
+                    <constraint firstAttribute="bottom" secondItem="Gif-vK-Y6I" secondAttribute="bottom" id="p6B-iN-Cx2"/>
                     <constraint firstItem="As8-WY-lZj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sK9-dr-GNX"/>
                     <constraint firstAttribute="trailing" secondItem="As8-WY-lZj" secondAttribute="trailing" id="waA-Jh-JI3"/>
                 </constraints>

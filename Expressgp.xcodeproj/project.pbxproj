@@ -11,6 +11,13 @@
 		030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C74228332BB00691E43 /* BookingListCell.xib */; };
 		030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C78228347B500691E43 /* BookingDetailViewController.swift */; };
 		030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C79228347B500691E43 /* BookingDetailViewController.xib */; };
+		030CC0C922DCCF1600A9B1AF /* ApiClientClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */; };
+		030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */; };
+		030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */; };
+		030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */; };
+		0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310E91922DE298F001DCD3E /* RegisterViewModal.swift */; };
+		0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */; };
+		0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */; };
 		03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181944227EF4F100F3B03D /* CompanyProfileModal.swift */; };
 		0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3832276B05B0014B568 /* AppDelegate.swift */; };
 		0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0319C38A2276B05D0014B568 /* Assets.xcassets */; };
@@ -18,11 +25,18 @@
 		0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39D2276B7820014B568 /* UIViewExtension.swift */; };
 		0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39F2276BA7B0014B568 /* UIColourExtension.swift */; };
 		0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */; };
+		034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */; };
+		034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F722E0D02F0020AC3F /* LanguageModal.swift */; };
+		034719FA22E0D0570020AC3F /* IllnessModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F922E0D0570020AC3F /* IllnessModal.swift */; };
+		034719FC22E0D0810020AC3F /* AllergiesModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719FB22E0D0810020AC3F /* AllergiesModal.swift */; };
+		034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */; };
+		03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */; };
 		038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
 		038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
 		03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */; };
 		03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */; };
 		03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */; };
+		24078C7BA2A8B2EF94BBB321 /* Pods_Expressgp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */; };
 		E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337946227EE4480074D1B3 /* SearchViewController.swift */; };
 		E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3337947227EE4480074D1B3 /* SearchViewController.xib */; };
 		E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */; };
@@ -52,6 +66,17 @@
 		030A8C74228332BB00691E43 /* BookingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListCell.xib; sourceTree = "<group>"; };
 		030A8C78228347B500691E43 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
 		030A8C79228347B500691E43 /* BookingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailViewController.xib; sourceTree = "<group>"; };
+		030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientClass.swift; sourceTree = "<group>"; };
+		030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantClass.swift; sourceTree = "<group>"; };
+		030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
+		030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewModal.swift; sourceTree = "<group>"; };
+		0310E91522DE24AD001DCD3E /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
+		0310E91622DE24AD001DCD3E /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
+		0310E91722DE24AD001DCD3E /* MavenPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Bold.ttf"; sourceTree = "<group>"; };
+		0310E91822DE2564001DCD3E /* MavenPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Black.ttf"; sourceTree = "<group>"; };
+		0310E91922DE298F001DCD3E /* RegisterViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModal.swift; sourceTree = "<group>"; };
+		0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSearchView.swift; sourceTree = "<group>"; };
+		0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageSearchView.xib; sourceTree = "<group>"; };
 		03181944227EF4F100F3B03D /* CompanyProfileModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileModal.swift; sourceTree = "<group>"; };
 		0319C3802276B05B0014B568 /* Expressgp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expressgp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0319C3832276B05B0014B568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,12 +86,20 @@
 		0319C39D2276B7820014B568 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0319C39F2276BA7B0014B568 /* UIColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColourExtension.swift; sourceTree = "<group>"; };
 		0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomeAlert.swift; sourceTree = "<group>"; };
+		034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSearchViweModal.swift; sourceTree = "<group>"; };
+		034719F722E0D02F0020AC3F /* LanguageModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModal.swift; sourceTree = "<group>"; };
+		034719F922E0D0570020AC3F /* IllnessModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessModal.swift; sourceTree = "<group>"; };
+		034719FB22E0D0810020AC3F /* AllergiesModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesModal.swift; sourceTree = "<group>"; };
+		034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableCell.swift; sourceTree = "<group>"; };
+		034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableCell.xib; sourceTree = "<group>"; };
 		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
 		038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListViewController.xib; sourceTree = "<group>"; };
 		03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailDrInfoCell.swift; sourceTree = "<group>"; };
 		03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailDrInfoCell.xib; sourceTree = "<group>"; };
 		03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingCell.swift; sourceTree = "<group>"; };
 		03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRatingCell.xib; sourceTree = "<group>"; };
+		6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expressgp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A8B92C06649DABBAA018E4 /* Pods-Expressgp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expressgp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp.debug.xcconfig"; sourceTree = "<group>"; };
 		E3337946227EE4480074D1B3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E3337947227EE4480074D1B3 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +121,7 @@
 		E3893C7522873CDF00691449 /* FirstNameLastNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameLastNameCell.swift; sourceTree = "<group>"; };
 		E3893C7622873CDF00691449 /* GenderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenderCell.xib; sourceTree = "<group>"; };
 		E3893C7722873CDF00691449 /* GeneralRegisterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralRegisterCell.xib; sourceTree = "<group>"; };
+		F1D38580435606F007DAA94E /* Pods-Expressgp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expressgp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24078C7BA2A8B2EF94BBB321 /* Pods_Expressgp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,11 +155,32 @@
 			path = BookingDetailFile;
 			sourceTree = "<group>";
 		};
+		030CC0C722DCCED800A9B1AF /* NetworkingFile */ = {
+			isa = PBXGroup;
+			children = (
+				030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */,
+				030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */,
+			);
+			path = NetworkingFile;
+			sourceTree = "<group>";
+		};
+		0310E91B22DE38C0001DCD3E /* SeaarchPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				03471A0122E0D8180020AC3F /* CellView */,
+				0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */,
+				0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */,
+			);
+			path = SeaarchPopUp;
+			sourceTree = "<group>";
+		};
 		0319C3772276B05B0014B568 = {
 			isa = PBXGroup;
 			children = (
 				0319C3822276B05B0014B568 /* Expressgp */,
 				0319C3812276B05B0014B568 /* Products */,
+				1DDD37B0D9785D65AFE7A285 /* Pods */,
+				FA780B8BC91C09B8DFB9226E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +195,7 @@
 		0319C3822276B05B0014B568 /* Expressgp */ = {
 			isa = PBXGroup;
 			children = (
+				030CC0C722DCCED800A9B1AF /* NetworkingFile */,
 				E333794C227EE4920074D1B3 /* Model */,
 				E333794B227EE4680074D1B3 /* ModelView */,
 				E333794A227EE45E0074D1B3 /* View */,
@@ -152,6 +209,10 @@
 		0319C39A2276B1980014B568 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				0310E91722DE24AD001DCD3E /* MavenPro-Bold.ttf */,
+				0310E91622DE24AD001DCD3E /* MavenPro-Medium.ttf */,
+				0310E91522DE24AD001DCD3E /* MavenPro-Regular.ttf */,
+				0310E91822DE2564001DCD3E /* MavenPro-Black.ttf */,
 				0319C38A2276B05D0014B568 /* Assets.xcassets */,
 				0319C38F2276B05D0014B568 /* Info.plist */,
 			);
@@ -178,6 +239,15 @@
 			path = CommonFile;
 			sourceTree = "<group>";
 		};
+		03471A0122E0D8180020AC3F /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */,
+				034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
 		038FD8EC2281F30A00CAA522 /* BookingViewFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +269,15 @@
 			path = BookingDetailCellFile;
 			sourceTree = "<group>";
 		};
+		1DDD37B0D9785D65AFE7A285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73A8B92C06649DABBAA018E4 /* Pods-Expressgp.debug.xcconfig */,
+				F1D38580435606F007DAA94E /* Pods-Expressgp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E3337943227EE39B0074D1B3 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +290,7 @@
 		E333794A227EE45E0074D1B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0310E91B22DE38C0001DCD3E /* SeaarchPopUp */,
 				E3893C6822873C6C00691449 /* RegisterView */,
 				E3893C6322873C5300691449 /* OTPView */,
 				E3893C5E22873C3400691449 /* LoginView */,
@@ -227,6 +307,10 @@
 			isa = PBXGroup;
 			children = (
 				E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */,
+				030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */,
+				030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */,
+				0310E91922DE298F001DCD3E /* RegisterViewModal.swift */,
+				034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -235,6 +319,9 @@
 			isa = PBXGroup;
 			children = (
 				03181944227EF4F100F3B03D /* CompanyProfileModal.swift */,
+				034719F722E0D02F0020AC3F /* LanguageModal.swift */,
+				034719F922E0D0570020AC3F /* IllnessModal.swift */,
+				034719FB22E0D0810020AC3F /* AllergiesModal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +387,14 @@
 			path = CellView;
 			sourceTree = "<group>";
 		};
+		FA780B8BC91C09B8DFB9226E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,9 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0319C3922276B05D0014B568 /* Build configuration list for PBXNativeTarget "Expressgp" */;
 			buildPhases = (
+				70DBB1BAC560DE6DB036439E /* [CP] Check Pods Manifest.lock */,
 				0319C37C2276B05B0014B568 /* Sources */,
 				0319C37D2276B05B0014B568 /* Frameworks */,
 				0319C37E2276B05B0014B568 /* Resources */,
+				7969303E30424EE897E291B0 /* [CP] Embed Pods Frameworks */,
+				FE59BC3892D17CA2A9D99EDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,11 +458,13 @@
 			files = (
 				038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */,
 				E3893C7822873CDF00691449 /* FirstNameLastNameCell.xib in Resources */,
+				03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */,
 				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
 				03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */,
 				E3893C6622873C6900691449 /* OTPViewController.xib in Resources */,
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
 				E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */,
+				0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */,
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
@@ -379,6 +479,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70DBB1BAC560DE6DB036439E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Expressgp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7969303E30424EE897E291B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE59BC3892D17CA2A9D99EDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0319C37C2276B05B0014B568 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -387,8 +541,10 @@
 				E3893C5D22873BF600691449 /* StarRatingCell.swift in Sources */,
 				030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */,
 				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
+				030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
+				0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */,
 				03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */,
 				E3893C5C22873BC700691449 /* HomeViewController.swift in Sources */,
 				E3893C7922873CDF00691449 /* GenderCell.swift in Sources */,
@@ -397,15 +553,24 @@
 				E3893C6E22873CC600691449 /* RegisterViewController.swift in Sources */,
 				E3893C7A22873CDF00691449 /* GeneralRegisterCell.swift in Sources */,
 				E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */,
+				030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
 				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
 				E380AE5122835265001206D2 /* Style.swift in Sources */,
 				E3893C6122873C4700691449 /* LoginViewController.swift in Sources */,
+				034719FC22E0D0810020AC3F /* AllergiesModal.swift in Sources */,
+				0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */,
+				034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */,
+				034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */,
 				0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */,
 				E3893C6722873C6900691449 /* OTPViewController.swift in Sources */,
+				034719FA22E0D0570020AC3F /* IllnessModal.swift in Sources */,
+				030CC0C922DCCF1600A9B1AF /* ApiClientClass.swift in Sources */,
 				E3893C7B22873CDF00691449 /* TermAndConditionCell.swift in Sources */,
 				E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */,
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
+				030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */,
+				034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +706,7 @@
 		};
 		0319C3932276B05D0014B568 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73A8B92C06649DABBAA018E4 /* Pods-Expressgp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +726,7 @@
 		};
 		0319C3942276B05D0014B568 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D38580435606F007DAA94E /* Pods-Expressgp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
