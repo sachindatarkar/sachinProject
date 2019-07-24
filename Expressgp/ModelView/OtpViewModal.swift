@@ -19,11 +19,11 @@ class OtpViewModal: NSObject {
         params = self.GetCommonParrameter()
         params["mobile"] = ConstantClass.sharedInstance.mobileNo
         params["otp"] = otpText
-        apiClient.fetchApiResponse(action: "otp_verify.php", param: params) { (dictionary) in
+        apiClient.fetchApiResponse(action: "otp_verify.php", param: params) { (dictionary,data) in
             do {
                 if let status : Int = dictionary?.value(forKey: "success") as? Int{
                     if status == 1 {
-                        UserDefaults.standard.setValue(dictionary, forKey: "UserResponse")
+                        UserDefaults.standard.setValue(data, forKey: "UserResponse")
                         self.pushToHomeView?()
                     }else if status == 2 {
                         self.pushToRegistartion?()

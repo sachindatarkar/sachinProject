@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class ApiClientClass: NSObject {
-    func fetchApiResponse(action : String,param : [String:Any], completion: @escaping (NSDictionary?) -> ()) {
+    func fetchApiResponse(action : String,param : [String:Any], completion: @escaping (NSDictionary?,Data?) -> ()) {
         //requestParameter(params: param)
         let completeURL = "\(ConstantClass.sharedInstance.SITE_URL)\(action)"
         print("URL\(completeURL)")
@@ -26,7 +26,7 @@ class ApiClientClass: NSObject {
             if let JSON = response.result.value as? NSDictionary {
                 let responseString = NSString(data: response.data!, encoding: String.Encoding.utf8.rawValue)
                 print("responseString = \(String(describing: responseString))\n***************")
-                completion(response.result.value as? NSDictionary)
+                completion(response.result.value as? NSDictionary, response.data!)
                 print("JSON: \(JSON)") // your JSONResponse result
             }
             else {

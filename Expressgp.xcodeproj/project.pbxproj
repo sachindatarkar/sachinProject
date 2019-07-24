@@ -14,10 +14,17 @@
 		030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C74228332BB00691E43 /* BookingListCell.xib */; };
 		030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C78228347B500691E43 /* BookingDetailViewController.swift */; };
 		030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C79228347B500691E43 /* BookingDetailViewController.xib */; };
+		030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349422E8B13A0015A150 /* FamilyViewController.swift */; };
+		030C349722E8B2E60015A150 /* LoginModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349622E8B2E60015A150 /* LoginModal.swift */; };
+		030C349922E8B6470015A150 /* FamilyViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349822E8B6470015A150 /* FamilyViewModal.swift */; };
+		030C349B22E8B7E10015A150 /* FamilyListModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349A22E8B7E10015A150 /* FamilyListModal.swift */; };
+		030C34A022E8BAD10015A150 /* FamilyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349E22E8BAD10015A150 /* FamilyViewCell.swift */; };
 		030CC0C922DCCF1600A9B1AF /* ApiClientClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */; };
 		030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */; };
 		030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */; };
 		030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */; };
+		030E960E22E76CEE00DE7D99 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E960C22E76CEE00DE7D99 /* AddMemberViewController.swift */; };
+		030E960F22E76CEE00DE7D99 /* AddMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030E960D22E76CEE00DE7D99 /* AddMemberViewController.xib */; };
 		0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310E91922DE298F001DCD3E /* RegisterViewModal.swift */; };
 		0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */; };
 		0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */; };
@@ -72,10 +79,17 @@
 		030A8C74228332BB00691E43 /* BookingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListCell.xib; sourceTree = "<group>"; };
 		030A8C78228347B500691E43 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
 		030A8C79228347B500691E43 /* BookingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailViewController.xib; sourceTree = "<group>"; };
+		030C349422E8B13A0015A150 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		030C349622E8B2E60015A150 /* LoginModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModal.swift; sourceTree = "<group>"; };
+		030C349822E8B6470015A150 /* FamilyViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModal.swift; sourceTree = "<group>"; };
+		030C349A22E8B7E10015A150 /* FamilyListModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListModal.swift; sourceTree = "<group>"; };
+		030C349E22E8BAD10015A150 /* FamilyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewCell.swift; sourceTree = "<group>"; };
 		030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientClass.swift; sourceTree = "<group>"; };
 		030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantClass.swift; sourceTree = "<group>"; };
 		030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
 		030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewModal.swift; sourceTree = "<group>"; };
+		030E960C22E76CEE00DE7D99 /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
+		030E960D22E76CEE00DE7D99 /* AddMemberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMemberViewController.xib; sourceTree = "<group>"; };
 		0310E91522DE24AD001DCD3E /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
 		0310E91622DE24AD001DCD3E /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
 		0310E91722DE24AD001DCD3E /* MavenPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -161,6 +175,23 @@
 			path = BookingDetailFile;
 			sourceTree = "<group>";
 		};
+		030C349C22E8BA830015A150 /* FamilyView */ = {
+			isa = PBXGroup;
+			children = (
+				030C349D22E8BAA80015A150 /* FamilyViewCell */,
+				030C349422E8B13A0015A150 /* FamilyViewController.swift */,
+			);
+			path = FamilyView;
+			sourceTree = "<group>";
+		};
+		030C349D22E8BAA80015A150 /* FamilyViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				030C349E22E8BAD10015A150 /* FamilyViewCell.swift */,
+			);
+			path = FamilyViewCell;
+			sourceTree = "<group>";
+		};
 		030CC0C722DCCED800A9B1AF /* NetworkingFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +199,15 @@
 				030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */,
 			);
 			path = NetworkingFile;
+			sourceTree = "<group>";
+		};
+		030E960B22E76C9500DE7D99 /* AddMemberView */ = {
+			isa = PBXGroup;
+			children = (
+				030E960C22E76CEE00DE7D99 /* AddMemberViewController.swift */,
+				030E960D22E76CEE00DE7D99 /* AddMemberViewController.xib */,
+			);
+			path = AddMemberView;
 			sourceTree = "<group>";
 		};
 		0310E91B22DE38C0001DCD3E /* SeaarchPopUp */ = {
@@ -299,6 +339,8 @@
 		E333794A227EE45E0074D1B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				030C349C22E8BA830015A150 /* FamilyView */,
+				030E960B22E76C9500DE7D99 /* AddMemberView */,
 				0310E91B22DE38C0001DCD3E /* SeaarchPopUp */,
 				E3893C6822873C6C00691449 /* RegisterView */,
 				E3893C6322873C5300691449 /* OTPView */,
@@ -320,6 +362,7 @@
 				030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */,
 				0310E91922DE298F001DCD3E /* RegisterViewModal.swift */,
 				034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */,
+				030C349822E8B6470015A150 /* FamilyViewModal.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -331,6 +374,8 @@
 				034719F722E0D02F0020AC3F /* LanguageModal.swift */,
 				034719F922E0D0570020AC3F /* IllnessModal.swift */,
 				034719FB22E0D0810020AC3F /* AllergiesModal.swift */,
+				030C349622E8B2E60015A150 /* LoginModal.swift */,
+				030C349A22E8B7E10015A150 /* FamilyListModal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -476,6 +521,7 @@
 				0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */,
 				030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */,
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
+				030E960F22E76CEE00DE7D99 /* AddMemberViewController.xib in Resources */,
 				030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
@@ -555,7 +601,9 @@
 				030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
+				030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */,
 				0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */,
+				030E960E22E76CEE00DE7D99 /* AddMemberViewController.swift in Sources */,
 				03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */,
 				E3893C5C22873BC700691449 /* HomeViewController.swift in Sources */,
 				E3893C7922873CDF00691449 /* GenderCell.swift in Sources */,
@@ -567,12 +615,14 @@
 				E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */,
 				030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
+				030C34A022E8BAD10015A150 /* FamilyViewCell.swift in Sources */,
 				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
 				E380AE5122835265001206D2 /* Style.swift in Sources */,
 				E3893C6122873C4700691449 /* LoginViewController.swift in Sources */,
 				034719FC22E0D0810020AC3F /* AllergiesModal.swift in Sources */,
 				0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */,
 				034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */,
+				030C349922E8B6470015A150 /* FamilyViewModal.swift in Sources */,
 				034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */,
 				0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */,
 				E3893C6722873C6900691449 /* OTPViewController.swift in Sources */,
@@ -580,8 +630,10 @@
 				030CC0C922DCCF1600A9B1AF /* ApiClientClass.swift in Sources */,
 				E3893C7B22873CDF00691449 /* TermAndConditionCell.swift in Sources */,
 				E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */,
+				030C349722E8B2E60015A150 /* LoginModal.swift in Sources */,
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
 				030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */,
+				030C349B22E8B7E10015A150 /* FamilyListModal.swift in Sources */,
 				034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

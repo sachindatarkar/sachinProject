@@ -17,7 +17,7 @@ class LoginViewModal: NSObject {
         var params: [String:Any] = [:]
         params = self.GetCommonParrameter()
         params["mobile"] = mobileNo
-        apiClient.fetchApiResponse(action: "login.php", param: params) { (dictionary) in
+        apiClient.fetchApiResponse(action: "login.php", param: params) { (dictionary,data) in
             do {
                 if let otp : Int = dictionary?.value(forKey: "otp") as? Int{
                     if otp != 0 {
