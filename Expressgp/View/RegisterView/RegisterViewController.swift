@@ -256,6 +256,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
         registerTV.reloadData()
     }
+    
     @objc func didChangeFirstText(textField:UITextField) {
         if(textField.text == " "){
             textField.text = ""

@@ -35,6 +35,7 @@
 		0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39D2276B7820014B568 /* UIViewExtension.swift */; };
 		0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39F2276BA7B0014B568 /* UIColourExtension.swift */; };
 		0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */; };
+		0343146522EC4ECF00BA28DC /* AddMemberViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */; };
 		034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */; };
 		034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F722E0D02F0020AC3F /* LanguageModal.swift */; };
 		034719FA22E0D0570020AC3F /* IllnessModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F922E0D0570020AC3F /* IllnessModal.swift */; };
@@ -106,6 +107,7 @@
 		0319C39D2276B7820014B568 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0319C39F2276BA7B0014B568 /* UIColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColourExtension.swift; sourceTree = "<group>"; };
 		0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomeAlert.swift; sourceTree = "<group>"; };
+		0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModal.swift; sourceTree = "<group>"; };
 		034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSearchViweModal.swift; sourceTree = "<group>"; };
 		034719F722E0D02F0020AC3F /* LanguageModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModal.swift; sourceTree = "<group>"; };
 		034719F922E0D0570020AC3F /* IllnessModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessModal.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				0310E91922DE298F001DCD3E /* RegisterViewModal.swift */,
 				034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */,
 				030C349822E8B6470015A150 /* FamilyViewModal.swift */,
+				0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
 				030C34A022E8BAD10015A150 /* FamilyViewCell.swift in Sources */,
+				0343146522EC4ECF00BA28DC /* AddMemberViewModal.swift in Sources */,
 				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
 				E380AE5122835265001206D2 /* Style.swift in Sources */,
 				E3893C6122873C4700691449 /* LoginViewController.swift in Sources */,

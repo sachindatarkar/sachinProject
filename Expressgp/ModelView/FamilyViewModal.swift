@@ -34,4 +34,24 @@ class FamilyViewModal: NSObject {
         }
     }
     
+    func deleteFamilyMember(userObj:LoginData,memberData:FamiliListData) {
+        var params: [String:Any] = [:]
+        params = self.GetCommonParrameter()
+        params["patient_id"] = userObj.patient_id
+        params["user_id"] = userObj.user_id
+        params["family_id"] = memberData.family_id
+        apiClient.fetchApiResponse(action: "delete_family.php", param: params) { (dictionary,data) in
+            do {
+                if let status : Int = dictionary?.value(forKey: "success") as? Int{
+                    if status == 1 {
+                        self.getFamilyList(userObj: userObj)
+                    }
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+                print(error.description)
+            }
+        }
+    }
+    
 }
