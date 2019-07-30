@@ -43,6 +43,10 @@
 		034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */; };
 		03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */; };
 		038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
+		03C1329C22F0B410004C3252 /* ConsulationFeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */; };
+		03C1329D22F0B410004C3252 /* ConsulationFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */; };
+		03C132A022F0B69A004C3252 /* UserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1329E22F0B69A004C3252 /* UserDetailCell.swift */; };
+		03C132A122F0B69A004C3252 /* UserDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C1329F22F0B69A004C3252 /* UserDetailCell.xib */; };
 		03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */; };
 		03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */; };
 		03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */; };
@@ -124,6 +128,10 @@
 		034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableCell.swift; sourceTree = "<group>"; };
 		034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableCell.xib; sourceTree = "<group>"; };
 		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
+		03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulationFeeCell.swift; sourceTree = "<group>"; };
+		03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsulationFeeCell.xib; sourceTree = "<group>"; };
+		03C1329E22F0B69A004C3252 /* UserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCell.swift; sourceTree = "<group>"; };
+		03C1329F22F0B69A004C3252 /* UserDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailCell.xib; sourceTree = "<group>"; };
 		03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailDrInfoCell.swift; sourceTree = "<group>"; };
 		03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailDrInfoCell.xib; sourceTree = "<group>"; };
 		03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingCell.swift; sourceTree = "<group>"; };
@@ -341,6 +349,10 @@
 				03F85BAD22EDA46200781437 /* MaptableCell.xib */,
 				03F85BB022EDA4B400781437 /* AppoinmentDetailCell.swift */,
 				03F85BB122EDA4B400781437 /* AppoinmentDetailCell.xib */,
+				03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */,
+				03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */,
+				03C1329E22F0B69A004C3252 /* UserDetailCell.swift */,
+				03C1329F22F0B69A004C3252 /* UserDetailCell.xib */,
 			);
 			path = BookingDetailCellFile;
 			sourceTree = "<group>";
@@ -540,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C1329D22F0B410004C3252 /* ConsulationFeeCell.xib in Resources */,
 				E3893C7822873CDF00691449 /* FirstNameLastNameCell.xib in Resources */,
 				03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */,
 				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
@@ -554,6 +567,7 @@
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
 				030E960F22E76CEE00DE7D99 /* AddMemberViewController.xib in Resources */,
 				030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */,
+				03C132A122F0B69A004C3252 /* UserDetailCell.xib in Resources */,
 				03F85BAB22EDA16B00781437 /* DoctorProfileCell.xib in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
@@ -637,6 +651,7 @@
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				03F85BB222EDA4B400781437 /* AppoinmentDetailCell.swift in Sources */,
+				03C1329C22F0B410004C3252 /* ConsulationFeeCell.swift in Sources */,
 				030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */,
 				0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */,
 				030E960E22E76CEE00DE7D99 /* AddMemberViewController.swift in Sources */,
@@ -661,6 +676,7 @@
 				034719FC22E0D0810020AC3F /* AllergiesModal.swift in Sources */,
 				0343146722EC67DD00BA28DC /* BookingListViewModal.swift in Sources */,
 				0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */,
+				03C132A022F0B69A004C3252 /* UserDetailCell.swift in Sources */,
 				034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */,
 				030C349922E8B6470015A150 /* FamilyViewModal.swift in Sources */,
 				034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */,
