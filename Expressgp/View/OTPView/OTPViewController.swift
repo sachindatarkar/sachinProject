@@ -115,4 +115,8 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         let seconds: Int = totalSeconds % 60
         return String(format: "0:%02ds", seconds)
     }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationItem.hidesBackButton = true
+    }
 }

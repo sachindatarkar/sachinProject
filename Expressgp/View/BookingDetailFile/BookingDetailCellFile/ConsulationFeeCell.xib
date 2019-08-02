@@ -74,6 +74,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgView" destination="e1f-Fu-ZJq" id="uSR-Hc-9tF"/>
+                <outlet property="consulation_lbl" destination="O7s-O7-iSd" id="Qmd-Ui-dOd"/>
+                <outlet property="paymentType_lbl" destination="xLs-rc-rcW" id="alU-CI-M5d"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="142.63392857142856"/>
         </tableViewCell>

@@ -10,6 +10,13 @@ import UIKit
 
 class DoctorProfileCell: UITableViewCell {
 
+    @IBOutlet weak var cancel_btn: UIButton!
+    @IBOutlet weak var call_btn: UIButton!
+    @IBOutlet weak var starRating_lbl: UILabel!
+    @IBOutlet weak var speciality_lbl: UILabel!
+    @IBOutlet weak var drName: UILabel!
+    @IBOutlet weak var drProfileImage: UIImageView!
+    @IBOutlet weak var otp_lbl: UILabel!
     @IBOutlet weak var bgView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()

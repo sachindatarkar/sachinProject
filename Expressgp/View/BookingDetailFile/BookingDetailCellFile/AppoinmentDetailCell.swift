@@ -10,6 +10,10 @@ import UIKit
 
 class AppoinmentDetailCell: UITableViewCell {
 
+    @IBOutlet weak var expectedTime_lbl: UILabel!
+    @IBOutlet weak var distance_lbl: UILabel!
+    @IBOutlet weak var address_lbl: UILabel!
+    @IBOutlet weak var bookingId: UILabel!
     @IBOutlet weak var bgView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()

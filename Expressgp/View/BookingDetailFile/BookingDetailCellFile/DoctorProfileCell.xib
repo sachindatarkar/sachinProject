@@ -139,6 +139,13 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgView" destination="XYD-op-Jul" id="P00-SK-BhD"/>
+                <outlet property="call_btn" destination="TlV-cJ-f6t" id="JhS-Wr-FD8"/>
+                <outlet property="cancel_btn" destination="za6-2x-m2Y" id="QnA-8t-NST"/>
+                <outlet property="drName" destination="pBg-PI-bPc" id="kFh-eg-gyQ"/>
+                <outlet property="drProfileImage" destination="XHn-G3-0Pl" id="UrS-Cv-cLD"/>
+                <outlet property="otp_lbl" destination="VLP-Ne-oDV" id="3Bf-ot-fTn"/>
+                <outlet property="speciality_lbl" destination="eN2-Jb-odo" id="NSd-Tx-NUi"/>
+                <outlet property="starRating_lbl" destination="OXS-p8-N8x" id="n14-C1-FoV"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="155.02232142857142"/>
         </tableViewCell>

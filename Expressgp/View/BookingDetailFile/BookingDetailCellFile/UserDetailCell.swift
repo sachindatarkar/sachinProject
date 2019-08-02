@@ -10,6 +10,11 @@ import UIKit
 
 class UserDetailCell: UITableViewCell {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var relation_lbl: UILabel!
+    @IBOutlet weak var problem_lbl: UILabel!
+    @IBOutlet weak var age_lbl: UILabel!
+    @IBOutlet weak var name_lbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

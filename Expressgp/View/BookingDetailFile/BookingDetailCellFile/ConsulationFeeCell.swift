@@ -10,6 +10,8 @@ import UIKit
 
 class ConsulationFeeCell: UITableViewCell {
 
+    @IBOutlet weak var paymentType_lbl: UILabel!
+    @IBOutlet weak var consulation_lbl: UILabel!
     @IBOutlet weak var bgView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
