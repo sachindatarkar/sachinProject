@@ -9,9 +9,16 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Medium.ttf">
+            <string>MavenPro-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LanguageSearchView" customModule="Expressgp" customModuleProvider="target">
             <connections>
+                <outlet property="cancel_btn" destination="cER-Oq-mdP" id="PTu-u2-sst"/>
+                <outlet property="done_btn" destination="FAp-oZ-ocK" id="ehK-ca-Pu4"/>
                 <outlet property="registerTV" destination="F2m-mQ-B7G" id="TJR-ce-cp5"/>
                 <outlet property="searchBar" destination="v1i-jK-q9Z" id="2er-oo-OIr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,22 +33,22 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-ei-v2P">
-                            <rect key="frame" x="364" y="10" width="40" height="40"/>
+                            <rect key="frame" x="364" y="23" width="40" height="32"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="0Ws-5P-Qct"/>
-                                <constraint firstAttribute="width" constant="40" id="W6T-Iy-68Y"/>
+                                <constraint firstAttribute="width" constant="40" id="Zjk-nZ-TsC"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Done"/>
                             <connections>
                                 <action selector="onClickClose:" destination="-1" eventType="touchUpInside" id="NXL-0z-dJl"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="8hH-LI-CRK"/>
-                        <constraint firstItem="xiX-Ty-NQ7" firstAttribute="trailing" secondItem="qk7-ei-v2P" secondAttribute="trailing" constant="10" id="LBu-bm-zkn"/>
-                        <constraint firstItem="qk7-ei-v2P" firstAttribute="top" secondItem="ZeD-fP-jaB" secondAttribute="top" constant="10" id="hon-Pm-vhL"/>
+                        <constraint firstItem="xiX-Ty-NQ7" firstAttribute="bottom" secondItem="qk7-ei-v2P" secondAttribute="bottom" constant="10" id="8vC-pv-c2J"/>
+                        <constraint firstItem="xiX-Ty-NQ7" firstAttribute="trailing" secondItem="qk7-ei-v2P" secondAttribute="trailing" constant="10" id="CBn-TW-Nom"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="xiX-Ty-NQ7"/>
                 </view>
@@ -56,25 +63,52 @@
                     </connections>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-mQ-B7G">
-                    <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                    <rect key="frame" x="0.0" y="105" width="414" height="735"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="4dX-zz-fms"/>
                         <outlet property="delegate" destination="-1" id="Iwq-bs-D39"/>
                     </connections>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U5I-Qg-rED">
+                    <rect key="frame" x="10" y="848" width="394" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cER-Oq-mdP">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro Medium" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAp-oZ-ocK">
+                            <rect key="frame" x="207" y="0.0" width="187" height="40"/>
+                            <color key="backgroundColor" red="0.21492957970000001" green="0.81385511160000001" blue="0.1455508348" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro Medium" pointSize="17"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iby-mr-Qhd"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ZeD-fP-jaB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0xh-tS-xT1"/>
                 <constraint firstItem="v1i-jK-q9Z" firstAttribute="top" secondItem="ZeD-fP-jaB" secondAttribute="bottom" id="1eU-XR-Mv1"/>
+                <constraint firstItem="F2m-mQ-B7G" firstAttribute="top" secondItem="v1i-jK-q9Z" secondAttribute="bottom" id="25k-Lg-rKe"/>
                 <constraint firstItem="v1i-jK-q9Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4ua-OZ-RZR"/>
                 <constraint firstItem="ZeD-fP-jaB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9zV-ZY-peH"/>
-                <constraint firstItem="F2m-mQ-B7G" firstAttribute="top" secondItem="v1i-jK-q9Z" secondAttribute="bottom" id="Acy-86-gn4"/>
+                <constraint firstItem="F2m-mQ-B7G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CAS-aO-c0j"/>
                 <constraint firstItem="v1i-jK-q9Z" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D8E-sm-QsL"/>
-                <constraint firstItem="F2m-mQ-B7G" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Ypq-PY-930"/>
-                <constraint firstItem="F2m-mQ-B7G" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZN5-jl-OVx"/>
-                <constraint firstItem="F2m-mQ-B7G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kI5-bU-bwi"/>
+                <constraint firstAttribute="trailing" secondItem="U5I-Qg-rED" secondAttribute="trailing" constant="10" id="OGc-hU-xrr"/>
+                <constraint firstItem="U5I-Qg-rED" firstAttribute="top" secondItem="F2m-mQ-B7G" secondAttribute="bottom" constant="8" id="WdA-hk-ZTG"/>
+                <constraint firstItem="U5I-Qg-rED" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bK3-RU-zSV"/>
+                <constraint firstAttribute="bottom" secondItem="U5I-Qg-rED" secondAttribute="bottom" constant="8" id="eDx-mm-Cl6"/>
+                <constraint firstItem="F2m-mQ-B7G" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sI5-Rr-4dK"/>
                 <constraint firstItem="ZeD-fP-jaB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y0m-PT-QmP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

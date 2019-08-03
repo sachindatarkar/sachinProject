@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 struct BookingDetailModal : Decodable {
     var data :[BookingDetailData]?
 }
@@ -32,8 +30,8 @@ struct BookingDetailData:Decodable {
     var patient_id : String?
     var appointment_date : String?
     var appointment_time : String?
-    var start_time : String?
-    var end_time : String?
+//    var start_time : String?
+//    var end_time : String?
     var paid : String?
     var doctor_id : String?
     var distance : String?
@@ -46,6 +44,6 @@ struct BookingDetailData:Decodable {
     var reason : String?
     var payment_type : String?
     var age : String?
-    var completed_on : String?
+   // var completed_on : String?
     var type : String?
 }

@@ -159,20 +159,20 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
     
     //MARK:- LanguageDelegate
     
-    func didSelectlanguage(languageObj:LanguageData) {
-        languageTF.text = languageObj.language_name
-        companyProfileObj.language = languageObj.language_name
-        companyProfileObj.language_id = languageObj.language_id
+    func didSelectlanguage(languageObj:[LanguageData]) {
+        languageTF.text = languageObj[0].language_name
+        companyProfileObj.language = languageObj[0].language_name
+        companyProfileObj.language_id = languageObj[0].language_id
     }
-    func didSelectillness(illnessObj:IllnessData) {
-        companyProfileObj.Illness_id = illnessObj.specialty_id
-        companyProfileObj.existingIllness = illnessObj.reason
-        existingillnessTF.text = illnessObj.reason
+    func didSelectillness(illnessObj:[IllnessData]) {
+        companyProfileObj.Illness_id = illnessObj[0].specialty_id
+        companyProfileObj.existingIllness = illnessObj[0].reason
+        existingillnessTF.text = illnessObj[0].reason
     }
-    func didSelectiAllergies(AllergiesObj:AllergiesData) {
-        companyProfileObj.allergies_id = AllergiesObj.allergy_id
-        companyProfileObj.existingAllergies = AllergiesObj.allergy
-        existingAllergiTF.text = AllergiesObj.allergy
+    func didSelectiAllergies(AllergiesObj:[AllergiesData]) {
+        companyProfileObj.allergies_id = AllergiesObj[0].allergy_id
+        companyProfileObj.existingAllergies = AllergiesObj[0].allergy
+        existingAllergiTF.text = AllergiesObj[0].allergy
     }
     
     //MARK:- Button Action

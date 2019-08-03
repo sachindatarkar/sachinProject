@@ -294,19 +294,35 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.view.endEditing(true)
     }
     
-    func didSelectlanguage(languageObj:LanguageData) {
-        companyProfileObj.language = languageObj.language_name
-        //companyProfileObj.
+    func didSelectlanguage(languageObj:[LanguageData]) {
+        var selectedStr = ""
+        for obj in languageObj {
+            selectedStr.append("\(obj.language_name ?? ""),")
+        }
+        selectedStr.removeLast()
+        companyProfileObj.language = selectedStr
         registerTV.reloadData()
     }
-    func didSelectillness(illnessObj:IllnessData) {
-        companyProfileObj.Illness_id = illnessObj.specialty_id
-        companyProfileObj.existingIllness = illnessObj.reason
+    func didSelectillness(illnessObj:[IllnessData]) {
+        var selecedIdArry = [String]()
+        var selectedReason = [String]()
+        for obj in illnessObj {
+            selecedIdArry.append(obj.specialty_id ?? "")
+            selectedReason.append(obj.reason ?? "")
+        }
+        companyProfileObj.Illness_id = selecedIdArry.joined(separator: ",")
+        companyProfileObj.existingIllness = selectedReason.joined(separator: ",")
         registerTV.reloadData()
     }
-    func didSelectiAllergies(AllergiesObj:AllergiesData) {
-        companyProfileObj.allergies_id = AllergiesObj.allergy_id
-        companyProfileObj.existingAllergies = AllergiesObj.allergy
+    func didSelectiAllergies(AllergiesObj:[AllergiesData]) {
+        var selecedIdArry = [String]()
+        var selectedReason = [String]()
+        for obj in AllergiesObj {
+            selecedIdArry.append(obj.allergy_id ?? "")
+            selectedReason.append(obj.allergy ?? "")
+        }
+        companyProfileObj.allergies_id = selecedIdArry.joined(separator: ",")
+        companyProfileObj.existingAllergies = selectedReason.joined(separator: ",")
         registerTV.reloadData()
     }
     

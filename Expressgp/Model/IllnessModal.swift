@@ -16,4 +16,5 @@ struct IllnessData :  Decodable {
     var visit_id : String?
     var specialty_id : String?
     var reason : String?
+    var isSelected : Bool?
 }

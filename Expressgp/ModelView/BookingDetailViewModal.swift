@@ -16,7 +16,7 @@ class BookingDetailViewModal: NSObject {
     func getBookingList(userObj:LoginData,bookingId:String) {
         var params: [String:Any] = [:]
         params = self.GetCommonParrameter()
-        params["booking_id"] = userObj.patient_id
+        params["booking_id"] = bookingId
         params["user_id"] = userObj.user_id
         apiClient.fetchApiResponse(action: "booking_details.php", param: params) { (dictionary,data) in
             do {

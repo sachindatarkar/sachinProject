@@ -13,11 +13,17 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
     @IBOutlet weak var addMemberBtn: UIButton!
     var loginModalObj : LoginData?
     var familaViewObj = FamilyViewModal()
-    private let sectionInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 10.0,right: 10.0)
-    
+   // private let sectionInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 10.0,right: 10.0)
+    private let spacing:CGFloat = 5.0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addMemberBtn.addTarget(self, action: #selector(onClickAddMember), for: .touchUpInside)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
+        self.collectionView?.collectionViewLayout = layout
        
         familaViewObj.reloadCollectionView = {
             self.collectionView.reloadData()
@@ -92,24 +98,39 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * (2 + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / 2
+//        let paddingSpace = sectionInsets.left * (2 + 2)
+//        let availableWidth = view.frame.width - paddingSpace
+//        let widthPerItem = availableWidth / 2
+//
+//        return CGSize(width: widthPerItem, height: widthPerItem)
+        let numberOfItemsPerRow:CGFloat = 2
+        let spacingBetweenCells:CGFloat = 5
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) //Amount of total spacing in a row
+        
+        if let collection = self.collectionView{
+            let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
+            return CGSize(width: width, height: width)
+        }else{
+            return CGSize(width: 0, height: 0)
+        }
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
-    }
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return sectionInsets
+//    }
+//
+//     func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return sectionInsets.left
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//         return sectionInsets.right
+//    }
     
     //MARK:- Delete Member
     

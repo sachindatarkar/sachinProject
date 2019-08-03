@@ -24,13 +24,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-iW-H92">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-iW-H92">
                         <rect key="frame" x="15" y="2" width="40" height="40"/>
-                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="eHB-9N-CJY"/>
                             <constraint firstAttribute="height" constant="40" id="sI3-lc-M07"/>
                         </constraints>
+                        <state key="normal" image="checkBoxUnselected.png"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-8s-wE8">
                         <rect key="frame" x="63" y="8" width="249" height="27.5"/>
@@ -56,4 +57,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checkBoxUnselected.png" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>

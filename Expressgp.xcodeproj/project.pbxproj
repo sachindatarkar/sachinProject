@@ -13,6 +13,9 @@
 		030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C73228332BB00691E43 /* BookingListCell.swift */; };
 		030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C78228347B500691E43 /* BookingDetailViewController.swift */; };
 		030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C79228347B500691E43 /* BookingDetailViewController.xib */; };
+		030AA2F922F5B98C00A32D3B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030AA2F822F5B98C00A32D3B /* AccountViewController.swift */; };
+		030AA2FC22F5FD2500A32D3B /* checkBoxSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */; };
+		030AA2FD22F5FD2500A32D3B /* checkBoxUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */; };
 		030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349422E8B13A0015A150 /* FamilyViewController.swift */; };
 		030C349722E8B2E60015A150 /* LoginModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349622E8B2E60015A150 /* LoginModal.swift */; };
 		030C349922E8B6470015A150 /* FamilyViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349822E8B6470015A150 /* FamilyViewModal.swift */; };
@@ -94,6 +97,9 @@
 		030A8C73228332BB00691E43 /* BookingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListCell.swift; sourceTree = "<group>"; };
 		030A8C78228347B500691E43 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
 		030A8C79228347B500691E43 /* BookingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailViewController.xib; sourceTree = "<group>"; };
+		030AA2F822F5B98C00A32D3B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBoxSelected.png; sourceTree = "<group>"; };
+		030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBoxUnselected.png; sourceTree = "<group>"; };
 		030C349422E8B13A0015A150 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
 		030C349622E8B2E60015A150 /* LoginModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModal.swift; sourceTree = "<group>"; };
 		030C349822E8B6470015A150 /* FamilyViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModal.swift; sourceTree = "<group>"; };
@@ -206,6 +212,14 @@
 			path = BookingDetailFile;
 			sourceTree = "<group>";
 		};
+		030AA2F722F5B95C00A32D3B /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				030AA2F822F5B98C00A32D3B /* AccountViewController.swift */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
 		030C349C22E8BA830015A150 /* FamilyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,14 +255,14 @@
 			path = AddMemberView;
 			sourceTree = "<group>";
 		};
-		0310E91B22DE38C0001DCD3E /* SeaarchPopUp */ = {
+		0310E91B22DE38C0001DCD3E /* SearchPopUp */ = {
 			isa = PBXGroup;
 			children = (
 				03471A0122E0D8180020AC3F /* CellView */,
 				0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */,
 				0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */,
 			);
-			path = SeaarchPopUp;
+			path = SearchPopUp;
 			sourceTree = "<group>";
 		};
 		0319C3772276B05B0014B568 = {
@@ -308,6 +322,8 @@
 		0319C39C2276B7620014B568 /* CommonFile */ = {
 			isa = PBXGroup;
 			children = (
+				030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */,
+				030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */,
 				03F85BA622ED875200781437 /* star.png */,
 				0319C39D2276B7820014B568 /* UIViewExtension.swift */,
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
@@ -382,9 +398,10 @@
 		E333794A227EE45E0074D1B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				030AA2F722F5B95C00A32D3B /* MyAccount */,
 				030C349C22E8BA830015A150 /* FamilyView */,
 				030E960B22E76C9500DE7D99 /* AddMemberView */,
-				0310E91B22DE38C0001DCD3E /* SeaarchPopUp */,
+				0310E91B22DE38C0001DCD3E /* SearchPopUp */,
 				E3893C6822873C6C00691449 /* RegisterView */,
 				E3893C6322873C5300691449 /* OTPView */,
 				E3893C5E22873C3400691449 /* LoginView */,
@@ -577,10 +594,12 @@
 				03F85BAB22EDA16B00781437 /* DoctorProfileCell.xib in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
+				030AA2FD22F5FD2500A32D3B /* checkBoxUnselected.png in Resources */,
 				E3893C6222873C4700691449 /* LoginViewController.xib in Resources */,
 				E3893C7F22873CDF00691449 /* GeneralRegisterCell.xib in Resources */,
 				03F85BA522ED83EC00781437 /* credit-card.png in Resources */,
 				03F85BA422ED83EC00781437 /* clock.png in Resources */,
+				030AA2FC22F5FD2500A32D3B /* checkBoxSelected.png in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
 				030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */,
 				E3893C6D22873CC600691449 /* RegisterViewController.xib in Resources */,
@@ -657,6 +676,7 @@
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				03F85BB222EDA4B400781437 /* AppoinmentDetailCell.swift in Sources */,
+				030AA2F922F5B98C00A32D3B /* AccountViewController.swift in Sources */,
 				03C1329C22F0B410004C3252 /* ConsulationFeeCell.swift in Sources */,
 				030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */,
 				0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */,

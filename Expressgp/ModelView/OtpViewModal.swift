@@ -35,5 +35,24 @@ class OtpViewModal: NSObject {
             }
         }
     }
+    
+   /* func checkLogin(mobileNo:String)  {
+        var params: [String:Any] = [:]
+        params = self.GetCommonParrameter()
+        params["mobile"] = ConstantClass.sharedInstance.mobileNo
+        apiClient.fetchApiResponse(action: "login.php", param: params) { (dictionary,data) in
+            do {
+                if let otp : Int = dictionary?.value(forKey: "otp") as? Int{
+                    if otp != 0 {
+                        ConstantClass.sharedInstance.mobileNo = mobileNo
+                      
+                    }
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+                print(error.description)
+            }
+        }
+    }*/
 
 }

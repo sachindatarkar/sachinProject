@@ -24,13 +24,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmr-5Q-Fcm">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmr-5Q-Fcm">
                         <rect key="frame" x="8" y="2" width="40" height="40"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="45U-0f-gM7"/>
                             <constraint firstAttribute="height" constant="40" id="uhn-D7-XPZ"/>
                         </constraints>
+                        <state key="normal" image="checkBoxUnselected.png"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Accept Term &amp; Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="416-Tm-XZz">
                         <rect key="frame" x="56" y="11" width="240" height="22"/>
@@ -51,4 +52,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checkBoxUnselected.png" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>
