@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0309794A22F6C6FA00DDD217 /* LoaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309794922F6C6FA00DDD217 /* LoaderClass.swift */; };
 		030A2B3B22E389F1007DC1A2 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */; };
 		030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A2B3C22E38F14007DC1A2 /* optionSelect.png */; };
 		030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A2B3D22E38F14007DC1A2 /* optionUnselect.png */; };
@@ -91,6 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0309794922F6C6FA00DDD217 /* LoaderClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderClass.swift; sourceTree = "<group>"; };
 		030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		030A2B3C22E38F14007DC1A2 /* optionSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionSelect.png; sourceTree = "<group>"; };
 		030A2B3D22E38F14007DC1A2 /* optionUnselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionUnselect.png; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				03F85BA322ED83EC00781437 /* credit-card.png */,
 				030A2B3C22E38F14007DC1A2 /* optionSelect.png */,
 				030A2B3D22E38F14007DC1A2 /* optionUnselect.png */,
+				0309794922F6C6FA00DDD217 /* LoaderClass.swift */,
 			);
 			path = CommonFile;
 			sourceTree = "<group>";
@@ -652,9 +655,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -673,6 +681,7 @@
 				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */,
 				03F85BA122ED723700781437 /* BookingListModal.swift in Sources */,
+				0309794A22F6C6FA00DDD217 /* LoaderClass.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				03F85BB222EDA4B400781437 /* AppoinmentDetailCell.swift in Sources */,
@@ -861,10 +870,7 @@
 				DEVELOPMENT_TEAM = QW737RU4QC;
 				INFOPLIST_FILE = Expressgp/SupportFile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Expressgp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -881,10 +887,7 @@
 				DEVELOPMENT_TEAM = QW737RU4QC;
 				INFOPLIST_FILE = Expressgp/SupportFile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Expressgp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

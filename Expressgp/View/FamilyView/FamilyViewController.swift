@@ -26,6 +26,7 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
         self.collectionView?.collectionViewLayout = layout
        
         familaViewObj.reloadCollectionView = {
+            LoadingOverlay.shared.hideLoaderView()
             self.collectionView.reloadData()
         }
     }
@@ -35,6 +36,7 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
             do {
                 let loginObj = try JSONDecoder().decode(LoginModal.self, from: loginData as! Data)
                 self.loginModalObj = loginObj.data?[0]
+                LoadingOverlay.shared.showLoaderView(view: self.view)
                 self.familaViewObj.getFamilyList(userObj: loginModalObj ?? LoginData())
             } catch let error as NSError {
                 print(error.localizedDescription)

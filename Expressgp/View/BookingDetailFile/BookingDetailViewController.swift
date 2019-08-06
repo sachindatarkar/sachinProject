@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+
 
 class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -61,12 +63,23 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell =  tableView.dequeueReusableCell(withIdentifier: "MaptableCell") as? MaptableCell
+            let latitude : Double = Double(self.bookingDetailViewObj.bookingDetailObj?.p_latitude ?? "0.0") ?? 0.0
+            let longitude : Double = Double(self.bookingDetailViewObj.bookingDetailObj?.p_longitude ?? "0.0") ?? 0.0
+            let sydney = GMSCameraPosition.camera(withLatitude: latitude,
+                                                  longitude: longitude,
+                                                  zoom: 6)
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            cell?.mapView.camera = sydney
+            marker.map = cell?.mapView
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 1 {
             let cell =  tableView.dequeueReusableCell(withIdentifier: "DoctorProfileCell") as? DoctorProfileCell
             cell?.drName.text = self.bookingDetailViewObj.bookingDetailObj?.doctor_name
             cell?.speciality_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.specialty_name
             cell?.otp_lbl.text = "Otp : \(self.bookingDetailViewObj.bookingDetailObj?.otp ?? "")"
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 2 {
             let cell =  tableView.dequeueReusableCell(withIdentifier: "AppoinmentDetailCell") as? AppoinmentDetailCell
@@ -74,11 +87,13 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
             cell?.address_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.booking_address
             cell?.distance_lbl.text = "\(self.bookingDetailViewObj.bookingDetailObj?.distance ?? "") Km"
             cell?.expectedTime_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.appointment_time
+            cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 3 {
             let cell =  tableView.dequeueReusableCell(withIdentifier: "ConsulationFeeCell") as? ConsulationFeeCell
             cell?.consulation_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.amount
             cell?.paymentType_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.payment_type
+            cell?.selectionStyle = .none
             return cell!
         }else{
             let cell =  tableView.dequeueReusableCell(withIdentifier: "UserDetailCell") as? UserDetailCell
@@ -86,6 +101,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
             cell?.age_lbl.text = "\(self.bookingDetailViewObj.bookingDetailObj?.age ?? "") Yrs"
             cell?.problem_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.reason
             cell?.relation_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.relation
+            cell?.selectionStyle = .none
             return cell!
         }
         return UITableViewCell()

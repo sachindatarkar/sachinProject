@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UINavigationBar.appearance().barTintColor = Style.Color.Background.primaryColor
         UINavigationBar.appearance().backgroundColor = Style.Color.Background.primaryColor
+        
+        GMSServices.provideAPIKey("AIzaSyBMNWJsFzaApBOPY9rbPphOqNADi_IRGbw")
+        GMSPlacesClient.provideAPIKey("AIzaSyBMNWJsFzaApBOPY9rbPphOqNADi_IRGbw")
 
        /* let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
         let navView = UINavigationController(rootViewController: vc)

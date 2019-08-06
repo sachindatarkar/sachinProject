@@ -19,18 +19,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gHu-lG-hbn">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAo-37-gVb" customClass="GMSMapView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                    </mapView>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="gHu-lG-hbn" secondAttribute="trailing" id="lPh-Lw-uTx"/>
-                    <constraint firstItem="gHu-lG-hbn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lfv-07-txS"/>
-                    <constraint firstAttribute="bottom" secondItem="gHu-lG-hbn" secondAttribute="bottom" id="pSR-ny-PiH"/>
-                    <constraint firstItem="gHu-lG-hbn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ykj-hU-5U0"/>
+                    <constraint firstItem="PAo-37-gVb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="T41-ut-N1b"/>
+                    <constraint firstAttribute="bottom" secondItem="PAo-37-gVb" secondAttribute="bottom" id="VkU-V5-uad"/>
+                    <constraint firstItem="PAo-37-gVb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="amK-Dr-d8f"/>
+                    <constraint firstAttribute="trailing" secondItem="PAo-37-gVb" secondAttribute="trailing" id="uT5-D4-TAf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mapView" destination="PAo-37-gVb" id="IiS-NH-IZP"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="104.46428571428571"/>
         </tableViewCell>
     </objects>

@@ -48,7 +48,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         registerViewModalObj.pushToHomeView = {
-            
+            let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }
@@ -193,9 +194,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func onClickSubmit() {
+        LoadingOverlay.shared.showLoaderView(view: self.view)
         registerViewModalObj.registerUser(userObj: companyProfileObj)
-        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- UITextField Delegate

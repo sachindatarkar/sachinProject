@@ -400,7 +400,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xvd-Lp-cm9">
-                                <rect key="frame" x="8" y="44" width="398" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xCQ-2s-vRN">
                                     <size key="itemSize" width="150" height="172"/>
@@ -510,11 +510,11 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dve-Ll-Dhr" firstAttribute="bottom" secondItem="xW4-Aa-y6N" secondAttribute="bottom" constant="10" id="RhJ-xV-lGa"/>
-                            <constraint firstItem="Xvd-Lp-cm9" firstAttribute="leading" secondItem="dve-Ll-Dhr" secondAttribute="leading" constant="8" id="V8o-qv-gC7"/>
+                            <constraint firstItem="Xvd-Lp-cm9" firstAttribute="leading" secondItem="dve-Ll-Dhr" secondAttribute="leading" id="V8o-qv-gC7"/>
                             <constraint firstItem="xW4-Aa-y6N" firstAttribute="centerX" secondItem="dve-Ll-Dhr" secondAttribute="centerX" id="ZUb-dh-88o"/>
                             <constraint firstItem="Xvd-Lp-cm9" firstAttribute="bottom" secondItem="dve-Ll-Dhr" secondAttribute="bottom" id="dmE-dl-W3M"/>
                             <constraint firstItem="Xvd-Lp-cm9" firstAttribute="top" secondItem="dve-Ll-Dhr" secondAttribute="top" id="pKf-P7-d6S"/>
-                            <constraint firstItem="Xvd-Lp-cm9" firstAttribute="trailing" secondItem="dve-Ll-Dhr" secondAttribute="trailing" constant="-8" id="rXh-dq-JTq"/>
+                            <constraint firstItem="Xvd-Lp-cm9" firstAttribute="trailing" secondItem="dve-Ll-Dhr" secondAttribute="trailing" id="rXh-dq-JTq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dve-Ll-Dhr"/>
                     </view>

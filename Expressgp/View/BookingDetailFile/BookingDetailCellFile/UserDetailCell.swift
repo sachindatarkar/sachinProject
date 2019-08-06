@@ -9,7 +9,8 @@
 import UIKit
 
 class UserDetailCell: UITableViewCell {
-
+    @IBOutlet weak var bgView: UIView!
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var relation_lbl: UILabel!
     @IBOutlet weak var problem_lbl: UILabel!
@@ -18,10 +19,10 @@ class UserDetailCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.contentView.layer.masksToBounds = false
-        self.contentView.layer.cornerRadius = 5.0
-        self.contentView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        self.contentView.layer.shadowOpacity = 0.5
+        self.bgView.layer.masksToBounds = false
+        self.bgView.layer.cornerRadius = 5.0
+        self.bgView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.bgView.layer.shadowOpacity = 0.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

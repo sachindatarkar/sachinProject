@@ -46,6 +46,7 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         fourthTF.setBottomBorder()
         
         otpViewModalObj.pushToHomeView = {
+            LoadingOverlay.shared.hideLoaderView()
             let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
            self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -73,6 +74,7 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         let otpStrings = "\(firstTF.text ?? "")\(secondTF.text ?? "")\(thirdTF.text ?? "")\(fourthTF.text ?? "")"
         print(otpStrings)
         if !otpStrings.contains("") && otpStrings.count == 4 {
+            LoadingOverlay.shared.showLoaderView(view: self.view)
             otpViewModalObj.checkOtp(otpText: otpStr ?? 0)
 //            let vc = RegisterViewController()
 //            self.navigationController?.pushViewController(vc, animated: true)

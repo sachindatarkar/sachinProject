@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
         mobileNoTF.text = "8976159522"
         self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
         loginViewModalObj.pushToHomeView = { (otpStr) in
+            LoadingOverlay.shared.hideLoaderView()
             let otpView = OTPViewController()
             otpView.otpStr = otpStr
             self.navigationController?.pushViewController(otpView, animated: true)
@@ -46,6 +47,7 @@ class LoginViewController: UIViewController {
     
     @objc func onClickGetStarted() {
         if mobileNoTF.text != "" {
+            LoadingOverlay.shared.showLoaderView(view: self.view)
             loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
         }else{
             MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")

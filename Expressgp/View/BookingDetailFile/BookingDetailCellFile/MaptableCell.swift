@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MaptableCell: UITableViewCell {
-
+    @IBOutlet weak var mapView: GMSMapView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

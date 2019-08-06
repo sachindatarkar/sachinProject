@@ -7,5 +7,8 @@ target 'Expressgp' do
 
   # Pods for Expressgp
    pod 'Alamofire'
+   pod 'GoogleMaps'
+   pod 'GooglePlaces'
+   pod 'SDWebImage'
 
 end
