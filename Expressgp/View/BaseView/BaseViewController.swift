@@ -13,19 +13,19 @@ class BaseViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let userDict = UserDefaults.standard.value(forKey: "UserResponse")
+        
+        print(userDict)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print(tabBar.tag)
+        if(item.tag == 1) {
+            // Code for item 1
+        } else if(item.tag == 2) {
+            // Code for item 2
+        }
     }
-    */
  
 
 }

@@ -15,4 +15,5 @@ struct LanguageModal : Decodable  {
 struct LanguageData :  Decodable {
     var language_id :  String?
     var language_name : String?
+    var isSelected : Bool?
 }

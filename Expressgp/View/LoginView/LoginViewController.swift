@@ -15,8 +15,10 @@ class LoginViewController: UIViewController {
     var loginViewModalObj = LoginViewModal()
     override func viewDidLoad() {
         super.viewDidLoad()
+        mobileNoTF.text = "8976159522"
         self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
         loginViewModalObj.pushToHomeView = { (otpStr) in
+            LoadingOverlay.shared.hideLoaderView()
             let otpView = OTPViewController()
             otpView.otpStr = otpStr
             self.navigationController?.pushViewController(otpView, animated: true)
@@ -51,6 +53,7 @@ class LoginViewController: UIViewController {
 //        }
 		let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
 		self.navigationController?.pushViewController(vc, animated: true)
+
     }
 
 }

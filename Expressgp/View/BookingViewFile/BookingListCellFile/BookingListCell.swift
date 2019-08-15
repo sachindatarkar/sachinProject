@@ -10,6 +10,15 @@ import UIKit
 
 class BookingListCell: UITableViewCell {
 
+    @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var date_lbl: UILabel!
+    @IBOutlet weak var drProfileImage: UIImageView!
+    @IBOutlet weak var distance_lbl: UILabel!
+    @IBOutlet weak var rating_lbl: UILabel!
+    @IBOutlet weak var specialty_lbl: UILabel!
+    @IBOutlet weak var drName_lbl: UILabel!
+    @IBOutlet weak var status_lbl: UIButton!
+    @IBOutlet weak var address_lbl: UILabel!
     @IBOutlet weak var bgView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +30,10 @@ class BookingListCell: UITableViewCell {
         self.contentView.layer.shadowOpacity = 0.5
         bgView.layer.cornerRadius = 5.0
         bgView.layer.masksToBounds = true
+        drProfileImage.layer.cornerRadius = drProfileImage.frame.size.width / 2
+        drProfileImage.layer.masksToBounds = true
+        status_lbl.layer.cornerRadius = 12
+        status_lbl.layer.masksToBounds = true
 
     }
 

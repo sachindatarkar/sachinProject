@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0309794A22F6C6FA00DDD217 /* LoaderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309794922F6C6FA00DDD217 /* LoaderClass.swift */; };
+		030A2B3B22E389F1007DC1A2 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */; };
+		030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A2B3C22E38F14007DC1A2 /* optionSelect.png */; };
+		030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A2B3D22E38F14007DC1A2 /* optionUnselect.png */; };
 		030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C73228332BB00691E43 /* BookingListCell.swift */; };
-		030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C74228332BB00691E43 /* BookingListCell.xib */; };
 		030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030A8C78228347B500691E43 /* BookingDetailViewController.swift */; };
 		030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030A8C79228347B500691E43 /* BookingDetailViewController.xib */; };
+		030AA2F922F5B98C00A32D3B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030AA2F822F5B98C00A32D3B /* AccountViewController.swift */; };
+		030AA2FC22F5FD2500A32D3B /* checkBoxSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */; };
+		030AA2FD22F5FD2500A32D3B /* checkBoxUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */; };
+		030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349422E8B13A0015A150 /* FamilyViewController.swift */; };
+		030C349722E8B2E60015A150 /* LoginModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349622E8B2E60015A150 /* LoginModal.swift */; };
+		030C349922E8B6470015A150 /* FamilyViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349822E8B6470015A150 /* FamilyViewModal.swift */; };
+		030C349B22E8B7E10015A150 /* FamilyListModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349A22E8B7E10015A150 /* FamilyListModal.swift */; };
+		030C34A022E8BAD10015A150 /* FamilyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C349E22E8BAD10015A150 /* FamilyViewCell.swift */; };
 		030CC0C922DCCF1600A9B1AF /* ApiClientClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */; };
 		030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */; };
 		030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */; };
 		030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */; };
+		030E960E22E76CEE00DE7D99 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E960C22E76CEE00DE7D99 /* AddMemberViewController.swift */; };
+		030E960F22E76CEE00DE7D99 /* AddMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030E960D22E76CEE00DE7D99 /* AddMemberViewController.xib */; };
+		030F209622F3429D007D4308 /* BookingDetailModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F209522F3429D007D4308 /* BookingDetailModal.swift */; };
+		030F209822F34543007D4308 /* BookingDetailViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F209722F34543007D4308 /* BookingDetailViewModal.swift */; };
 		0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310E91922DE298F001DCD3E /* RegisterViewModal.swift */; };
 		0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */; };
 		0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */; };
@@ -25,6 +40,8 @@
 		0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39D2276B7820014B568 /* UIViewExtension.swift */; };
 		0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39F2276BA7B0014B568 /* UIColourExtension.swift */; };
 		0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */; };
+		0343146522EC4ECF00BA28DC /* AddMemberViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */; };
+		0343146722EC67DD00BA28DC /* BookingListViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343146622EC67DD00BA28DC /* BookingListViewModal.swift */; };
 		034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */; };
 		034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F722E0D02F0020AC3F /* LanguageModal.swift */; };
 		034719FA22E0D0570020AC3F /* IllnessModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719F922E0D0570020AC3F /* IllnessModal.swift */; };
@@ -32,10 +49,23 @@
 		034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */; };
 		03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */; };
 		038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
-		038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */; };
+		03C1329C22F0B410004C3252 /* ConsulationFeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */; };
+		03C1329D22F0B410004C3252 /* ConsulationFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */; };
+		03C132A022F0B69A004C3252 /* UserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1329E22F0B69A004C3252 /* UserDetailCell.swift */; };
+		03C132A122F0B69A004C3252 /* UserDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C1329F22F0B69A004C3252 /* UserDetailCell.xib */; };
 		03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */; };
 		03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */; };
 		03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */; };
+		03F85BA122ED723700781437 /* BookingListModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F85BA022ED723700781437 /* BookingListModal.swift */; };
+		03F85BA422ED83EC00781437 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F85BA222ED83EC00781437 /* clock.png */; };
+		03F85BA522ED83EC00781437 /* credit-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F85BA322ED83EC00781437 /* credit-card.png */; };
+		03F85BA722ED875300781437 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F85BA622ED875200781437 /* star.png */; };
+		03F85BAA22EDA16B00781437 /* DoctorProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F85BA822EDA16B00781437 /* DoctorProfileCell.swift */; };
+		03F85BAB22EDA16B00781437 /* DoctorProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F85BA922EDA16B00781437 /* DoctorProfileCell.xib */; };
+		03F85BAE22EDA46200781437 /* MaptableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F85BAC22EDA46200781437 /* MaptableCell.swift */; };
+		03F85BAF22EDA46200781437 /* MaptableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F85BAD22EDA46200781437 /* MaptableCell.xib */; };
+		03F85BB222EDA4B400781437 /* AppoinmentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F85BB022EDA4B400781437 /* AppoinmentDetailCell.swift */; };
+		03F85BB322EDA4B400781437 /* AppoinmentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F85BB122EDA4B400781437 /* AppoinmentDetailCell.xib */; };
 		24078C7BA2A8B2EF94BBB321 /* Pods_Expressgp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */; };
 		C33A19892301E5CB00A76640 /* FindingDoctorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A19872301E5CB00A76640 /* FindingDoctorViewController.xib */; };
 		C33A198A2301E5CB00A76640 /* FindingDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A19882301E5CB00A76640 /* FindingDoctorViewController.swift */; };
@@ -69,14 +99,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0309794922F6C6FA00DDD217 /* LoaderClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderClass.swift; sourceTree = "<group>"; };
+		030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		030A2B3C22E38F14007DC1A2 /* optionSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionSelect.png; sourceTree = "<group>"; };
+		030A2B3D22E38F14007DC1A2 /* optionUnselect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optionUnselect.png; sourceTree = "<group>"; };
 		030A8C73228332BB00691E43 /* BookingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListCell.swift; sourceTree = "<group>"; };
-		030A8C74228332BB00691E43 /* BookingListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListCell.xib; sourceTree = "<group>"; };
 		030A8C78228347B500691E43 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
 		030A8C79228347B500691E43 /* BookingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailViewController.xib; sourceTree = "<group>"; };
+		030AA2F822F5B98C00A32D3B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBoxSelected.png; sourceTree = "<group>"; };
+		030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBoxUnselected.png; sourceTree = "<group>"; };
+		030C349422E8B13A0015A150 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		030C349622E8B2E60015A150 /* LoginModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModal.swift; sourceTree = "<group>"; };
+		030C349822E8B6470015A150 /* FamilyViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModal.swift; sourceTree = "<group>"; };
+		030C349A22E8B7E10015A150 /* FamilyListModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListModal.swift; sourceTree = "<group>"; };
+		030C349E22E8BAD10015A150 /* FamilyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewCell.swift; sourceTree = "<group>"; };
 		030CC0C822DCCF1600A9B1AF /* ApiClientClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientClass.swift; sourceTree = "<group>"; };
 		030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantClass.swift; sourceTree = "<group>"; };
 		030CC0CC22DCD40F00A9B1AF /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
 		030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewModal.swift; sourceTree = "<group>"; };
+		030E960C22E76CEE00DE7D99 /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
+		030E960D22E76CEE00DE7D99 /* AddMemberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMemberViewController.xib; sourceTree = "<group>"; };
+		030F209522F3429D007D4308 /* BookingDetailModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailModal.swift; sourceTree = "<group>"; };
+		030F209722F34543007D4308 /* BookingDetailViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewModal.swift; sourceTree = "<group>"; };
 		0310E91522DE24AD001DCD3E /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
 		0310E91622DE24AD001DCD3E /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
 		0310E91722DE24AD001DCD3E /* MavenPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -93,6 +138,8 @@
 		0319C39D2276B7820014B568 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0319C39F2276BA7B0014B568 /* UIColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColourExtension.swift; sourceTree = "<group>"; };
 		0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomeAlert.swift; sourceTree = "<group>"; };
+		0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModal.swift; sourceTree = "<group>"; };
+		0343146622EC67DD00BA28DC /* BookingListViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewModal.swift; sourceTree = "<group>"; };
 		034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSearchViweModal.swift; sourceTree = "<group>"; };
 		034719F722E0D02F0020AC3F /* LanguageModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModal.swift; sourceTree = "<group>"; };
 		034719F922E0D0570020AC3F /* IllnessModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessModal.swift; sourceTree = "<group>"; };
@@ -100,11 +147,24 @@
 		034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableCell.swift; sourceTree = "<group>"; };
 		034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableCell.xib; sourceTree = "<group>"; };
 		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
-		038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingListViewController.xib; sourceTree = "<group>"; };
+		03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulationFeeCell.swift; sourceTree = "<group>"; };
+		03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsulationFeeCell.xib; sourceTree = "<group>"; };
+		03C1329E22F0B69A004C3252 /* UserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCell.swift; sourceTree = "<group>"; };
+		03C1329F22F0B69A004C3252 /* UserDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailCell.xib; sourceTree = "<group>"; };
 		03C379FF2285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailDrInfoCell.swift; sourceTree = "<group>"; };
 		03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailDrInfoCell.xib; sourceTree = "<group>"; };
 		03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingCell.swift; sourceTree = "<group>"; };
 		03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRatingCell.xib; sourceTree = "<group>"; };
+		03F85BA022ED723700781437 /* BookingListModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListModal.swift; sourceTree = "<group>"; };
+		03F85BA222ED83EC00781437 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		03F85BA322ED83EC00781437 /* credit-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit-card.png"; sourceTree = "<group>"; };
+		03F85BA622ED875200781437 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		03F85BA822EDA16B00781437 /* DoctorProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileCell.swift; sourceTree = "<group>"; };
+		03F85BA922EDA16B00781437 /* DoctorProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorProfileCell.xib; sourceTree = "<group>"; };
+		03F85BAC22EDA46200781437 /* MaptableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaptableCell.swift; sourceTree = "<group>"; };
+		03F85BAD22EDA46200781437 /* MaptableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaptableCell.xib; sourceTree = "<group>"; };
+		03F85BB022EDA4B400781437 /* AppoinmentDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoinmentDetailCell.swift; sourceTree = "<group>"; };
+		03F85BB122EDA4B400781437 /* AppoinmentDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoinmentDetailCell.xib; sourceTree = "<group>"; };
 		6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expressgp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A8B92C06649DABBAA018E4 /* Pods-Expressgp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expressgp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp.debug.xcconfig"; sourceTree = "<group>"; };
 		C33A19872301E5CB00A76640 /* FindingDoctorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindingDoctorViewController.xib; sourceTree = "<group>"; };
@@ -154,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				030A8C73228332BB00691E43 /* BookingListCell.swift */,
-				030A8C74228332BB00691E43 /* BookingListCell.xib */,
 			);
 			path = BookingListCellFile;
 			sourceTree = "<group>";
@@ -169,6 +228,31 @@
 			path = BookingDetailFile;
 			sourceTree = "<group>";
 		};
+		030AA2F722F5B95C00A32D3B /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				030AA2F822F5B98C00A32D3B /* AccountViewController.swift */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		030C349C22E8BA830015A150 /* FamilyView */ = {
+			isa = PBXGroup;
+			children = (
+				030C349D22E8BAA80015A150 /* FamilyViewCell */,
+				030C349422E8B13A0015A150 /* FamilyViewController.swift */,
+			);
+			path = FamilyView;
+			sourceTree = "<group>";
+		};
+		030C349D22E8BAA80015A150 /* FamilyViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				030C349E22E8BAD10015A150 /* FamilyViewCell.swift */,
+			);
+			path = FamilyViewCell;
+			sourceTree = "<group>";
+		};
 		030CC0C722DCCED800A9B1AF /* NetworkingFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +260,16 @@
 				030CC0CA22DCD01F00A9B1AF /* ConstantClass.swift */,
 			);
 			path = NetworkingFile;
+			sourceTree = "<group>";
+		};
+
+		030E960B22E76C9500DE7D99 /* AddMemberView */ = {
+			isa = PBXGroup;
+			children = (
+				030E960C22E76CEE00DE7D99 /* AddMemberViewController.swift */,
+				030E960D22E76CEE00DE7D99 /* AddMemberViewController.xib */,
+			);
+			path = AddMemberView;
 			sourceTree = "<group>";
 		};
 		0310E91B22DE38C0001DCD3E /* SearchPopUp */ = {
@@ -246,10 +340,19 @@
 			isa = PBXGroup;
 			children = (
 				C33A19902301F3F400A76640 /* GradientButton.swift */,
+				030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */,
+				030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */,
+				03F85BA622ED875200781437 /* star.png */,
 				0319C39D2276B7820014B568 /* UIViewExtension.swift */,
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
 				0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */,
 				E380AE5022835265001206D2 /* Style.swift */,
+				030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */,
+				03F85BA222ED83EC00781437 /* clock.png */,
+				03F85BA322ED83EC00781437 /* credit-card.png */,
+				030A2B3C22E38F14007DC1A2 /* optionSelect.png */,
+				030A2B3D22E38F14007DC1A2 /* optionUnselect.png */,
+				0309794922F6C6FA00DDD217 /* LoaderClass.swift */,
 			);
 			path = CommonFile;
 			sourceTree = "<group>";
@@ -268,7 +371,6 @@
 			children = (
 				030A8C722283329300691E43 /* BookingListCellFile */,
 				038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */,
-				038FD8EE2281F33F00CAA522 /* BookingListViewController.xib */,
 			);
 			path = BookingViewFile;
 			sourceTree = "<group>";
@@ -280,6 +382,16 @@
 				03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */,
 				03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */,
 				03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */,
+				03F85BA822EDA16B00781437 /* DoctorProfileCell.swift */,
+				03F85BA922EDA16B00781437 /* DoctorProfileCell.xib */,
+				03F85BAC22EDA46200781437 /* MaptableCell.swift */,
+				03F85BAD22EDA46200781437 /* MaptableCell.xib */,
+				03F85BB022EDA4B400781437 /* AppoinmentDetailCell.swift */,
+				03F85BB122EDA4B400781437 /* AppoinmentDetailCell.xib */,
+				03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */,
+				03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */,
+				03C1329E22F0B69A004C3252 /* UserDetailCell.swift */,
+				03C1329F22F0B69A004C3252 /* UserDetailCell.xib */,
 			);
 			path = BookingDetailCellFile;
 			sourceTree = "<group>";
@@ -335,6 +447,9 @@
 				C33A198F2301E61300A76640 /* WelcomeScreen */,
 				C33A19862301E5BA00A76640 /* FindDoctor */,
 				C3CADDA522FCA54400BAF329 /* New Group */,
+				030AA2F722F5B95C00A32D3B /* MyAccount */,
+				030C349C22E8BA830015A150 /* FamilyView */,
+				030E960B22E76C9500DE7D99 /* AddMemberView */,
 				0310E91B22DE38C0001DCD3E /* SearchPopUp */,
 				E3893C6822873C6C00691449 /* RegisterView */,
 				E3893C6322873C5300691449 /* OTPView */,
@@ -356,6 +471,10 @@
 				030CC0CE22DCE11D00A9B1AF /* OtpViewModal.swift */,
 				0310E91922DE298F001DCD3E /* RegisterViewModal.swift */,
 				034719F522E0CACE0020AC3F /* LanguageSearchViweModal.swift */,
+				030C349822E8B6470015A150 /* FamilyViewModal.swift */,
+				0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */,
+				0343146622EC67DD00BA28DC /* BookingListViewModal.swift */,
+				030F209722F34543007D4308 /* BookingDetailViewModal.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -367,6 +486,10 @@
 				034719F722E0D02F0020AC3F /* LanguageModal.swift */,
 				034719F922E0D0570020AC3F /* IllnessModal.swift */,
 				034719FB22E0D0810020AC3F /* AllergiesModal.swift */,
+				030C349622E8B2E60015A150 /* LoginModal.swift */,
+				030C349A22E8B7E10015A150 /* FamilyListModal.swift */,
+				03F85BA022ED723700781437 /* BookingListModal.swift */,
+				030F209522F3429D007D4308 /* BookingDetailModal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,7 +624,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				038FD8F02281F33F00CAA522 /* BookingListViewController.xib in Resources */,
+				03C1329D22F0B410004C3252 /* ConsulationFeeCell.xib in Resources */,
 				E3893C7822873CDF00691449 /* FirstNameLastNameCell.xib in Resources */,
 				03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */,
 				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
@@ -512,16 +635,27 @@
 				C33A198D2301E61000A76640 /* WelcomeViewController.xib in Resources */,
 				E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */,
 				0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */,
+				03F85BB322EDA4B400781437 /* AppoinmentDetailCell.xib in Resources */,
+				030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */,
+				03F85BA722ED875300781437 /* star.png in Resources */,
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
+				030E960F22E76CEE00DE7D99 /* AddMemberViewController.xib in Resources */,
+				030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */,
+				03C132A122F0B69A004C3252 /* UserDetailCell.xib in Resources */,
+				03F85BAB22EDA16B00781437 /* DoctorProfileCell.xib in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
-				030A8C76228332BB00691E43 /* BookingListCell.xib in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
+				030AA2FD22F5FD2500A32D3B /* checkBoxUnselected.png in Resources */,
 				E3893C6222873C4700691449 /* LoginViewController.xib in Resources */,
 				E3893C7F22873CDF00691449 /* GeneralRegisterCell.xib in Resources */,
 				C33A19892301E5CB00A76640 /* FindingDoctorViewController.xib in Resources */,
+				03F85BA522ED83EC00781437 /* credit-card.png in Resources */,
+				03F85BA422ED83EC00781437 /* clock.png in Resources */,
+				030AA2FC22F5FD2500A32D3B /* checkBoxSelected.png in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
 				030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */,
 				E3893C6D22873CC600691449 /* RegisterViewController.xib in Resources */,
+				03F85BAF22EDA46200781437 /* MaptableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,9 +704,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,34 +730,53 @@
 				C3CADDA222FCA02A00BAF329 /* HomeViewController.swift in Sources */,
 				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */,
+				03F85BA122ED723700781437 /* BookingListModal.swift in Sources */,
+				0309794A22F6C6FA00DDD217 /* LoaderClass.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
+				03F85BB222EDA4B400781437 /* AppoinmentDetailCell.swift in Sources */,
+				030AA2F922F5B98C00A32D3B /* AccountViewController.swift in Sources */,
+				03C1329C22F0B410004C3252 /* ConsulationFeeCell.swift in Sources */,
+				030C349522E8B13A0015A150 /* FamilyViewController.swift in Sources */,
 				0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */,
+				030E960E22E76CEE00DE7D99 /* AddMemberViewController.swift in Sources */,
 				03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */,
 				C33A198E2301E61000A76640 /* WelcomeViewController.swift in Sources */,
 				E3893C7922873CDF00691449 /* GenderCell.swift in Sources */,
 				030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */,
+				03F85BAA22EDA16B00781437 /* DoctorProfileCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
 				E3893C6E22873CC600691449 /* RegisterViewController.swift in Sources */,
+				030A2B3B22E389F1007DC1A2 /* ImagePickerManager.swift in Sources */,
 				E3893C7A22873CDF00691449 /* GeneralRegisterCell.swift in Sources */,
 				E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */,
 				030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */,
+				03F85BAE22EDA46200781437 /* MaptableCell.swift in Sources */,
 				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
+				030C34A022E8BAD10015A150 /* FamilyViewCell.swift in Sources */,
+				0343146522EC4ECF00BA28DC /* AddMemberViewModal.swift in Sources */,
 				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
 				E380AE5122835265001206D2 /* Style.swift in Sources */,
 				E3893C6122873C4700691449 /* LoginViewController.swift in Sources */,
 				034719FC22E0D0810020AC3F /* AllergiesModal.swift in Sources */,
+				0343146722EC67DD00BA28DC /* BookingListViewModal.swift in Sources */,
 				0310E91E22DE3925001DCD3E /* LanguageSearchView.swift in Sources */,
+				03C132A022F0B69A004C3252 /* UserDetailCell.swift in Sources */,
 				034719F622E0CACE0020AC3F /* LanguageSearchViweModal.swift in Sources */,
+				030C349922E8B6470015A150 /* FamilyViewModal.swift in Sources */,
 				034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */,
 				0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */,
+				030F209622F3429D007D4308 /* BookingDetailModal.swift in Sources */,
 				E3893C6722873C6900691449 /* OTPViewController.swift in Sources */,
 				034719FA22E0D0570020AC3F /* IllnessModal.swift in Sources */,
 				030CC0C922DCCF1600A9B1AF /* ApiClientClass.swift in Sources */,
 				E3893C7B22873CDF00691449 /* TermAndConditionCell.swift in Sources */,
 				E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */,
+				030C349722E8B2E60015A150 /* LoginModal.swift in Sources */,
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
 				030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */,
+				030F209822F34543007D4308 /* BookingDetailViewModal.swift in Sources */,
+				030C349B22E8B7E10015A150 /* FamilyListModal.swift in Sources */,
 				034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */,
 				C3CADDAD22FCA5A800BAF329 /* ProfilePopupViewController.swift in Sources */,
 				C33A19912301F3F400A76640 /* GradientButton.swift in Sources */,
@@ -765,10 +923,7 @@
 				DEVELOPMENT_TEAM = QW737RU4QC;
 				INFOPLIST_FILE = Expressgp/SupportFile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Expressgp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -785,10 +940,7 @@
 				DEVELOPMENT_TEAM = QW737RU4QC;
 				INFOPLIST_FILE = Expressgp/SupportFile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Expressgp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

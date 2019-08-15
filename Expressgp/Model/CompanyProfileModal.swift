@@ -16,9 +16,12 @@ struct CompanyProfileModal : Decodable {
     var gender : String?
     var dateOfBirth : String?
     var language : String?
+    var language_id : String?
     var existingIllness : String?
     var Illness_id : String?
     var existingAllergies : String?
     var allergies_id : String?
     var acceptCondition : Bool = false
+    var insurance : String?
+    var relation:String?
 }

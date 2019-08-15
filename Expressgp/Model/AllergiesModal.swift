@@ -16,4 +16,5 @@ struct AllergiesModal : Decodable  {
 struct AllergiesData :  Decodable {
     var allergy_id : String?
     var allergy : String?
+    var isSelected : Bool?
 }

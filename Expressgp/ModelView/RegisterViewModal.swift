@@ -11,7 +11,6 @@ import UIKit
 class RegisterViewModal: NSObject {
     var apiClient = ApiClientClass();
     var pushToHomeView : (() -> Void)?
-//"mobile":"43253433544","fcm_id":"87499","imei_no":"32432423423423423","firstname":"test","lastname":"foru","email":"ttt363@s.com","gender":"Male","dob":"2000-09-10","illness":"High blood pressure","illness_id":"21","allergy":"Dust","allergy_id":"1","insurance":
     func registerUser(userObj:CompanyProfileModal)  {
         var params: [String:Any] = [:]
         params = self.GetCommonParrameter()
@@ -24,13 +23,14 @@ class RegisterViewModal: NSObject {
         params["illness"] = userObj.existingIllness
         params["illness_id"] = userObj.Illness_id
         params["allergy"] = userObj.existingAllergies
-        params["allergy_id"] = userObj.existingIllness
-        params["insurance"] = userObj.existingIllness
+        params["allergy_id"] = userObj.allergies_id
+        params["insurance"] = ""
         
-        apiClient.fetchApiResponse(action: "signup.php", param: params) { (dictionary) in
+        apiClient.fetchApiResponse(action: "signup.php", param: params) { (dictionary,data) in
             do {
                 if let status : Int = dictionary?.value(forKey: "success") as? Int{
                     if status == 1 {
+                        UserDefaults.standard.setValue(dictionary, forKey: "UserResponse")
                         self.pushToHomeView?()
                     }
                 }

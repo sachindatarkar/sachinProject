@@ -25,6 +25,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let datePicker = UIDatePicker()
     var dateTextField : UITextField?
     var registerViewModalObj = RegisterViewModal()
+    var isMenselected : Bool = false
+    var iswomenSelected : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,10 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Allergies", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
+        registerViewModalObj.pushToHomeView = {
+            let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
     }
 
@@ -100,12 +106,26 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
-             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
+            cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = companyProfileObj.emailId
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenderCell") as? GenderCell
+            cell?.btn_women.addTarget(self, action: #selector(OnClickWomen), for: .touchUpInside)
+            cell?.btn_men.addTarget(self, action: #selector(OnClickMen), for: .touchUpInside)
+            if !isMenselected && !iswomenSelected {
+                cell?.womenImageView.image = UIImage(named: "optionUnselect.png")
+                cell?.menImageView.image = UIImage(named: "optionUnselect.png")
+            }else{
+                if isMenselected {
+                    cell?.womenImageView.image = UIImage(named: "optionUnselect.png")
+                    cell?.menImageView.image = UIImage(named: "optionSelect.png")
+                }else{
+                    cell?.menImageView.image = UIImage(named: "optionUnselect.png")
+                    cell?.womenImageView.image = UIImage(named: "optionSelect.png")
+                }
+            }
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 4 {
@@ -174,6 +194,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func onClickSubmit() {
+        LoadingOverlay.shared.showLoaderView(view: self.view)
         registerViewModalObj.registerUser(userObj: companyProfileObj)
     }
     
@@ -198,6 +219,14 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
              vc.delegate = self
             vc.fromText = "Existing Allergies"
             self.present(vc, animated: true, completion: nil)
+        }else if textField.placeholder == "Upload Insurance" {
+            ImagePickerManager().pickImage(self){ image in
+                //here is the image
+                let imgStr = image.toBase64()
+                self.companyProfileObj.insurance = imgStr
+                print("Image Found")
+            }
+             self.view.endEditing(true)
         }
     }
     
@@ -227,6 +256,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
         registerTV.reloadData()
     }
+    
     @objc func didChangeFirstText(textField:UITextField) {
         if(textField.text == " "){
             textField.text = ""
@@ -254,7 +284,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "yyyy-dd-MM"
         dateTextField?.text = formatter.string(from: datePicker.date)
         companyProfileObj.dateOfBirth = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
@@ -264,19 +294,52 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.view.endEditing(true)
     }
     
-    func didSelectlanguage(languageObj:LanguageData) {
-        companyProfileObj.language = languageObj.language_name
-        //companyProfileObj.
+    func didSelectlanguage(languageObj:[LanguageData]) {
+        var selectedStr = ""
+        for obj in languageObj {
+            selectedStr.append("\(obj.language_name ?? ""),")
+        }
+        selectedStr.removeLast()
+        companyProfileObj.language = selectedStr
         registerTV.reloadData()
     }
-    func didSelectillness(illnessObj:IllnessData) {
-        companyProfileObj.Illness_id = illnessObj.specialty_id
-        companyProfileObj.existingIllness = illnessObj.reason
+    func didSelectillness(illnessObj:[IllnessData]) {
+        var selecedIdArry = [String]()
+        var selectedReason = [String]()
+        for obj in illnessObj {
+            selecedIdArry.append(obj.specialty_id ?? "")
+            selectedReason.append(obj.reason ?? "")
+        }
+        companyProfileObj.Illness_id = selecedIdArry.joined(separator: ",")
+        companyProfileObj.existingIllness = selectedReason.joined(separator: ",")
         registerTV.reloadData()
     }
-    func didSelectiAllergies(AllergiesObj:AllergiesData) {
-        companyProfileObj.allergies_id = AllergiesObj.allergy_id
-        companyProfileObj.existingAllergies = AllergiesObj.allergy
+    func didSelectiAllergies(AllergiesObj:[AllergiesData]) {
+        var selecedIdArry = [String]()
+        var selectedReason = [String]()
+        for obj in AllergiesObj {
+            selecedIdArry.append(obj.allergy_id ?? "")
+            selectedReason.append(obj.allergy ?? "")
+        }
+        companyProfileObj.allergies_id = selecedIdArry.joined(separator: ",")
+        companyProfileObj.existingAllergies = selectedReason.joined(separator: ",")
         registerTV.reloadData()
     }
+    
+    
+    @objc func OnClickWomen() {
+        isMenselected = false
+        iswomenSelected = true
+        companyProfileObj.gender = "Women"
+        registerTV.reloadData()
+    }
+    
+    @objc func OnClickMen() {
+        isMenselected = true
+        iswomenSelected = false
+        companyProfileObj.gender = "Men"
+        registerTV.reloadData()
+       
+    }
+    
 }
