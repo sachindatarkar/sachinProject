@@ -44,11 +44,13 @@ class LoginViewController: UIViewController {
     }
     
     @objc func onClickGetStarted() {
-        if mobileNoTF.text != "" {
-            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
-        }else{
-            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
-        }
+//        if mobileNoTF.text != "" {
+//            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
+//        }else{
+//            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
+//        }
+		let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+		self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

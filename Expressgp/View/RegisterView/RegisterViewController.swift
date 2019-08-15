@@ -175,8 +175,6 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @objc func onClickSubmit() {
         registerViewModalObj.registerUser(userObj: companyProfileObj)
-//        let vc = BookingListViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- UITextField Delegate

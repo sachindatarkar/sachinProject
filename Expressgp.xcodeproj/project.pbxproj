@@ -37,13 +37,20 @@
 		03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A002285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib */; };
 		03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */; };
 		24078C7BA2A8B2EF94BBB321 /* Pods_Expressgp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */; };
+		C33A19892301E5CB00A76640 /* FindingDoctorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A19872301E5CB00A76640 /* FindingDoctorViewController.xib */; };
+		C33A198A2301E5CB00A76640 /* FindingDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A19882301E5CB00A76640 /* FindingDoctorViewController.swift */; };
+		C33A198D2301E61000A76640 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A198B2301E61000A76640 /* WelcomeViewController.xib */; };
+		C33A198E2301E61000A76640 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A198C2301E61000A76640 /* WelcomeViewController.swift */; };
+		C33A19912301F3F400A76640 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A19902301F3F400A76640 /* GradientButton.swift */; };
+		C3CADDA222FCA02A00BAF329 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CADDA122FCA02900BAF329 /* HomeViewController.swift */; };
+		C3CADDAC22FCA5A800BAF329 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CADDAA22FCA5A700BAF329 /* ProfilePopupViewController.xib */; };
+		C3CADDAD22FCA5A800BAF329 /* ProfilePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CADDAB22FCA5A700BAF329 /* ProfilePopupViewController.swift */; };
 		E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337946227EE4480074D1B3 /* SearchViewController.swift */; };
 		E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3337947227EE4480074D1B3 /* SearchViewController.xib */; };
 		E333794E227EE4CD0074D1B3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */; };
 		E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3337951227EFFE00074D1B3 /* BaseViewController.swift */; };
 		E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */; };
 		E380AE5122835265001206D2 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380AE5022835265001206D2 /* Style.swift */; };
-		E3893C5C22873BC700691449 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C5B22873BC700691449 /* HomeViewController.swift */; };
 		E3893C5D22873BF600691449 /* StarRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37A032285E9C600D3D0B4 /* StarRatingCell.swift */; };
 		E3893C6122873C4700691449 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3893C5F22873C4700691449 /* LoginViewController.swift */; };
 		E3893C6222873C4700691449 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3893C6022873C4700691449 /* LoginViewController.xib */; };
@@ -100,13 +107,20 @@
 		03C37A042285E9C600D3D0B4 /* StarRatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRatingCell.xib; sourceTree = "<group>"; };
 		6E14D2789AEB6ED1F1FE1D28 /* Pods_Expressgp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expressgp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A8B92C06649DABBAA018E4 /* Pods-Expressgp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expressgp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expressgp/Pods-Expressgp.debug.xcconfig"; sourceTree = "<group>"; };
+		C33A19872301E5CB00A76640 /* FindingDoctorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindingDoctorViewController.xib; sourceTree = "<group>"; };
+		C33A19882301E5CB00A76640 /* FindingDoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindingDoctorViewController.swift; sourceTree = "<group>"; };
+		C33A198B2301E61000A76640 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		C33A198C2301E61000A76640 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C33A19902301F3F400A76640 /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		C3CADDA122FCA02900BAF329 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Expressgp/View/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		C3CADDAA22FCA5A700BAF329 /* ProfilePopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePopupViewController.xib; sourceTree = "<group>"; };
+		C3CADDAB22FCA5A700BAF329 /* ProfilePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewController.swift; sourceTree = "<group>"; };
 		E3337946227EE4480074D1B3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E3337947227EE4480074D1B3 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		E333794D227EE4CD0074D1B3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E3337951227EFFE00074D1B3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E3337955227F5E4F0074D1B3 /* BaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseViewController.storyboard; sourceTree = "<group>"; };
 		E380AE5022835265001206D2 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		E3893C5B22873BC700691449 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E3893C5F22873C4700691449 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3893C6022873C4700691449 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E3893C6422873C6900691449 /* OTPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
@@ -164,14 +178,14 @@
 			path = NetworkingFile;
 			sourceTree = "<group>";
 		};
-		0310E91B22DE38C0001DCD3E /* SeaarchPopUp */ = {
+		0310E91B22DE38C0001DCD3E /* SearchPopUp */ = {
 			isa = PBXGroup;
 			children = (
 				03471A0122E0D8180020AC3F /* CellView */,
 				0310E91C22DE3925001DCD3E /* LanguageSearchView.swift */,
 				0310E91D22DE3925001DCD3E /* LanguageSearchView.xib */,
 			);
-			path = SeaarchPopUp;
+			path = SearchPopUp;
 			sourceTree = "<group>";
 		};
 		0319C3772276B05B0014B568 = {
@@ -231,6 +245,7 @@
 		0319C39C2276B7620014B568 /* CommonFile */ = {
 			isa = PBXGroup;
 			children = (
+				C33A19902301F3F400A76640 /* GradientButton.swift */,
 				0319C39D2276B7820014B568 /* UIViewExtension.swift */,
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
 				0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */,
@@ -278,6 +293,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C33A19862301E5BA00A76640 /* FindDoctor */ = {
+			isa = PBXGroup;
+			children = (
+				C33A19882301E5CB00A76640 /* FindingDoctorViewController.swift */,
+				C33A19872301E5CB00A76640 /* FindingDoctorViewController.xib */,
+			);
+			path = FindDoctor;
+			sourceTree = "<group>";
+		};
+		C33A198F2301E61300A76640 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C33A198C2301E61000A76640 /* WelcomeViewController.swift */,
+				C33A198B2301E61000A76640 /* WelcomeViewController.xib */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		C3CADDA522FCA54400BAF329 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C3CADDAB22FCA5A700BAF329 /* ProfilePopupViewController.swift */,
+				C3CADDAA22FCA5A700BAF329 /* ProfilePopupViewController.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E3337943227EE39B0074D1B3 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,7 +332,10 @@
 		E333794A227EE45E0074D1B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0310E91B22DE38C0001DCD3E /* SeaarchPopUp */,
+				C33A198F2301E61300A76640 /* WelcomeScreen */,
+				C33A19862301E5BA00A76640 /* FindDoctor */,
+				C3CADDA522FCA54400BAF329 /* New Group */,
+				0310E91B22DE38C0001DCD3E /* SearchPopUp */,
 				E3893C6822873C6C00691449 /* RegisterView */,
 				E3893C6322873C5300691449 /* OTPView */,
 				E3893C5E22873C3400691449 /* LoginView */,
@@ -338,7 +383,7 @@
 		E3893C5A22873BB400691449 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				E3893C5B22873BC700691449 /* HomeViewController.swift */,
+				C3CADDA122FCA02900BAF329 /* HomeViewController.swift */,
 			);
 			name = HomeView;
 			path = "New Group";
@@ -463,6 +508,8 @@
 				03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */,
 				E3893C6622873C6900691449 /* OTPViewController.xib in Resources */,
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
+				C3CADDAC22FCA5A800BAF329 /* ProfilePopupViewController.xib in Resources */,
+				C33A198D2301E61000A76640 /* WelcomeViewController.xib in Resources */,
 				E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */,
 				0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */,
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
@@ -471,6 +518,7 @@
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
 				E3893C6222873C4700691449 /* LoginViewController.xib in Resources */,
 				E3893C7F22873CDF00691449 /* GeneralRegisterCell.xib in Resources */,
+				C33A19892301E5CB00A76640 /* FindingDoctorViewController.xib in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
 				030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */,
 				E3893C6D22873CC600691449 /* RegisterViewController.xib in Resources */,
@@ -540,13 +588,14 @@
 			files = (
 				E3893C5D22873BF600691449 /* StarRatingCell.swift in Sources */,
 				030A8C7A228347B500691E43 /* BookingDetailViewController.swift in Sources */,
+				C3CADDA222FCA02A00BAF329 /* HomeViewController.swift in Sources */,
 				038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */,
 				030CC0CD22DCD40F00A9B1AF /* LoginViewModal.swift in Sources */,
 				0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */,
 				E3337948227EE4480074D1B3 /* SearchViewController.swift in Sources */,
 				0310E91A22DE298F001DCD3E /* RegisterViewModal.swift in Sources */,
 				03C37A012285E2FE00D3D0B4 /* BookingDetailDrInfoCell.swift in Sources */,
-				E3893C5C22873BC700691449 /* HomeViewController.swift in Sources */,
+				C33A198E2301E61000A76640 /* WelcomeViewController.swift in Sources */,
 				E3893C7922873CDF00691449 /* GenderCell.swift in Sources */,
 				030A8C75228332BB00691E43 /* BookingListCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
@@ -571,6 +620,9 @@
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
 				030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */,
 				034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */,
+				C3CADDAD22FCA5A800BAF329 /* ProfilePopupViewController.swift in Sources */,
+				C33A19912301F3F400A76640 /* GradientButton.swift in Sources */,
+				C33A198A2301E5CB00A76640 /* FindingDoctorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

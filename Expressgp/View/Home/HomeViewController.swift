@@ -9,7 +9,8 @@
 import UIKit
 import MapKit
 class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
-	@IBOutlet weak var currentUserAddr: UILabel!
+	@IBOutlet weak var findDoctorButton: GradientButton!
+	@IBOutlet weak var currentUserAddr: UIButton!
 	var locationManager = CLLocationManager() {
 		didSet {
 			locationManager.delegate = self
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 	@IBOutlet weak var mapView: MKMapView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
 		mapView.delegate = self
 		mapView.showsUserLocation = true
 		let locationManager = CLLocationManager()
@@ -50,7 +52,7 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 		rightButton.setTitle("Personal", for: .normal)
 		
 		self.tabBarController?.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: rightButton),UIBarButtonItem(customView: notifiButton)]
-		//        self.navigationItem.title = "My Title"
+		        self.navigationItem.title = "My Title"
 		// self.navigationController?.viewControllers.first?.navigationController?.navigationBar.topItem?.title = "Shital"
 		//       print(self.navigationController?.viewControllers.first?.navigationController?.navigationBar.topItem?.title)
 		presentWelcomeOverlay()
@@ -130,7 +132,7 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 						addressString = addressString + pm.postalCode! + " "
 					}
 					
-//					self.currentUserAddr.text = addressString
+					self.currentUserAddr.setTitle(addressString, for:.normal) 
 					print(addressString)
 				}
 		})
