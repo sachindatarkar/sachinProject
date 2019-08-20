@@ -106,7 +106,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-C9-44R">
-                                                    <rect key="frame" x="8" y="8" width="398" height="222"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="222"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI7-Bb-wry">
                                                             <rect key="frame" x="10" y="10" width="100" height="30"/>
@@ -121,7 +121,7 @@
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 April 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nf5-E3-wK4">
-                                                            <rect key="frame" x="238" y="15" width="150" height="20"/>
+                                                            <rect key="frame" x="199" y="15" width="150" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="150" id="0Nx-dH-5HI"/>
                                                             </constraints>
@@ -144,7 +144,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="PLOT No: 457, SREEJI DARSHAN BUILIDING SREE JISWAMINARAYANA NAGAR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-TM-W1I">
-                                                            <rect key="frame" x="35" y="65.5" width="353" height="31"/>
+                                                            <rect key="frame" x="35" y="65.5" width="314" height="31"/>
                                                             <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro Medium" pointSize="13"/>
                                                             <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -163,7 +163,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="Online Payment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA1-qT-p6Z">
-                                                            <rect key="frame" x="308" y="167.5" width="80" height="40"/>
+                                                            <rect key="frame" x="269" y="167.5" width="80" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="80" id="Mta-Cu-keU"/>
                                                             </constraints>
@@ -172,7 +172,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card.png" translatesAutoresizingMaskIntoConstraints="NO" id="JOg-c9-N8Y">
-                                                            <rect key="frame" x="285" y="180" width="15" height="15"/>
+                                                            <rect key="frame" x="246" y="180" width="15" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="Dwc-et-htE"/>
                                                                 <constraint firstAttribute="height" constant="15" id="pQw-Tj-gS6"/>
@@ -187,13 +187,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iq-5a-d1v">
-                                                            <rect key="frame" x="66" y="104.5" width="322" height="18"/>
+                                                            <rect key="frame" x="66" y="104.5" width="283" height="18"/>
                                                             <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG5-38-5Z8">
-                                                            <rect key="frame" x="66" y="127.5" width="322" height="15"/>
+                                                            <rect key="frame" x="66" y="127.5" width="283" height="15"/>
                                                             <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kQ-HK-yw0">
-                                                            <rect key="frame" x="84" y="149.5" width="314" height="10"/>
+                                                            <rect key="frame" x="84" y="149.5" width="275" height="10"/>
                                                             <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -360,12 +360,15 @@
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH5-sY-Vh6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH5-sY-Vh6">
                                         <rect key="frame" x="164" y="54" width="139" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Reason for Request" image="searchIcon">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addReasonForRequest:" destination="5AQ-G9-uGp" eventType="touchUpInside" id="BVA-eM-mNj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHE-gC-eKr">
                                         <rect key="frame" x="8" y="54" width="139" height="25"/>
@@ -373,6 +376,9 @@
                                         <state key="normal" title="Patient : Self" image="searchIcon">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changePatientName:" destination="5AQ-G9-uGp" eventType="touchUpInside" id="nLi-vl-iSq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b31-Ag-FDx">
                                         <rect key="frame" x="164" y="95" width="139" height="25"/>
@@ -453,8 +459,12 @@
                     <navigationItem key="navigationItem" id="eki-St-qhQ"/>
                     <connections>
                         <outlet property="currentUserAddr" destination="FQW-jl-pco" id="zSa-wb-kWS"/>
+                        <outlet property="dateButton" destination="Yyl-c1-85u" id="NKT-0d-WE9"/>
                         <outlet property="findDoctorButton" destination="w7r-uV-WkD" id="cew-Jn-V6P"/>
                         <outlet property="mapView" destination="LHc-XK-vEd" id="U4W-um-aBr"/>
+                        <outlet property="patientButton" destination="jHE-gC-eKr" id="wgj-VC-4p3"/>
+                        <outlet property="paymentOptionButton" destination="b31-Ag-FDx" id="b7v-Kb-Cvd"/>
+                        <outlet property="reasonButton" destination="IH5-sY-Vh6" id="zrV-RD-FeX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlj-KA-Kld" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,13 +474,13 @@
         <!--Family-->
         <scene sceneID="Ykd-jd-0J6">
             <objects>
-                <viewController id="MjT-fS-N7Y" customClass="FamilyViewController" customModule="Expressgp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FamilyViewController" id="MjT-fS-N7Y" customClass="FamilyViewController" customModule="Expressgp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fIv-Gm-brz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xvd-Lp-cm9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xCQ-2s-vRN">
                                     <size key="itemSize" width="150" height="172"/>
@@ -565,7 +575,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW4-Aa-y6N">
-                                <rect key="frame" x="62.5" y="494" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="558" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.81960784310000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jDk-oB-rSq"/>
@@ -1069,7 +1079,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-dk-jtA">
-                                                    <rect key="frame" x="8" y="8" width="398" height="193"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="193"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-gz-U7P">
                                                             <rect key="frame" x="10" y="10" width="100" height="33"/>
@@ -1083,7 +1093,7 @@
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 April 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ous-Lx-Bj5">
-                                                            <rect key="frame" x="238" y="10" width="150" height="21"/>
+                                                            <rect key="frame" x="199" y="10" width="150" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="150" id="LYS-V4-zu7"/>
                                                             </constraints>
@@ -1100,7 +1110,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="PLOT No: 457, SREEJI DARSHAN BUILIDING SREE JISWAMINARAYANA NAGAR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaT-VF-Lmc">
-                                                            <rect key="frame" x="21" y="55" width="369" height="31.5"/>
+                                                            <rect key="frame" x="21" y="55" width="330" height="31.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1114,7 +1124,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLOT No: 457, SREEJI DARSHAN BUILIDING SREE JISWAMINARAYANA NAGAR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-XA-EDZ">
-                                                            <rect key="frame" x="21" y="99" width="369" height="27"/>
+                                                            <rect key="frame" x="21" y="99" width="330" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1133,13 +1143,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSI-uC-eVv">
-                                                            <rect key="frame" x="280.5" y="148.5" width="107.5" height="18"/>
+                                                            <rect key="frame" x="241.5" y="148.5" width="107.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="er3-xs-kc6">
-                                                            <rect key="frame" x="257.5" y="150" width="15" height="15"/>
+                                                            <rect key="frame" x="218.5" y="150" width="15" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="VzT-dn-oOR"/>
                                                                 <constraint firstAttribute="width" constant="15" id="qh9-km-Len"/>

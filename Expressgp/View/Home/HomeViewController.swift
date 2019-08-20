@@ -11,6 +11,10 @@ import MapKit
 class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 	@IBOutlet weak var findDoctorButton: GradientButton!
 	@IBOutlet weak var currentUserAddr: UIButton!
+	@IBOutlet weak var patientButton: UIButton!
+	@IBOutlet weak var dateButton: UIButton!
+	@IBOutlet weak var reasonButton: UIButton!
+	@IBOutlet weak var paymentOptionButton: UIButton!
 	var locationManager = CLLocationManager() {
 		didSet {
 			locationManager.delegate = self
@@ -142,4 +146,39 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 		})
 		
 	}
+	@IBAction func openDatePicker(_ sender: Any) {
+	}
+	
+	@IBAction func changePaymentOption(_ sender: Any) {
+	}
+	@IBAction func changePatientName(_ sender: Any) {
+		let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "FamilyViewController")
+		self.navigationController?.pushViewController(vc, animated: true)
+	}
+		
+	@IBAction func addReasonForRequest(_ sender: Any) {
+		let vc = LanguageSearchView()
+		vc.delegate = self
+		vc.fromText = "Existing Illness"
+		self.present(vc, animated: true, completion: nil)
+	}
+}
+extension HomeViewController: LanguageSearchViewDelegate{
+	func didSelectlanguage(languageObj: [LanguageData]) {
+
+	}
+	
+	func didSelectillness(illnessObj: [IllnessData]) {
+		var selectedReason = [String]()
+		for obj in illnessObj {
+			selectedReason.append(obj.reason ?? "")
+		}
+		var reasonStr: String = selectedReason.joined(separator: ",")
+		self.reasonButton.setTitle(reasonStr, for: .normal)
+	}
+	
+	func didSelectiAllergies(AllergiesObj: [AllergiesData]) {
+	}
+	
+	
 }
