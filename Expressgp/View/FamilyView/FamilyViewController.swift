@@ -31,7 +31,33 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        if let loginData = UserDefaults.standard.value(forKey: "UserResponse") {
+//            do {
+//                let loginObj = try JSONDecoder().decode(LoginModal.self, from: loginData as! Data)
+//                self.loginModalObj = loginObj.data?[0]
+//                LoadingOverlay.shared.showLoaderView(view: self.view)
+//                self.familaViewObj.getFamilyList(userObj: loginModalObj ?? LoginData())
+//            } catch let error as NSError {
+//                print(error.localizedDescription)
+//                print(error.description)
+//            }
+//        }
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
+        }
+        let img = UIImage()
+        navigationController?.navigationBar.shadowImage = img
+        navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
+        navigationController?.navigationBar.backgroundColor =  UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
+        
         if let loginData = UserDefaults.standard.value(forKey: "UserResponse") {
             do {
                 let loginObj = try JSONDecoder().decode(LoginModal.self, from: loginData as! Data)
@@ -55,7 +81,7 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        //self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     //MAR:- Button Action
