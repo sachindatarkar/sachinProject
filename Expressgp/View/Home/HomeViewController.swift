@@ -38,8 +38,7 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 			locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
 			locationManager.startUpdatingLocation()
 		}
-		
-		
+
 		//Zoom to user location
 		if let userLocation = locationManager.location?.coordinate {
 			let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 200, longitudinalMeters: 200)
@@ -96,7 +95,6 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 	
 	func getAddressFromLatLon(Latitude: Double, Longitude: Double) {
 		var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-		
 		
 		let ceo: CLGeocoder = CLGeocoder()
 		center.latitude = Latitude
