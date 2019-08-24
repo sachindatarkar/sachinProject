@@ -125,17 +125,17 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.title_lbl?.text = languagefilterData?[indexPath.row].language_name
                 cell.selectedBtn.tag = indexPath.row
                 if languagefilterData?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxSelected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxUnselected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }else{
                 cell.title_lbl?.text = languageObj.languageArry?[indexPath.row].language_name
                 cell.selectedBtn.tag = indexPath.row
                 if languageObj.languageArry?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxSelected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxUnselected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }
             cell.selectedBtn.addTarget(self, action: #selector(onClickSelected), for: .touchUpInside)
@@ -144,17 +144,17 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.title_lbl?.text = illnessfilterData?[indexPath.row].reason
                 cell.selectedBtn.tag = indexPath.row
                 if illnessfilterData?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxSelected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxUnselected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }else{
                 cell.title_lbl?.text = languageObj.illnessArry?[indexPath.row].reason
                 cell.selectedBtn.tag = indexPath.row
                 if languageObj.illnessArry?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxSelected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxUnselected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }
             cell.selectedBtn.addTarget(self, action: #selector(onClickSelected), for: .touchUpInside)
@@ -164,17 +164,17 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.title_lbl?.text = allengifilterData?[indexPath.row].allergy
                 cell.selectedBtn.tag = indexPath.row
                 if allengifilterData?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxSelected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxUnselected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }else{
                cell.title_lbl?.text = languageObj.allengiArry?[indexPath.row].allergy
                 cell.selectedBtn.tag = indexPath.row
                 if languageObj.allengiArry?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxSelected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "checkBoxUnselected"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }
             cell.selectedBtn.addTarget(self, action: #selector(onClickSelected), for: .touchUpInside)

@@ -28,6 +28,7 @@ class AccountViewController: UIViewController {
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.layer.masksToBounds = true
         self.navigationItem.setHidesBackButton(true, animated:true);
+        logoOut_btn.addTarget(self, action: #selector(onClickLogOut), for: .touchUpInside)
 
         if let loginData = UserDefaults.standard.value(forKey: "UserResponse") {
             do {
@@ -76,6 +77,10 @@ class AccountViewController: UIViewController {
     @objc func onClickUpdate() {
         let vc = RegisterViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func onClickLogOut() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
