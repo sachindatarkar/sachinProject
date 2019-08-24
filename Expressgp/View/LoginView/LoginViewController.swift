@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mobileNoTF: UITextField!
     @IBOutlet weak var btn_getStarted: UIButton!
     var loginViewModalObj = LoginViewModal()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mobileNoTF.text = "8976159522"
@@ -53,7 +54,7 @@ class LoginViewController: UIViewController {
         }
 //        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
 //        self.navigationController?.pushViewController(vc, animated: true)
-
+      
     }
 
 }
