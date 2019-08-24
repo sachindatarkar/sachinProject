@@ -10,6 +10,7 @@ import UIKit
 
 class TermAndConditionCell: UITableViewCell {
 
+    @IBOutlet weak var checkBox_btn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

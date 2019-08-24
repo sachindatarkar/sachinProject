@@ -16,6 +16,8 @@ class GenderCell: UITableViewCell {
     @IBOutlet weak var btn_women: UIButton!
     @IBOutlet weak var btn_men: UIButton!
     var registerVc : RegisterViewController?
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

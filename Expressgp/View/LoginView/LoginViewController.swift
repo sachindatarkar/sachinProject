@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mobileNoTF.text = "8976159522"
+        //mobileNoTF.text = "8976159522"
         self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
         loginViewModalObj.pushToHomeView = { (otpStr) in
             LoadingOverlay.shared.hideLoaderView()

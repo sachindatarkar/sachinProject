@@ -10,6 +10,8 @@ import UIKit
 
 class FirstNameLastNameCell: UITableViewCell {
 
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
     override func awakeFromNib() {

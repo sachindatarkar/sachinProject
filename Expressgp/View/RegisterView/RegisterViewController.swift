@@ -27,6 +27,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var registerViewModalObj = RegisterViewModal()
     var isMenselected : Bool = false
     var iswomenSelected : Bool = false
+    var checkBoxSelected : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,15 +38,15 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         logo_img.layer.borderWidth = 1
         logo_img.layer.borderColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0).cgColor
         registerTV.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "First Name", secondPlaceHolder: "Last Name", firstText: "", secondText: "",iconImg :""))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "First Name", secondPlaceHolder: "Last Name", firstText: "", secondText: "",iconImg :"account-50"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: ConstantClass.sharedInstance.mobileNo, secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Email Id", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Men", secondPlaceHolder: "Women", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Date Of Birth", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Language", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Illness", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Allergies", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Email Id", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"new-post-50"))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Men", secondPlaceHolder: "Women", firstText: "", secondText: "",iconImg :"account-50"))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Date Of Birth", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"planner-50"))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Language", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"language-50"))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Illness", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"searchIcon"))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Allergies", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"searchIcon"))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"upload-50 (1)"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         registerViewModalObj.pushToHomeView = {
             let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
@@ -93,6 +94,8 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.lastNameTF.placeholder = completeProfileArry[indexPath.row].secondPlaceHolder
             cell?.firstNameTF.text = companyProfileObj.firstName
             cell?.lastNameTF.text = companyProfileObj.lastName
+            cell?.image1.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
+            cell?.image2.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 1 {
@@ -101,6 +104,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = ConstantClass.sharedInstance.mobileNo
             cell?.titleTF.isUserInteractionEnabled = false
+            cell?.icon_img.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 2 {
@@ -108,12 +112,15 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.titleTF.delegate = self
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = companyProfileObj.emailId
+            cell?.icon_img.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GenderCell") as? GenderCell
             cell?.btn_women.addTarget(self, action: #selector(OnClickWomen), for: .touchUpInside)
             cell?.btn_men.addTarget(self, action: #selector(OnClickMen), for: .touchUpInside)
+            cell?.image1.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
+            cell?.image2.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             if !isMenselected && !iswomenSelected {
                 cell?.womenImageView.image = UIImage(named: "optionUnselect.png")
                 cell?.menImageView.image = UIImage(named: "optionUnselect.png")
@@ -134,6 +141,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             dateTextField = cell?.titleTF
             cell?.titleTF.text = companyProfileObj.dateOfBirth
+            cell?.icon_img.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 5 {
@@ -141,13 +149,15 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.titleTF.delegate = self
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = companyProfileObj.language
+            cell?.icon_img.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GeneralRegisterCell") as? GeneralRegisterCell
             cell?.titleTF.delegate = self
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
-             cell?.titleTF.text = companyProfileObj.existingIllness
+            cell?.titleTF.text = companyProfileObj.existingIllness
+            cell?.icon_img.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 7 {
@@ -155,6 +165,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.titleTF.delegate = self
             cell?.titleTF.placeholder = completeProfileArry[indexPath.row].firstPlaceHolder
             cell?.titleTF.text = companyProfileObj.existingAllergies
+            cell?.icon_img.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             cell?.selectionStyle = .none
             return cell!
         }else if indexPath.row == 8 {
@@ -165,6 +176,12 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             return cell!
         }else if indexPath.row == 9 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TermAndConditionCell") as? TermAndConditionCell
+            cell?.checkBox_btn.addTarget(self, action: #selector(onClickCheckBox), for: .touchUpInside)
+            if checkBoxSelected {
+                cell?.checkBox_btn.setImage(UIImage(named: "checked-checkbox-50.png"), for: .normal)
+            }else{
+                cell?.checkBox_btn.setImage(UIImage(named: "unchecked-checkbox-50.png"), for: .normal)
+            }
             cell?.selectionStyle = .none
             return cell!
         }
@@ -340,6 +357,15 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         companyProfileObj.gender = "Men"
         registerTV.reloadData()
        
+    }
+    
+    @objc func onClickCheckBox(sender:UIButton) {
+        if checkBoxSelected {
+            checkBoxSelected = false
+        }else{
+            checkBoxSelected = true
+        }
+         registerTV.reloadData()
     }
     
 }

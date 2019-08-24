@@ -48,6 +48,23 @@
 		034719FC22E0D0810020AC3F /* AllergiesModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719FB22E0D0810020AC3F /* AllergiesModal.swift */; };
 		034719FF22E0D80F0020AC3F /* LanguageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */; };
 		03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */; };
+		038EABBA2310E6AD004371E0 /* trash-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABB92310E6AD004371E0 /* trash-30.png */; };
+		038EABBE2310E8A8004371E0 /* clock-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABBD2310E8A7004371E0 /* clock-30.png */; };
+		038EABCD2310F045004371E0 /* setting-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABBF2310F042004371E0 /* setting-50.png */; };
+		038EABCE2310F045004371E0 /* home-50 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC02310F042004371E0 /* home-50 (1).png */; };
+		038EABCF2310F045004371E0 /* upload-50 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC12310F042004371E0 /* upload-50 (1).png */; };
+		038EABD02310F045004371E0 /* language-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC22310F043004371E0 /* language-50.png */; };
+		038EABD12310F045004371E0 /* home-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC32310F043004371E0 /* home-100.png */; };
+		038EABD22310F045004371E0 /* checked-checkbox-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC42310F043004371E0 /* checked-checkbox-50.png */; };
+		038EABD32310F045004371E0 /* account-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC52310F043004371E0 /* account-50.png */; };
+		038EABD42310F045004371E0 /* new-post-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC62310F043004371E0 /* new-post-50.png */; };
+		038EABD52310F045004371E0 /* planner-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC72310F043004371E0 /* planner-50.png */; };
+		038EABD62310F045004371E0 /* upload-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC82310F044004371E0 /* upload-50.png */; };
+		038EABD72310F045004371E0 /* document-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABC92310F044004371E0 /* document-50.png */; };
+		038EABD82310F045004371E0 /* help-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABCA2310F044004371E0 /* help-50.png */; };
+		038EABD92310F045004371E0 /* unchecked-checkbox-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABCB2310F044004371E0 /* unchecked-checkbox-50.png */; };
+		038EABDA2310F045004371E0 /* home-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABCC2310F044004371E0 /* home-50.png */; };
+		038EABDC2310F119004371E0 /* mastercard-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 038EABDB2310F118004371E0 /* mastercard-50.png */; };
 		038FD8EF2281F33F00CAA522 /* BookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */; };
 		03C1329C22F0B410004C3252 /* ConsulationFeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */; };
 		03C1329D22F0B410004C3252 /* ConsulationFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */; };
@@ -146,6 +163,23 @@
 		034719FB22E0D0810020AC3F /* AllergiesModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesModal.swift; sourceTree = "<group>"; };
 		034719FD22E0D80F0020AC3F /* LanguageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableCell.swift; sourceTree = "<group>"; };
 		034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableCell.xib; sourceTree = "<group>"; };
+		038EABB92310E6AD004371E0 /* trash-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trash-30.png"; sourceTree = "<group>"; };
+		038EABBD2310E8A7004371E0 /* clock-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-30.png"; sourceTree = "<group>"; };
+		038EABBF2310F042004371E0 /* setting-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-50.png"; sourceTree = "<group>"; };
+		038EABC02310F042004371E0 /* home-50 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-50 (1).png"; sourceTree = "<group>"; };
+		038EABC12310F042004371E0 /* upload-50 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-50 (1).png"; sourceTree = "<group>"; };
+		038EABC22310F043004371E0 /* language-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "language-50.png"; sourceTree = "<group>"; };
+		038EABC32310F043004371E0 /* home-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-100.png"; sourceTree = "<group>"; };
+		038EABC42310F043004371E0 /* checked-checkbox-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked-checkbox-50.png"; sourceTree = "<group>"; };
+		038EABC52310F043004371E0 /* account-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account-50.png"; sourceTree = "<group>"; };
+		038EABC62310F043004371E0 /* new-post-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-post-50.png"; sourceTree = "<group>"; };
+		038EABC72310F043004371E0 /* planner-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planner-50.png"; sourceTree = "<group>"; };
+		038EABC82310F044004371E0 /* upload-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-50.png"; sourceTree = "<group>"; };
+		038EABC92310F044004371E0 /* document-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "document-50.png"; sourceTree = "<group>"; };
+		038EABCA2310F044004371E0 /* help-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-50.png"; sourceTree = "<group>"; };
+		038EABCB2310F044004371E0 /* unchecked-checkbox-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked-checkbox-50.png"; sourceTree = "<group>"; };
+		038EABCC2310F044004371E0 /* home-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-50.png"; sourceTree = "<group>"; };
+		038EABDB2310F118004371E0 /* mastercard-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mastercard-50.png"; sourceTree = "<group>"; };
 		038FD8ED2281F33F00CAA522 /* BookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListViewController.swift; sourceTree = "<group>"; };
 		03C1329A22F0B410004C3252 /* ConsulationFeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulationFeeCell.swift; sourceTree = "<group>"; };
 		03C1329B22F0B410004C3252 /* ConsulationFeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsulationFeeCell.xib; sourceTree = "<group>"; };
@@ -262,7 +296,6 @@
 			path = NetworkingFile;
 			sourceTree = "<group>";
 		};
-
 		030E960B22E76C9500DE7D99 /* AddMemberView */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +336,7 @@
 		0319C3822276B05B0014B568 /* Expressgp */ = {
 			isa = PBXGroup;
 			children = (
+				038EABB82310E636004371E0 /* Icons */,
 				030CC0C722DCCED800A9B1AF /* NetworkingFile */,
 				E333794C227EE4920074D1B3 /* Model */,
 				E333794B227EE4680074D1B3 /* ModelView */,
@@ -340,18 +374,11 @@
 			isa = PBXGroup;
 			children = (
 				C33A19902301F3F400A76640 /* GradientButton.swift */,
-				030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */,
-				030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */,
-				03F85BA622ED875200781437 /* star.png */,
 				0319C39D2276B7820014B568 /* UIViewExtension.swift */,
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
 				0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */,
 				E380AE5022835265001206D2 /* Style.swift */,
 				030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */,
-				03F85BA222ED83EC00781437 /* clock.png */,
-				03F85BA322ED83EC00781437 /* credit-card.png */,
-				030A2B3C22E38F14007DC1A2 /* optionSelect.png */,
-				030A2B3D22E38F14007DC1A2 /* optionUnselect.png */,
 				0309794922F6C6FA00DDD217 /* LoaderClass.swift */,
 			);
 			path = CommonFile;
@@ -364,6 +391,37 @@
 				034719FE22E0D80F0020AC3F /* LanguageTableCell.xib */,
 			);
 			path = CellView;
+			sourceTree = "<group>";
+		};
+		038EABB82310E636004371E0 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				038EABDB2310F118004371E0 /* mastercard-50.png */,
+				038EABC52310F043004371E0 /* account-50.png */,
+				038EABC42310F043004371E0 /* checked-checkbox-50.png */,
+				038EABC92310F044004371E0 /* document-50.png */,
+				038EABCA2310F044004371E0 /* help-50.png */,
+				038EABC02310F042004371E0 /* home-50 (1).png */,
+				038EABCC2310F044004371E0 /* home-50.png */,
+				038EABC32310F043004371E0 /* home-100.png */,
+				038EABC22310F043004371E0 /* language-50.png */,
+				038EABC62310F043004371E0 /* new-post-50.png */,
+				038EABC72310F043004371E0 /* planner-50.png */,
+				038EABBF2310F042004371E0 /* setting-50.png */,
+				038EABCB2310F044004371E0 /* unchecked-checkbox-50.png */,
+				038EABC12310F042004371E0 /* upload-50 (1).png */,
+				038EABC82310F044004371E0 /* upload-50.png */,
+				038EABBD2310E8A7004371E0 /* clock-30.png */,
+				038EABB92310E6AD004371E0 /* trash-30.png */,
+				030AA2FA22F5FD2500A32D3B /* checkBoxSelected.png */,
+				030AA2FB22F5FD2500A32D3B /* checkBoxUnselected.png */,
+				03F85BA622ED875200781437 /* star.png */,
+				03F85BA222ED83EC00781437 /* clock.png */,
+				03F85BA322ED83EC00781437 /* credit-card.png */,
+				030A2B3C22E38F14007DC1A2 /* optionSelect.png */,
+				030A2B3D22E38F14007DC1A2 /* optionUnselect.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		038FD8EC2281F30A00CAA522 /* BookingViewFile */ = {
@@ -627,31 +685,48 @@
 				03C1329D22F0B410004C3252 /* ConsulationFeeCell.xib in Resources */,
 				E3893C7822873CDF00691449 /* FirstNameLastNameCell.xib in Resources */,
 				03471A0022E0D80F0020AC3F /* LanguageTableCell.xib in Resources */,
+				038EABD32310F045004371E0 /* account-50.png in Resources */,
 				E3337956227F5E4F0074D1B3 /* BaseViewController.storyboard in Resources */,
 				03C37A022285E2FE00D3D0B4 /* BookingDetailDrInfoCell.xib in Resources */,
 				E3893C6622873C6900691449 /* OTPViewController.xib in Resources */,
+				038EABD02310F045004371E0 /* language-50.png in Resources */,
+				038EABD22310F045004371E0 /* checked-checkbox-50.png in Resources */,
+				038EABDA2310F045004371E0 /* home-50.png in Resources */,
 				E3337949227EE4480074D1B3 /* SearchViewController.xib in Resources */,
 				C3CADDAC22FCA5A800BAF329 /* ProfilePopupViewController.xib in Resources */,
 				C33A198D2301E61000A76640 /* WelcomeViewController.xib in Resources */,
 				E3893C7E22873CDF00691449 /* GenderCell.xib in Resources */,
 				0310E91F22DE3925001DCD3E /* LanguageSearchView.xib in Resources */,
+				038EABD12310F045004371E0 /* home-100.png in Resources */,
+				038EABCE2310F045004371E0 /* home-50 (1).png in Resources */,
 				03F85BB322EDA4B400781437 /* AppoinmentDetailCell.xib in Resources */,
+				038EABD42310F045004371E0 /* new-post-50.png in Resources */,
 				030A2B3F22E38F14007DC1A2 /* optionUnselect.png in Resources */,
 				03F85BA722ED875300781437 /* star.png in Resources */,
 				E3893C7C22873CDF00691449 /* TermAndConditionCell.xib in Resources */,
 				030E960F22E76CEE00DE7D99 /* AddMemberViewController.xib in Resources */,
 				030A2B3E22E38F14007DC1A2 /* optionSelect.png in Resources */,
+				038EABD52310F045004371E0 /* planner-50.png in Resources */,
 				03C132A122F0B69A004C3252 /* UserDetailCell.xib in Resources */,
+				038EABD82310F045004371E0 /* help-50.png in Resources */,
 				03F85BAB22EDA16B00781437 /* DoctorProfileCell.xib in Resources */,
+				038EABDC2310F119004371E0 /* mastercard-50.png in Resources */,
 				03C37A062285E9C600D3D0B4 /* StarRatingCell.xib in Resources */,
+				038EABD62310F045004371E0 /* upload-50.png in Resources */,
 				0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */,
 				030AA2FD22F5FD2500A32D3B /* checkBoxUnselected.png in Resources */,
+				038EABCF2310F045004371E0 /* upload-50 (1).png in Resources */,
 				E3893C6222873C4700691449 /* LoginViewController.xib in Resources */,
+				038EABBA2310E6AD004371E0 /* trash-30.png in Resources */,
+				038EABCD2310F045004371E0 /* setting-50.png in Resources */,
+				038EABD92310F045004371E0 /* unchecked-checkbox-50.png in Resources */,
 				E3893C7F22873CDF00691449 /* GeneralRegisterCell.xib in Resources */,
 				C33A19892301E5CB00A76640 /* FindingDoctorViewController.xib in Resources */,
 				03F85BA522ED83EC00781437 /* credit-card.png in Resources */,
+				038EABD72310F045004371E0 /* document-50.png in Resources */,
 				03F85BA422ED83EC00781437 /* clock.png in Resources */,
 				030AA2FC22F5FD2500A32D3B /* checkBoxSelected.png in Resources */,
+				038EABBE2310E8A8004371E0 /* clock-30.png in Resources */,
 				0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */,
 				030A8C7B228347B500691E43 /* BookingDetailViewController.xib in Resources */,
 				E3893C6D22873CC600691449 /* RegisterViewController.xib in Resources */,
@@ -923,7 +998,10 @@
 				DEVELOPMENT_TEAM = QW737RU4QC;
 				INFOPLIST_FILE = Expressgp/SupportFile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Expressgp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -940,7 +1018,10 @@
 				DEVELOPMENT_TEAM = QW737RU4QC;
 				INFOPLIST_FILE = Expressgp/SupportFile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Expressgp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

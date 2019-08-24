@@ -39,15 +39,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-Oq-Akf">
                     <rect key="frame" x="30" y="225" width="315" height="65"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0vg-NZ-Ak7">
-                            <rect key="frame" x="8" y="12.5" width="40" height="40"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0vg-NZ-Ak7">
+                            <rect key="frame" x="8" y="17.5" width="30" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="jkK-o3-zR5"/>
-                                <constraint firstAttribute="width" constant="40" id="q8f-2Q-QKS"/>
+                                <constraint firstAttribute="height" constant="30" id="jkK-o3-zR5"/>
+                                <constraint firstAttribute="width" constant="30" id="q8f-2Q-QKS"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jY9-Sm-qI9">
-                            <rect key="frame" x="58" y="8" width="247" height="49"/>
+                            <rect key="frame" x="48" y="8" width="257" height="49"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro Medium" pointSize="15"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>

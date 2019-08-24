@@ -32,7 +32,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFA-WC-DZ6">
                                         <rect key="frame" x="8" y="6" width="30" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="F1b-W1-xuo"/>
                                             <constraint firstAttribute="width" constant="30" id="NT2-SV-zDj"/>
@@ -63,7 +63,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-nR-N3Q">
                                         <rect key="frame" x="8" y="6" width="30" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="GX3-nc-crx"/>
                                             <constraint firstAttribute="height" constant="30" id="d4T-Cf-y5b"/>
@@ -124,6 +124,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="firstNameTF" destination="oUw-cO-3or" id="yul-75-7oK"/>
+                <outlet property="image1" destination="RFA-WC-DZ6" id="DMt-82-fmy"/>
+                <outlet property="image2" destination="aeT-nR-N3Q" id="zNx-I0-cbn"/>
                 <outlet property="lastNameTF" destination="0NV-3y-8AP" id="SRb-UT-U3T"/>
             </connections>
             <point key="canvasLocation" x="129.59999999999999" y="153.82308845577214"/>

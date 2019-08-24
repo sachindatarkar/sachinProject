@@ -52,6 +52,7 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         }
         
         otpViewModalObj.pushToRegistartion = {
+            LoadingOverlay.shared.hideLoaderView()
             let vc = RegisterViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }

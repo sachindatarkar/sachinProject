@@ -46,7 +46,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ZT-H9-dOw">
                                         <rect key="frame" x="8" y="6" width="30" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="PCk-Al-uKi"/>
                                             <constraint firstAttribute="width" constant="30" id="kV9-B7-lwL"/>
@@ -84,7 +84,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTx-Jp-uiC">
                                         <rect key="frame" x="8" y="6" width="30" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="HEG-xY-agL"/>
                                             <constraint firstAttribute="height" constant="30" id="cpZ-8l-Iic"/>
@@ -137,6 +137,8 @@
             <connections>
                 <outlet property="btn_men" destination="UBl-CM-KBP" id="9js-Bs-dlL"/>
                 <outlet property="btn_women" destination="GTe-wy-SdS" id="aHB-1u-ebY"/>
+                <outlet property="image1" destination="4ZT-H9-dOw" id="olA-tX-R9i"/>
+                <outlet property="image2" destination="bTx-Jp-uiC" id="yo7-hs-sqy"/>
                 <outlet property="menImageView" destination="Qts-6I-Ifb" id="Ayu-Uq-D6c"/>
                 <outlet property="womenImageView" destination="vBL-xW-aDQ" id="hkW-SK-Ulm"/>
             </connections>
