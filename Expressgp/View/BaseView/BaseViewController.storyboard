@@ -970,7 +970,7 @@
         <scene sceneID="kEB-uS-tQf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9dc-lO-xK6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="homeIcon" selectedImage="homeIcon" id="39o-Xv-CS9"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-50 (1).png" selectedImage="home-50 (1).png" id="39o-Xv-CS9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ufu-nn-uW8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1226,7 +1226,7 @@
         <image name="clock.png" width="384" height="384"/>
         <image name="credit-card.png" width="384" height="384"/>
         <image name="familyIcon" width="25" height="25"/>
-        <image name="homeIcon" width="25" height="25"/>
+        <image name="home-50 (1).png" width="25.411764144897461" height="25.411764144897461"/>
         <image name="mastercard-50.png" width="27.360000610351562" height="27.360000610351562"/>
         <image name="searchIcon" width="25" height="25"/>
         <image name="star.png" width="384" height="384"/>

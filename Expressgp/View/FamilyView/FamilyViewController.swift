@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol FamilyViewProtocol {
+    func didselectFamilyMember(familyObj : FamiliListData)
+}
+
 class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addMemberBtn: UIButton!
     var loginModalObj : LoginData?
     var familaViewObj = FamilyViewModal()
+    var fromView : String?
+    var delegate : FamilyViewProtocol!
    // private let sectionInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 10.0,right: 10.0)
     private let spacing:CGFloat = 5.0
     override func viewDidLoad() {
@@ -116,11 +122,16 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let addVC = AddMemberViewController()
-        addVC.loginModalObj = self.loginModalObj
-        addVC.singleFamilyObj = familaViewObj.familyListArry?[indexPath.row]
-        addVC.isEditProfile = true
-        self.navigationController?.pushViewController(addVC, animated: true)
+        if fromView == "Home" {
+            delegate.didselectFamilyMember(familyObj: (familaViewObj.familyListArry?[indexPath.row])!)
+            self.navigationController?.popViewController(animated: true)
+        }else{
+            let addVC = AddMemberViewController()
+            addVC.loginModalObj = self.loginModalObj
+            addVC.singleFamilyObj = familaViewObj.familyListArry?[indexPath.row]
+            addVC.isEditProfile = true
+            self.navigationController?.pushViewController(addVC, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,

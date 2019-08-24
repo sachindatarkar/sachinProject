@@ -11,6 +11,7 @@ import UIKit
 class RegisterViewModal: NSObject {
     var apiClient = ApiClientClass();
     var pushToHomeView : (() -> Void)?
+    var showError : ((String) -> Void)?
     func registerUser(userObj:CompanyProfileModal)  {
         var params: [String:Any] = [:]
         params = self.GetCommonParrameter()
@@ -32,6 +33,13 @@ class RegisterViewModal: NSObject {
                     if status == 1 {
                         UserDefaults.standard.setValue(dictionary, forKey: "UserResponse")
                         self.pushToHomeView?()
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showError?(str as! String)
+                        }else{
+                            self.showError?("Something wrong!!!!")
+                        }
                     }
                 }
             } catch let error as NSError {

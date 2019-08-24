@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         logo_img.layer.borderColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0).cgColor
         registerTV.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "First Name", secondPlaceHolder: "Last Name", firstText: "", secondText: "",iconImg :"account-50"))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: ConstantClass.sharedInstance.mobileNo, secondText: "",iconImg :""))
+        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: ConstantClass.sharedInstance.mobileNo, secondText: "",iconImg :"mobile_icon"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Email Id", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"new-post-50"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Men", secondPlaceHolder: "Women", firstText: "", secondText: "",iconImg :"account-50"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Date Of Birth", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"planner-50"))
@@ -49,8 +49,14 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"upload-50 (1)"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
         registerViewModalObj.pushToHomeView = {
+            LoadingOverlay.shared.hideLoaderView()
             let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        registerViewModalObj.showError = { (str) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: str)
         }
         
     }
@@ -211,8 +217,35 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @objc func onClickSubmit() {
-        LoadingOverlay.shared.showLoaderView(view: self.view)
-        registerViewModalObj.registerUser(userObj: companyProfileObj)
+        if checkValidation(userObj: companyProfileObj) {
+            if checkBoxSelected {
+                LoadingOverlay.shared.showLoaderView(view: self.view)
+                registerViewModalObj.registerUser(userObj: companyProfileObj)
+            }else{
+                MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Please accept term And condition")
+            }
+
+        }
+    }
+    
+    func checkValidation(userObj: CompanyProfileModal) -> Bool {
+        if userObj.firstName == "" || userObj.firstName == nil {
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter first name")
+            return false
+        }else if userObj.lastName == "" || userObj.lastName == nil {
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter last name")
+            return false
+        }else if userObj.emailId == "" || userObj.emailId == nil {
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter email Id")
+            return false
+        }else if userObj.gender == "" || userObj.gender == nil {
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Please select gender")
+            return false
+        }else if userObj.dateOfBirth == "" || userObj.dateOfBirth == nil {
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Date of Birth")
+            return false
+        }
+        return true
     }
     
     //MARK:- UITextField Delegate

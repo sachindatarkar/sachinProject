@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,FamilyViewProtocol {
 	@IBOutlet weak var findDoctorButton: GradientButton!
 	@IBOutlet weak var currentUserAddr: UIButton!
 	@IBOutlet weak var patientButton: UIButton!
@@ -152,8 +152,10 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 	@IBAction func changePaymentOption(_ sender: Any) {
 	}
 	@IBAction func changePatientName(_ sender: Any) {
-		let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "FamilyViewController")
-		self.navigationController?.pushViewController(vc, animated: true)
+		let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "FamilyViewController") as? FamilyViewController
+        vc?.fromView = "Home"
+        vc?.delegate  = self
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
 	}
 		
 	@IBAction func addReasonForRequest(_ sender: Any) {
@@ -162,6 +164,10 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 		vc.fromText = "Existing Illness"
 		self.present(vc, animated: true, completion: nil)
 	}
+    
+    func didselectFamilyMember(familyObj : FamiliListData) {
+        patientButton.setTitle("Patient : \(familyObj.relation ?? "")", for: .normal)
+    }
 }
 extension HomeViewController: LanguageSearchViewDelegate{
 	func didSelectlanguage(languageObj: [LanguageData]) {
@@ -180,5 +186,5 @@ extension HomeViewController: LanguageSearchViewDelegate{
 	func didSelectiAllergies(AllergiesObj: [AllergiesData]) {
 	}
 	
-	
+   
 }
