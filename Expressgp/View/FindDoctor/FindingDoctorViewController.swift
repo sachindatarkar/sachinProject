@@ -19,6 +19,15 @@ class FindingDoctorViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         imgvAvatar.layer.cornerRadius = imgvAvatar.frame.size.width/2.0
         createPulse()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        pulseVIew.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        // handling code
+        print("Tap on click")
+        self.dismiss(animated: true, completion: nil)
     }
     
 	func getDoctorList(){
@@ -31,7 +40,6 @@ class FindingDoctorViewController: UIViewController {
 	}
     func createPulse() {
 		for _ in 0...2 {
-
             let circularPath = UIBezierPath(arcCenter: .zero, radius: 300, startAngle: 0, endAngle: 2 * .pi , clockwise: true)
             let pulsatingLayer = CAShapeLayer()
             pulsatingLayer.path = circularPath.cgPath
