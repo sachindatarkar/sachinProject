@@ -74,12 +74,42 @@ extension NSObject {
     }
 }
 
-
-extension UIViewController {
-    func showAlert(title: String?, message: String?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
+extension UIButton{
+	func setTitle(_ title: String?){
+		self.setTitle(title, for: .normal)
+	}
+	
+	func setTitleAndAttributes(_ title: String?, fontColor: UIColor = UIColor.white){
+		self.setTitle(title, for: .normal)
+	}
 }
 
+extension UIViewController {
+	func showAlert(title: String?, message: String?) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+		alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	func setupNavigationBarColor(){
+		UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
+		self.tabBarController?.navigationItem.hidesBackButton = true
+		let img = UIImage()
+		navigationController?.navigationBar.shadowImage = img
+		navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
+		navigationController?.navigationBar.backgroundColor = Style.Color.Background.primaryColor
+		navigationController?.navigationBar.barTintColor = Style.Color.Background.primaryColor
+	}
+	
+	func setupNavigationBarData(){
+		let notifiButton = UIButton(type: .custom)
+		notifiButton.setImage(UIImage(named: "notification-icon"), for: .normal)
+		let rightButton = UIButton(type: .custom)
+		rightButton.setTitleAndAttributes("Personal")
+		self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: notifiButton)]
+		let leftButton = UIButton(type: .custom)
+		leftButton.setTitleAndAttributes("ExpressGP")
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+	}
+	
+}
