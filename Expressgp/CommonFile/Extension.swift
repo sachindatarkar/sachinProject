@@ -8,7 +8,20 @@
 
 import Foundation
 import UIKit
-
+import SDWebImage
+extension UIImageView{
+	func setImage(url: URL) {
+		self.sd_setImage(with:url) { (image, error, type,_) in
+			if (error != nil) {
+				// Failed to load image
+				//self.image = //Placeholder
+			} else {
+				// Successful in loading image
+				self.image = image
+			}
+		}
+	}
+}
 extension UIView {
     func applyGradient(colours: [UIColor]) -> Void {
         self.applyGradient(colours: colours, locations: nil)
