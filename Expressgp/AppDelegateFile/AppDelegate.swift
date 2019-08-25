@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backgroundColor = Style.Color.Background.primaryColor
         
         GMSServices.provideAPIKey("AIzaSyBMNWJsFzaApBOPY9rbPphOqNADi_IRGbw")
-        GMSPlacesClient.provideAPIKey("AIzaSyBMNWJsFzaApBOPY9rbPphOqNADi_IRGbw")
+		GMSPlacesClient.provideAPIKey("AIzaSyBMNWJsFzaApBOPY9rbPphOqNADi_IRGbw")
 
        /* let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
         let navView = UINavigationController(rootViewController: vc)
@@ -61,8 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+	
 }
 
 extension UIApplication {

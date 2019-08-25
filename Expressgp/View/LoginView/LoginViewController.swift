@@ -35,10 +35,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor.white
-        }
+		UIApplication.shared.statusBarView?.backgroundColor = .white
         let img = UIImage()
         navigationController?.navigationBar.shadowImage = img
         navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
@@ -47,14 +44,14 @@ class LoginViewController: UIViewController {
     }
     
     @objc func onClickGetStarted() {
-        if mobileNoTF.text != "" {
-            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
-        }else{
-            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
-        }
-//        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
-//        self.navigationController?.pushViewController(vc, animated: true)
-      
+//        if mobileNoTF.text != "" {
+//            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
+//        }else{
+//            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
+//        }
+        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+		
     }
 
 }
