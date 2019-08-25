@@ -37,7 +37,7 @@
 		0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3832276B05B0014B568 /* AppDelegate.swift */; };
 		0319C38B2276B05D0014B568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0319C38A2276B05D0014B568 /* Assets.xcassets */; };
 		0319C38E2276B05D0014B568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0319C38C2276B05D0014B568 /* LaunchScreen.storyboard */; };
-		0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39D2276B7820014B568 /* UIViewExtension.swift */; };
+		0319C39E2276B7820014B568 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39D2276B7820014B568 /* Extension.swift */; };
 		0319C3A02276BA7B0014B568 /* UIColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C39F2276BA7B0014B568 /* UIColourExtension.swift */; };
 		0319C3A22276C34E0014B568 /* MyCustomeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */; };
 		0343146522EC4ECF00BA28DC /* AddMemberViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */; };
@@ -89,6 +89,8 @@
 		C33A198D2301E61000A76640 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A198B2301E61000A76640 /* WelcomeViewController.xib */; };
 		C33A198E2301E61000A76640 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A198C2301E61000A76640 /* WelcomeViewController.swift */; };
 		C33A19912301F3F400A76640 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33A19902301F3F400A76640 /* GradientButton.swift */; };
+		C33D6E3B2312BBC900B2A293 /* FindDoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D6E3A2312BBC900B2A293 /* FindDoctorViewModel.swift */; };
+		C34AA1482311AFA80021013F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA1472311AFA80021013F /* Utilities.swift */; };
 		C3CADDA222FCA02A00BAF329 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CADDA122FCA02900BAF329 /* HomeViewController.swift */; };
 		C3CADDAC22FCA5A800BAF329 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CADDAA22FCA5A700BAF329 /* ProfilePopupViewController.xib */; };
 		C3CADDAD22FCA5A800BAF329 /* ProfilePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CADDAB22FCA5A700BAF329 /* ProfilePopupViewController.swift */; };
@@ -152,7 +154,7 @@
 		0319C38A2276B05D0014B568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0319C38D2276B05D0014B568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0319C38F2276B05D0014B568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0319C39D2276B7820014B568 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		0319C39D2276B7820014B568 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0319C39F2276BA7B0014B568 /* UIColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColourExtension.swift; sourceTree = "<group>"; };
 		0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomeAlert.swift; sourceTree = "<group>"; };
 		0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModal.swift; sourceTree = "<group>"; };
@@ -206,6 +208,8 @@
 		C33A198B2301E61000A76640 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		C33A198C2301E61000A76640 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C33A19902301F3F400A76640 /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		C33D6E3A2312BBC900B2A293 /* FindDoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindDoctorViewModel.swift; sourceTree = "<group>"; };
+		C34AA1472311AFA80021013F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C3CADDA122FCA02900BAF329 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Expressgp/View/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3CADDAA22FCA5A700BAF329 /* ProfilePopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePopupViewController.xib; sourceTree = "<group>"; };
 		C3CADDAB22FCA5A700BAF329 /* ProfilePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewController.swift; sourceTree = "<group>"; };
@@ -374,12 +378,13 @@
 			isa = PBXGroup;
 			children = (
 				C33A19902301F3F400A76640 /* GradientButton.swift */,
-				0319C39D2276B7820014B568 /* UIViewExtension.swift */,
+				0319C39D2276B7820014B568 /* Extension.swift */,
 				0319C39F2276BA7B0014B568 /* UIColourExtension.swift */,
 				0319C3A12276C34E0014B568 /* MyCustomeAlert.swift */,
 				E380AE5022835265001206D2 /* Style.swift */,
 				030A2B3A22E389F1007DC1A2 /* ImagePickerManager.swift */,
 				0309794922F6C6FA00DDD217 /* LoaderClass.swift */,
+				C34AA1472311AFA80021013F /* Utilities.swift */,
 			);
 			path = CommonFile;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				0343146422EC4ECF00BA28DC /* AddMemberViewModal.swift */,
 				0343146622EC67DD00BA28DC /* BookingListViewModal.swift */,
 				030F209722F34543007D4308 /* BookingDetailViewModal.swift */,
+				C33D6E3A2312BBC900B2A293 /* FindDoctorViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -822,12 +828,13 @@
 				03F85BAA22EDA16B00781437 /* DoctorProfileCell.swift in Sources */,
 				03181945227EF4F100F3B03D /* CompanyProfileModal.swift in Sources */,
 				E3893C6E22873CC600691449 /* RegisterViewController.swift in Sources */,
+				C33D6E3B2312BBC900B2A293 /* FindDoctorViewModel.swift in Sources */,
 				030A2B3B22E389F1007DC1A2 /* ImagePickerManager.swift in Sources */,
 				E3893C7A22873CDF00691449 /* GeneralRegisterCell.swift in Sources */,
 				E3893C7D22873CDF00691449 /* FirstNameLastNameCell.swift in Sources */,
 				030CC0CF22DCE11D00A9B1AF /* OtpViewModal.swift in Sources */,
 				03F85BAE22EDA46200781437 /* MaptableCell.swift in Sources */,
-				0319C39E2276B7820014B568 /* UIViewExtension.swift in Sources */,
+				0319C39E2276B7820014B568 /* Extension.swift in Sources */,
 				030C34A022E8BAD10015A150 /* FamilyViewCell.swift in Sources */,
 				0343146522EC4ECF00BA28DC /* AddMemberViewModal.swift in Sources */,
 				E3337953227EFFE00074D1B3 /* BaseViewController.swift in Sources */,
@@ -851,6 +858,7 @@
 				0319C3842276B05B0014B568 /* AppDelegate.swift in Sources */,
 				030CC0CB22DCD01F00A9B1AF /* ConstantClass.swift in Sources */,
 				030F209822F34543007D4308 /* BookingDetailViewModal.swift in Sources */,
+				C34AA1482311AFA80021013F /* Utilities.swift in Sources */,
 				030C349B22E8B7E10015A150 /* FamilyListModal.swift in Sources */,
 				034719F822E0D02F0020AC3F /* LanguageModal.swift in Sources */,
 				C3CADDAD22FCA5A800BAF329 /* ProfilePopupViewController.swift in Sources */,
