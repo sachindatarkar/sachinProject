@@ -25,7 +25,7 @@ public struct Style {
     
     struct Color {
         struct Background{
-            static let primaryColor = UIColor(red: 0/255.0, green: 169/255.0, blue: 182/255.0, alpha: 1.0)
+            static let primaryColor = UIColor(red: 0/255.0, green: 169/255.0, blue: 179/255.0, alpha: 1.0)
         }
         
         struct Border{

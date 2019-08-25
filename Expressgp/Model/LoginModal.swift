@@ -15,7 +15,7 @@ struct LoginModal : Decodable {
     var data : [LoginData]?
 }
 
-struct LoginData : Decodable {
+public struct LoginData : Decodable {
    var firstname : String?
    var  lastname : String?
    var  user_id : String?
