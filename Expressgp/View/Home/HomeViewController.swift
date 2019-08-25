@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import MapKit
-class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,FamilyViewProtocol {
+import GoogleMaps
+
+class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManagerDelegate {
 	@IBOutlet weak var findDoctorButton: GradientButton!
 	@IBOutlet weak var currentUserAddr: UIButton!
 	@IBOutlet weak var patientButton: UIButton!
-	@IBOutlet weak var dateButton: UIButton!
+	@IBOutlet weak var dateButton: UITextField!
 	@IBOutlet weak var reasonButton: UIButton!
 	@IBOutlet weak var paymentOptionButton: UIButton!
 	var locationManager = CLLocationManager() {
@@ -20,68 +21,76 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 			locationManager.delegate = self
 		}
 	}
-	
+//
 	let regionRadius: CLLocationDistance = 1000
 	
-	@IBOutlet weak var mapView: MKMapView!
+	@IBOutlet weak var mapView: GMSMapView!
+	var geoCoder: GMSGeocoder = GMSGeocoder()
+	let datePicker: UIDatePicker = UIDatePicker()
+	var selectedReason = [String]()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
-		mapView.delegate = self
-		mapView.showsUserLocation = true
-		let locationManager = CLLocationManager()
 		locationManager.delegate = self
+		dateButton.delegate = self
+//		dateButton.becomeFirstResponder()
 		// Check for Location Services
 		self.locationManager.requestAlwaysAuthorization()
-		
-		// For use in foreground
+		//		// For use in foreground
 		self.locationManager.requestWhenInUseAuthorization()
-		
-		if CLLocationManager.locationServicesEnabled() {
-			locationManager.delegate = self
-			locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-			locationManager.startUpdatingLocation()
-		}
-
-		//Zoom to user location
-		if let userLocation = locationManager.location?.coordinate {
-			let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 200, longitudinalMeters: 200)
-			mapView.setRegion(viewRegion, animated: false)
-		}
-		self.tabBarController?.title="ExpressGP"
-		let notifiButton = UIButton(type: .custom)
-		notifiButton.setImage(UIImage(named: "notification"), for: .normal)
-		let rightButton = UIButton(type: .custom)
-		rightButton.setTitle("Personal", for: .normal)
-		
-		self.tabBarController?.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: rightButton),UIBarButtonItem(customView: notifiButton)]
-		        self.navigationItem.title = "My Title"
-		// self.navigationController?.viewControllers.first?.navigationController?.navigationBar.topItem?.title = "Shital"
-		//       print(self.navigationController?.viewControllers.first?.navigationController?.navigationBar.topItem?.title)
 		presentWelcomeOverlay()
-		self.locationManager = locationManager
 		DispatchQueue.main.async {
 			self.locationManager.startUpdatingLocation()
-		}        // Do any additional setup after loading the view.
+		}
+		// Do any additional setup after loading the view.
+		
+		self.mapView.isMyLocationEnabled = true;
+		
+		//Controls the type of map tiles that should be displayed.
+		
+		self.mapView.mapType = .normal;
+		
+		//Shows the compass button on the map
+		
+		self.mapView.settings.compassButton = true;
+		
+		//Shows the my location button on the map
+		
+		self.mapView.settings.myLocationButton = true;
+		
+		//Sets the view controller to be the GMSMapView delegate
+		
+		self.mapView.delegate = self;
 	}
 	
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
-        }
-        let img = UIImage()
-        navigationController?.navigationBar.shadowImage = img
-        navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
-        navigationController?.navigationBar.backgroundColor =  UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
-        self.navigationItem.hidesBackButton = true
-        self.tabBarController?.navigationItem.hidesBackButton = true
-    }
+		setupHomeNavigationBar()
+	}
 	
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		findDoctorButton.gradientLayer.frame = findDoctorButton.bounds
+
+	}
 	
+	func setupHomeNavigationBar(){
+		UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
+		self.tabBarController?.navigationItem.hidesBackButton = true
+		let img = UIImage()
+		navigationController?.navigationBar.shadowImage = img
+		navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
+		navigationController?.navigationBar.backgroundColor = Style.Color.Background.primaryColor
+		navigationController?.navigationBar.barTintColor = Style.Color.Background.primaryColor
+		let notifiButton = UIButton(type: .custom)
+		notifiButton.setImage(UIImage(named: "notification-icon"), for: .normal)
+		let rightButton = UIButton(type: .custom)
+		rightButton.setTitleAndAttributes("Personal")
+		self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: notifiButton)]
+		let leftButton = UIButton(type: .custom)
+		leftButton.setTitleAndAttributes("ExpressGP")
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+	}
 	func presentWelcomeOverlay(){
 //		let overLay = FindingDoctorViewController()
 //		overLay.modalPresentationStyle = .overFullScreen
@@ -89,61 +98,32 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 	}
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 		if let location = locations.last{
-			self.getAddressFromLatLon(Latitude: location.coordinate.latitude, Longitude: location.coordinate.longitude)
-			let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-			let coordinateRegion = MKCoordinateRegion(center: center,
-													  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-			self.mapView.setRegion(coordinateRegion, animated: true)
+			let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 17.0)
+			self.mapView.animate(to: camera)
+			//Finally stop updating location otherwise it will come again and again in this delegate
+			self.locationManager.stopUpdatingLocation()
 		}
 	}
 	
-	func getAddressFromLatLon(Latitude: Double, Longitude: Double) {
-		var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-		
-		let ceo: CLGeocoder = CLGeocoder()
-		center.latitude = Latitude
-		center.longitude = Longitude
-		
-		let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
-		
-		
-		ceo.reverseGeocodeLocation(loc, completionHandler:
-			{(placemarks, error) in
-				if (error != nil)
-				{
-					print("reverse geodcode fail: \(error!.localizedDescription)")
-				}
-				let pm = placemarks! as [CLPlacemark]
+	func getAddressFromLatLon(_ coordinate:CLLocationCoordinate2D){
+		geoCoder.reverseGeocodeCoordinate(coordinate) { (response, error) in
+			if let result = response {
+				let addr:GMSAddress! = result.firstResult()
 				
-				if pm.count > 0 {
-					let pm = placemarks![0]
-					print(pm.country)
-					print(pm.locality)
-					print(pm.subLocality)
-					print(pm.thoroughfare)
-					print(pm.postalCode)
-					print(pm.subThoroughfare)
+				if let address = addr {
 					var addressString : String = ""
-					if pm.subLocality != nil {
-						addressString = addressString + pm.subLocality! + ", "
+					if let lineAddr = address.lines?.first
+					{
+						addressString += lineAddr
+						self.currentUserAddr.setTitle("\(addressString)".appending("."), for:.normal)
 					}
-					if pm.thoroughfare != nil {
-						addressString = addressString + pm.thoroughfare! + ", "
+					else
+					{
+						self.currentUserAddr.setTitle("", for: .normal)
 					}
-					if pm.locality != nil {
-						addressString = addressString + pm.locality! + ", "
-					}
-					if pm.country != nil {
-						addressString = addressString + pm.country! + ", "
-					}
-					if pm.postalCode != nil {
-						addressString = addressString + pm.postalCode! + " "
-					}
-					
-					self.currentUserAddr.setTitle(addressString, for:.normal) 
-					print(addressString)
 				}
-		})
+			}
+		}
 		
 	}
 	@IBAction func openDatePicker(_ sender: Any) {
@@ -155,7 +135,8 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
 		let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "FamilyViewController") as? FamilyViewController
         vc?.fromView = "Home"
         vc?.delegate  = self
-        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+		vc?.hidesBottomBarWhenPushed = true
+		self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
 	}
 		
 	@IBAction func addReasonForRequest(_ sender: Any) {
@@ -168,6 +149,44 @@ class HomeViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDe
     func didselectFamilyMember(familyObj : FamiliListData) {
         patientButton.setTitle("Patient : \(familyObj.relation ?? "")", for: .normal)
     }
+	@IBAction func onFindDoctorTapped(_ sender: Any) {
+		let overLay = FindingDoctorViewController()
+		overLay.modalPresentationStyle = .overFullScreen
+	 self.navigationController?.present(overLay, animated: true, completion: nil)
+	}
+	
+	@IBAction func addFavouritePlace(_ sender: Any) {
+		
+	}
+	
+	func showDateOfBirthPicker(){
+		//Formate Date
+		datePicker.datePickerMode = .date
+		
+		//ToolBar
+		let toolbar = UIToolbar();
+		toolbar.sizeToFit()
+		let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+		let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+		let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+		
+		toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+		
+		dateButton?.inputAccessoryView = toolbar
+		dateButton?.inputView = datePicker
+		
+	}
+	
+	@objc func donedatePicker(){
+		let formatter = DateFormatter()
+		formatter.dateFormat = "yyyy-dd-MM"
+		dateButton.text = formatter.string(from: datePicker.date)
+		self.view.endEditing(true)
+	}
+	
+	@objc func cancelDatePicker(){
+		self.view.endEditing(true)
+	}
 }
 extension HomeViewController: LanguageSearchViewDelegate{
 	func didSelectlanguage(languageObj: [LanguageData]) {
@@ -175,7 +194,6 @@ extension HomeViewController: LanguageSearchViewDelegate{
 	}
 	
 	func didSelectillness(illnessObj: [IllnessData]) {
-		var selectedReason = [String]()
 		for obj in illnessObj {
 			selectedReason.append(obj.reason ?? "")
 		}
@@ -187,4 +205,15 @@ extension HomeViewController: LanguageSearchViewDelegate{
 	}
 	
    
+}
+extension HomeViewController : UITextFieldDelegate{
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		showDateOfBirthPicker()
+	}
+}
+extension HomeViewController: GMSMapViewDelegate{
+	func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition)
+	{
+		self.getAddressFromLatLon(position.target)
+	}
 }
