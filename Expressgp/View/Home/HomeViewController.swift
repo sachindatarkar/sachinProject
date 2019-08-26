@@ -161,7 +161,7 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 	
 	func showDateOfBirthPicker(){
 		//Formate Date
-		datePicker.datePickerMode = .date
+		datePicker.datePickerMode = .dateAndTime
 		
 		//ToolBar
 		let toolbar = UIToolbar();
@@ -179,7 +179,7 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 	
 	@objc func donedatePicker(){
 		let formatter = DateFormatter()
-		formatter.dateFormat = "yyyy-dd-MM"
+		formatter.dateFormat = "yyyy-dd-MM h:mm"
 		dateButton.text = formatter.string(from: datePicker.date)
 		self.view.endEditing(true)
 	}
