@@ -115,6 +115,8 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
         cell?.relation_lbl.text = "\(familaViewObj.familyListArry?[indexPath.row].relation ?? "")"
         cell?.delete_btn.tag = indexPath.row
         cell?.delete_btn.addTarget(self, action: #selector(onClickDelete), for: .touchUpInside)
+        let url = NSURL(string: familaViewObj.familyListArry?[indexPath.row].profile_pic ?? "")
+        cell?.profileImg.setImage(url: url! as URL)
         return cell ?? FamilyViewCell()
     }
     
@@ -122,7 +124,7 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
         if fromView == "Home" {
             delegate.didselectFamilyMember(familyObj: (familaViewObj.familyListArry?[indexPath.row])!)
             self.navigationController?.popViewController(animated: true)
-        }else{
+        }else {
             let addVC = AddMemberViewController()
             addVC.loginModalObj = self.loginModalObj
             addVC.singleFamilyObj = familaViewObj.familyListArry?[indexPath.row]

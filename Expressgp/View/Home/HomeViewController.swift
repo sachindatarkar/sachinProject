@@ -152,7 +152,7 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 	@IBAction func onFindDoctorTapped(_ sender: Any) {
 		let overLay = FindingDoctorViewController()
 		overLay.modalPresentationStyle = .overFullScreen
-	 self.navigationController?.present(overLay, animated: true, completion: nil)
+	   self.navigationController?.present(overLay, animated: true, completion: nil)
 	}
 	
 	@IBAction func addFavouritePlace(_ sender: Any) {

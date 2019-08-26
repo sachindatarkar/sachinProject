@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         mobileNoTF.text = "8976159522"
         self.btn_getStarted.addTarget(self, action: #selector(onClickGetStarted), for: .touchUpInside)
         loginViewModalObj.pushToHomeView = { (otpStr) in
-            LoadingOverlay.shared.hideLoaderView()
+            //LoadingOverlay.shared.hideLoaderView()
             let otpView = OTPViewController()
             otpView.otpStr = otpStr
             self.navigationController?.pushViewController(otpView, animated: true)
@@ -44,13 +44,13 @@ class LoginViewController: UIViewController {
     }
     
     @objc func onClickGetStarted() {
-//        if mobileNoTF.text != "" {
-//            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
-//        }else{
-//            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
-//        }
-        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
+        if mobileNoTF.text != "" {
+            loginViewModalObj.checkLogin(mobileNo: mobileNoTF.text ?? "")
+        }else{
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter Mobile Number")
+        }
+//        let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
+//        self.navigationController?.pushViewController(vc, animated: true)
 		
     }
 

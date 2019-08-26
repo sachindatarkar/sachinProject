@@ -10,6 +10,7 @@ import UIKit
 
 class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSearchViewDelegate {
 
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var womenSelectionImg: UIImageView!
     @IBOutlet weak var menSelectionImg: UIImageView!
     @IBOutlet weak var btn_save: UIButton!
@@ -35,6 +36,9 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
+        profileImage.layer.masksToBounds = true
+        
         self.btn_save.addTarget(self, action: #selector(onClickSubmit), for: .touchUpInside)
         womenBtn.addTarget(self, action: #selector(OnClickWomen), for: .touchUpInside)
         mentBtn.addTarget(self, action: #selector(OnClickMen), for: .touchUpInside)
@@ -78,6 +82,8 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
         existingAllergiTF.text = singleFamilyObj?.allergy
         existingillnessTF.text = singleFamilyObj?.illness
         languageTF.text = singleFamilyObj?.languages
+        let url = NSURL(string: singleFamilyObj?.profile_pic ?? "")
+        profileImage.setImage(url: url! as URL)
     }
     
     //MARK:- TextField Delegate
