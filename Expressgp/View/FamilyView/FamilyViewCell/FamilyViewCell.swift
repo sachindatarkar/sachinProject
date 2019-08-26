@@ -27,6 +27,9 @@ class FamilyViewCell: UICollectionViewCell {
         
         // shadow
         
+        profileImg.layer.cornerRadius = profileImg.frame.size.width / 2
+        //profileImg.layer.masksToBounds = true
+        
     }
 
 }

@@ -15,6 +15,7 @@ extension UIImageView{
 			if (error != nil) {
 				// Failed to load image
 				//self.image = //Placeholder
+                self.image = UIImage(named: "logo")
 			} else {
 				// Successful in loading image
 				self.image = image
@@ -124,5 +125,9 @@ extension UIViewController {
 		leftButton.setTitleAndAttributes("ExpressGP")
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
 	}
+    
+    var appDelegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 	
 }

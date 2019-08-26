@@ -73,7 +73,10 @@ class AccountViewController: UIViewController {
     }
     
     @objc func onClickLogOut() {
-        self.navigationController?.popToRootViewController(animated: true)
+        let vc = LoginViewController()
+        let navView = UINavigationController(rootViewController: vc)
+        self.appDelegate.window?.rootViewController = navView
+        self.appDelegate.window?.makeKeyAndVisible()
     }
     
 }

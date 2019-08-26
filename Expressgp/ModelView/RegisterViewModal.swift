@@ -25,7 +25,7 @@ class RegisterViewModal: NSObject {
         params["illness_id"] = userObj.Illness_id
         params["allergy"] = userObj.existingAllergies
         params["allergy_id"] = userObj.allergies_id
-        params["insurance"] = ""
+        params["insurance"] = userObj.insurance
         
         apiClient.fetchApiResponse(action: "signup.php", param: params) { (dictionary,data) in
             do {
