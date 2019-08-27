@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManagerDelegate {
 	@IBOutlet weak var findDoctorButton: GradientButton!
@@ -91,6 +92,19 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 		leftButton.setTitleAndAttributes("ExpressGP")
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
 	}
+	
+	func validationForReason() -> Bool{
+		let title = reasonButton.titleLabel?.text
+		if title?.lowercased() == "reason for request" || (title?.isEmpty ?? true){
+			return false
+		}
+		return true
+	}
+	
+	func validationForDate() -> Bool{
+		return false
+	}
+	
 	func presentWelcomeOverlay(){
 //		let overLay = FindingDoctorViewController()
 //		overLay.modalPresentationStyle = .overFullScreen
@@ -103,6 +117,16 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 			//Finally stop updating location otherwise it will come again and again in this delegate
 			self.locationManager.stopUpdatingLocation()
 		}
+	}
+	
+	@IBAction func onsearchButtonClicked(_ sender: Any) {
+		let acController = GMSAutocompleteViewController()
+		// Specify a filter.
+		let filter = GMSAutocompleteFilter()
+		filter.type = .address
+		acController.autocompleteFilter = filter
+		acController.delegate = self
+		self.present(acController, animated: true, completion: nil)
 	}
 	
 	func getAddressFromLatLon(_ coordinate:CLLocationCoordinate2D){
@@ -150,9 +174,16 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
         patientButton.setTitle("Patient : \(familyObj.relation ?? "")", for: .normal)
     }
 	@IBAction func onFindDoctorTapped(_ sender: Any) {
-		let overLay = FindingDoctorViewController()
-		overLay.modalPresentationStyle = .overFullScreen
-	   self.navigationController?.present(overLay, animated: true, completion: nil)
+		let isValidReason = validationForReason()
+		if isValidReason{
+			let overLay = FindingDoctorViewController()
+			overLay.modalPresentationStyle = .overFullScreen
+			self.navigationController?.present(overLay, animated: true, completion: nil)
+		} else {
+			let alert: UIAlertController = UIAlertController(title: "", message: "Please select a reason for request", preferredStyle: UIAlertController.Style.alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+			self.present(alert, animated: true, completion: nil)
+		}
 	}
 	
 	@IBAction func addFavouritePlace(_ sender: Any) {
@@ -217,3 +248,25 @@ extension HomeViewController: GMSMapViewDelegate{
 		self.getAddressFromLatLon(position.target)
 	}
 }
+
+extension HomeViewController: GMSAutocompleteViewControllerDelegate {
+	
+	func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+		
+		print("Place name: \(place.name)")
+		print("Place address: \(place.formattedAddress ?? "null")")
+		self.currentUserAddr.setTitle(place.formattedAddress, for:.normal)
+		print("Place attributions: \(String(describing: place.attributions))")
+		
+	}
+	func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+		// TODO: handle the error.
+	}
+	
+	// User canceled the operation.
+	func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+		print("Autocomplete was cancelled.")
+		self.dismiss(animated: true, completion: nil)
+	}
+}
+
