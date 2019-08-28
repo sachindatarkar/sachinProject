@@ -10,6 +10,10 @@ import UIKit
 
 class BookingDetailDrInfoCell: UITableViewCell {
 
+    @IBOutlet weak var location_lbl: UILabel!
+    @IBOutlet weak var paymentType_lbl: UILabel!
+    @IBOutlet weak var grandTotal_lbl: UILabel!
+    @IBOutlet weak var bookingId_lbl: UILabel!
     @IBOutlet weak var bgView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
