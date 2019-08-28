@@ -56,6 +56,11 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
             let vc = RegisterViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        
+        otpViewModalObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

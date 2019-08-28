@@ -12,6 +12,7 @@ class OtpViewModal: NSObject {
     var apiClient = ApiClientClass();
     var pushToHomeView : (() -> Void)?
     var pushToRegistartion : (() -> Void)?
+    var showErrorMsg : ((String) -> Void)?
 
     //MARK:- Check Login Api
     func checkOtp(otpText:Int)  {
@@ -27,6 +28,9 @@ class OtpViewModal: NSObject {
                         self.pushToHomeView?()
                     }else if status == 2 {
                         self.pushToRegistartion?()
+                    }else{
+                        let msg = dictionary?["message"] as? String
+                        self.showErrorMsg?(msg!)
                     }
                 }
             } catch let error as NSError {
