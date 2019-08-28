@@ -74,23 +74,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHu-16-YZa">
-                                <rect key="frame" x="33" y="185" width="47" height="14.5"/>
+                                <rect key="frame" x="43" y="185" width="47" height="14.5"/>
                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNS-NP-hQs">
-                                <rect key="frame" x="33" y="203.5" width="329" height="16.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNS-NP-hQs">
+                                <rect key="frame" x="43" y="203.5" width="319" height="16.5"/>
                                 <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3g-lE-WQP">
-                                <rect key="frame" x="20" y="209.5" width="5" height="5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="204.5" width="15" height="15"/>
+                                <color key="backgroundColor" red="0.54821992689999999" green="0.81385511160000001" blue="0.45698880749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="5" id="W3B-U6-b5f"/>
-                                    <constraint firstAttribute="height" constant="5" id="jhh-Bs-yRD"/>
+                                    <constraint firstAttribute="width" constant="15" id="W3B-U6-b5f"/>
+                                    <constraint firstAttribute="height" constant="15" id="jhh-Bs-yRD"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Us serve you better by rating your doctor service" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiB-ea-Dcn">
@@ -155,6 +155,7 @@
                             <constraint firstItem="VGA-i6-hH1" firstAttribute="top" secondItem="8Ih-df-0DZ" secondAttribute="bottom" constant="20" id="nne-Vb-ulM"/>
                             <constraint firstItem="RHu-16-YZa" firstAttribute="leading" secondItem="tNS-NP-hQs" secondAttribute="leading" id="poC-9a-z3t"/>
                             <constraint firstAttribute="trailing" secondItem="bO1-U7-Ol1" secondAttribute="trailing" constant="8" id="uLt-nf-Vc4"/>
+                            <constraint firstItem="GwX-bM-vp3" firstAttribute="top" secondItem="TiB-ea-Dcn" secondAttribute="bottom" constant="28" id="v31-Gc-dcZ"/>
                             <constraint firstItem="rI1-yP-cLS" firstAttribute="leading" secondItem="enk-Vh-5l5" secondAttribute="leading" constant="8" id="w4P-fC-XeH"/>
                             <constraint firstItem="rI1-yP-cLS" firstAttribute="top" secondItem="SMU-WT-FNb" secondAttribute="bottom" constant="4" id="yHE-8a-Cn7"/>
                         </constraints>
@@ -171,6 +172,7 @@
             <connections>
                 <outlet property="bgView" destination="enk-Vh-5l5" id="4bE-XM-XT1"/>
                 <outlet property="bookingId_lbl" destination="VGA-i6-hH1" id="M3Y-sf-bVI"/>
+                <outlet property="dotView" destination="E3g-lE-WQP" id="25X-cD-DPJ"/>
                 <outlet property="grandTotal_lbl" destination="bO1-U7-Ol1" id="AUO-qO-DB4"/>
                 <outlet property="location_lbl" destination="tNS-NP-hQs" id="7Hl-bE-UrB"/>
                 <outlet property="paymentType_lbl" destination="HXB-7e-L0k" id="aEt-Gu-gdZ"/>

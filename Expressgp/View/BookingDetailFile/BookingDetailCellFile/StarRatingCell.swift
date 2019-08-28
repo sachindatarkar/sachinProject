@@ -14,11 +14,13 @@ class StarRatingCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.contentView.layer.masksToBounds = false
-        self.contentView.layer.cornerRadius = 5.0
-        self.contentView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        self.contentView.layer.shadowOpacity = 0.5
+//        self.contentView.layer.masksToBounds = false
+//        self.contentView.layer.cornerRadius = 5.0
+//        self.contentView.layer.shadowOffset = CGSize(width: -1, height: 1)
+//        self.contentView.layer.shadowOpacity = 0.5
         bgView.layer.cornerRadius = 5.0
+        bgView.layer.borderWidth = 0.7
+        bgView.layer.borderColor = UIColor.lightGray.cgColor
         bgView.layer.masksToBounds = true
     }
 

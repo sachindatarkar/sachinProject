@@ -123,7 +123,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled"  {
-            return 339
+             return UITableView.automaticDimension
         }
         if indexPath.row == 0  {
             return 250
