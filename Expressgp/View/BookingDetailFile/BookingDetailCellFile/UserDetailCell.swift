@@ -19,10 +19,15 @@ class UserDetailCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.bgView.layer.masksToBounds = false
-        self.bgView.layer.cornerRadius = 5.0
-        self.bgView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        self.bgView.layer.shadowOpacity = 0.5
+//        self.bgView.layer.masksToBounds = false
+//        self.bgView.layer.cornerRadius = 5.0
+//        self.bgView.layer.shadowOffset = CGSize(width: -1, height: 1)
+//        self.bgView.layer.shadowOpacity = 0.5
+        
+        bgView.layer.cornerRadius = 5.0
+        bgView.layer.borderWidth = 0.7
+        bgView.layer.borderColor = UIColor.lightGray.cgColor
+        bgView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

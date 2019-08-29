@@ -24,6 +24,7 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
     var allengifilterData : [AllergiesData]?
     var isFilter : Bool = false
     
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var cancel_btn: UIButton!
     @IBOutlet weak var done_btn: UIButton!
     
@@ -32,7 +33,9 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
          registerTV.register(UINib(nibName: "LanguageTableCell", bundle: nil), forCellReuseIdentifier: "LanguageTableCell")
         cancel_btn.addTarget(self, action: #selector(onClickCancel), for: .touchUpInside)
         done_btn.addTarget(self, action: #selector(onClickDone), for: .touchUpInside)
-        
+        cancel_btn.layer.cornerRadius = 12
+        done_btn.layer.cornerRadius = 12
+        titleLbl.text = "Select \(fromText ?? "")"
         
         if fromText == "Language" {
             languageObj.getsearchList(type:"language_mst.php")
