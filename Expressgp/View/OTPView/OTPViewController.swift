@@ -73,6 +73,13 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         navigationController?.navigationBar.barTintColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0)
     }
     
+    override func viewDidLayoutSubviews() {
+        self.submit_btn?.tintColor = UIColor.white
+        self.submit_btn?.applyGradient(colours: [UIColor.white])
+        submit_btn.layer.cornerRadius = 24
+        submit_btn.layer.masksToBounds = true
+    }
+    
     @objc func onClickSubmit() {
         let otpStrings = "\(firstTF.text ?? "")\(secondTF.text ?? "")\(thirdTF.text ?? "")\(fourthTF.text ?? "")"
         print(otpStrings)
@@ -91,7 +98,7 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     
     @objc func textFieldDidChange(textField: UITextField){
         let text = textField.text
-        if text?.utf16.count ?? 0 >= 1{
+        if  text?.count == 1 {
             switch textField{
             case firstTF:
                 secondTF.becomeFirstResponder()
@@ -104,9 +111,25 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
             default:
                 break
             }
-        }else{
+        }
+        if  text?.count == 0 {
+            switch textField{
+            case firstTF:
+                firstTF.becomeFirstResponder()
+            case secondTF:
+                firstTF.becomeFirstResponder()
+            case thirdTF:
+                secondTF.becomeFirstResponder()
+            case fourthTF:
+                thirdTF.becomeFirstResponder()
+            default:
+                break
+            }
+        }
+        else{
             
         }
+       
     }
     
     @objc func updateTime(){
