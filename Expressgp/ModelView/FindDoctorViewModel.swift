@@ -11,6 +11,7 @@ import Foundation
 final class FindDoctorViewModel: NSObject {
 //{"patient_id":"7","user_id":"5","appointment_date":"","appointment_time":"","ill_reason_id":"2","speciality_id":"3","lat":"19.218330","long":"72.978088"}
 	var apiClient = ApiClientClass();
+    var showErrorMsg : ((String) -> Void)?
 
 	func getDoctorList(bookingObj:BookingListData,userObj:LoginData) {
 		var params: [String:Any] = [:]
@@ -29,8 +30,14 @@ final class FindDoctorViewModel: NSObject {
 				if let rstatus : Int = dictionary?.value(forKey: "success") as? Int{
 					if rstatus == 1 {
 						let listObj = try JSONDecoder().decode(BookingListModal.self, from: data as! Data)
-					
-					}
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showErrorMsg?(str as! String)
+                        }else{
+                            self.showErrorMsg?("Something wrong!!!!")
+                        }
+                    }
 				}
 			} catch let error as NSError {
 				print(error.localizedDescription)

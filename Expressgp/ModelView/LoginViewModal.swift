@@ -11,6 +11,7 @@ import UIKit
 class LoginViewModal: NSObject {
     var apiClient = ApiClientClass();
     var pushToHomeView : ((Int) -> Void)?
+    var showErrorMsg : ((String) -> Void)?
     
     //MARK:- Check Login Api
     func checkLogin(mobileNo:String)  {
@@ -25,6 +26,13 @@ class LoginViewModal: NSObject {
                         ConstantClass.sharedInstance.mobileNo = mobileNo
                         let otpStr = dictionary?.value(forKey: "otp")
                         self.pushToHomeView?(otpStr as! Int )
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showErrorMsg?(str as! String)
+                        }else{
+                            self.showErrorMsg?("Something wrong!!!!")
+                        }
                     }
                 }
             } catch let error as NSError {

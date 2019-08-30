@@ -13,6 +13,7 @@ class BookingListViewModal: NSObject {
     var reloadTableView: (() -> Void)?
     var bookingListArry : [BookingListData]?
     var historyListArry : [BookingListData]?
+    var showErrorMsg : ((String) -> Void)?
     
     func getBookingList(userObj:LoginData,status:String) {
         var params: [String:Any] = [:]
@@ -31,6 +32,8 @@ class BookingListViewModal: NSObject {
                            self.historyListArry = listObj.data ?? [BookingListData]()
                         }
                         self.reloadTableView?()
+                    }else{
+                        
                     }
                 }
             } catch let error as NSError {

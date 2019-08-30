@@ -47,6 +47,11 @@ class BookingListViewController: UIViewController,UITableViewDelegate,UITableVie
         bookinglistViewModalObj.reloadTableView = {
             self.bookingListTV.reloadData()
         }
+        
+        bookinglistViewModalObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,6 +133,7 @@ class BookingListViewController: UIViewController,UITableViewDelegate,UITableVie
         }else{
             vc.bookingId = bookinglistViewModalObj.historyListArry?[indexPath.row].booking_id
         }
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

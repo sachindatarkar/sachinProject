@@ -13,6 +13,7 @@ class OtpViewModal: NSObject {
     var pushToHomeView : (() -> Void)?
     var pushToRegistartion : (() -> Void)?
     var showErrorMsg : ((String) -> Void)?
+    var updateTimer : (() -> Void)?
 
     //MARK:- Check Login Api
     func checkOtp(otpText:Int)  {
@@ -40,16 +41,15 @@ class OtpViewModal: NSObject {
         }
     }
     
-   /* func checkLogin(mobileNo:String)  {
+    func resendOtp()  {
         var params: [String:Any] = [:]
         params = self.GetCommonParrameter()
         params["mobile"] = ConstantClass.sharedInstance.mobileNo
-        apiClient.fetchApiResponse(action: "login.php", param: params) { (dictionary,data) in
+        apiClient.fetchApiResponse(action: "resend_otp.php", param: params) { (dictionary,data) in
             do {
                 if let otp : Int = dictionary?.value(forKey: "otp") as? Int{
                     if otp != 0 {
-                        ConstantClass.sharedInstance.mobileNo = mobileNo
-                      
+                      self.updateTimer?()
                     }
                 }
             } catch let error as NSError {
@@ -57,6 +57,6 @@ class OtpViewModal: NSObject {
                 print(error.description)
             }
         }
-    }*/
+    }
 
 }

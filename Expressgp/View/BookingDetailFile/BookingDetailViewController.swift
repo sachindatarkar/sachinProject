@@ -45,6 +45,24 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
             self.bookingDetailTV.reloadData()
         }
         
+        bookingDetailViewObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //        self.navigationController?.isNavigationBarHidden = true
+        //        UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
+        
+        UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
+        self.tabBarController?.navigationItem.hidesBackButton = true
+        let img = UIImage()
+        navigationController?.navigationBar.shadowImage = img
+        navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
+        navigationController?.navigationBar.backgroundColor = Style.Color.Background.primaryColor
+        navigationController?.navigationBar.barTintColor = Style.Color.Background.primaryColor
     }
     
     //MARK:- UITAbleView Delegate And DataSource

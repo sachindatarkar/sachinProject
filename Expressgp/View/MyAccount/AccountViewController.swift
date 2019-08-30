@@ -69,6 +69,7 @@ class AccountViewController: UIViewController {
     
     @objc func onClickUpdate() {
         let vc = RegisterViewController()
+         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

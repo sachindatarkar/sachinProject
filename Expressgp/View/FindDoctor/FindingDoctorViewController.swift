@@ -22,6 +22,11 @@ class FindingDoctorViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         pulseVIew.addGestureRecognizer(tap)
+        
+        viewModel.showErrorMsg = { (msg) in
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {

@@ -11,6 +11,7 @@ import UIKit
 class AddMemberViewModal: NSObject {
     var apiClient = ApiClientClass();
     var addFamilySuccess: (() -> Void)?
+    var showErrorMsg : ((String) -> Void)?
     
     func addFamilyMember(userObj:CompanyProfileModal,userData:LoginData,singleFamilyObj : FamiliListData,isedit:Bool)  {
         var params: [String:Any] = [:]
@@ -38,6 +39,13 @@ class AddMemberViewModal: NSObject {
                 if let status : Int = dictionary?.value(forKey: "success") as? Int{
                     if status == 1 {
                         self.addFamilySuccess?()
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showErrorMsg?(str as! String)
+                        }else{
+                            self.showErrorMsg?("Something wrong!!!!")
+                        }
                     }
                 }
             } catch let error as NSError {

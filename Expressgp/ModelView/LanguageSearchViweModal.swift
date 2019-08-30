@@ -14,6 +14,7 @@ class LanguageSearchViweModal: NSObject {
     var languageArry : [LanguageData]?
     var illnessArry : [IllnessData]?
     var allengiArry : [AllergiesData]?
+    var showErrorMsg : ((String) -> Void)?
     
     func getsearchList(type:String)  {
         apiClient.fetchApiForGet(action: type) { (dictionary,data) in
@@ -36,6 +37,13 @@ class LanguageSearchViweModal: NSObject {
                         } catch let error as NSError {
                             print(error.localizedDescription)
                             print(error.description)
+                        }
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showErrorMsg?(str as! String)
+                        }else{
+                            self.showErrorMsg?("Something wrong!!!!")
                         }
                     }
                 }

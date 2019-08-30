@@ -46,6 +46,11 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
         addMemberViewObj.addFamilySuccess = {
             self.navigationController?.popViewController(animated: true)
         }
+        
+        addMemberViewObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
     }
     
     override func viewDidLayoutSubviews() {

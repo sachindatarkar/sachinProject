@@ -59,11 +59,21 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: str)
         }
         
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
+//        UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
+        
         UIApplication.shared.statusBarView?.backgroundColor = Style.Color.Background.primaryColor
+        self.tabBarController?.navigationItem.hidesBackButton = true
+        let img = UIImage()
+        navigationController?.navigationBar.shadowImage = img
+        navigationController?.navigationBar.setBackgroundImage(img, for: UIBarMetrics.default)
+        navigationController?.navigationBar.backgroundColor = Style.Color.Background.primaryColor
+        navigationController?.navigationBar.barTintColor = Style.Color.Background.primaryColor
 	}
     
     func registerCell()  {

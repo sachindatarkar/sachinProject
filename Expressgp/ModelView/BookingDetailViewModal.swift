@@ -12,6 +12,7 @@ class BookingDetailViewModal: NSObject {
     var apiClient = ApiClientClass();
     var reloadTableView: (() -> Void)?
     var bookingDetailObj : BookingDetailData?
+    var showErrorMsg : ((String) -> Void)?
     
     func getBookingList(userObj:LoginData,bookingId:String) {
         var params: [String:Any] = [:]
@@ -25,6 +26,13 @@ class BookingDetailViewModal: NSObject {
                         let listObj = try JSONDecoder().decode(BookingDetailModal.self, from: data as! Data)
                         self.bookingDetailObj = listObj.data?[0]
                         self.reloadTableView?()
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showErrorMsg?(str as! String)
+                        }else{
+                            self.showErrorMsg?("Something wrong!!!!")
+                        }
                     }
                 }
             } catch let error as NSError {

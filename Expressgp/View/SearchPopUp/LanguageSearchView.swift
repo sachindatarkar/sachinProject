@@ -48,6 +48,11 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
         languageObj.tableReload = {
             self.registerTV.reloadData()
         }
+        
+        languageObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
     }
 
     @IBAction func onClickClose(_ sender: Any) {

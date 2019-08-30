@@ -61,6 +61,10 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
             LoadingOverlay.shared.hideLoaderView()
             MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
         }
+        
+        otpViewModalObj.updateTimer = {
+            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,7 +97,7 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     }
     
     @objc func onClickResend() {
-        
+        otpViewModalObj.resendOtp()
     }
     
     @objc func textFieldDidChange(textField: UITextField){

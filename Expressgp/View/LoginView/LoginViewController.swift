@@ -24,6 +24,11 @@ class LoginViewController: UIViewController {
             otpView.otpStr = otpStr
             self.navigationController?.pushViewController(otpView, animated: true)
         }
+        
+        loginViewModalObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
     }
     
     override func viewDidLayoutSubviews() {

@@ -12,6 +12,7 @@ class FamilyViewModal: NSObject {
     var apiClient = ApiClientClass();
     var reloadCollectionView: (() -> Void)?
     var familyListArry : [FamiliListData]?
+    var showErrorMsg : ((String) -> Void)?
     
     func getFamilyList(userObj:LoginData)  {
         var params: [String:Any] = [:]
@@ -25,6 +26,13 @@ class FamilyViewModal: NSObject {
                         let listObj = try JSONDecoder().decode(FamilyListModal.self, from: data as! Data)
                         self.familyListArry = listObj.data ?? [FamiliListData]()
                         self.reloadCollectionView?()
+                    }else{
+                        let str = dictionary?.value(forKey: "message")
+                        if str != nil {
+                            self.showErrorMsg?(str as! String)
+                        }else{
+                            self.showErrorMsg?("Something wrong!!!!")
+                        }
                     }
                 }
             } catch let error as NSError {

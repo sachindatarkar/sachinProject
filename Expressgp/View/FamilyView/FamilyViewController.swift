@@ -35,6 +35,11 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
             LoadingOverlay.shared.hideLoaderView()
             self.collectionView.reloadData()
         }
+        
+        familaViewObj.showErrorMsg = { (msg) in
+            LoadingOverlay.shared.hideLoaderView()
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: msg)
+        }
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -129,6 +134,7 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
             addVC.loginModalObj = self.loginModalObj
             addVC.singleFamilyObj = familaViewObj.familyListArry?[indexPath.row]
             addVC.isEditProfile = true
+            addVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(addVC, animated: true)
         }
     }
