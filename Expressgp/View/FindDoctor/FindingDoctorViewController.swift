@@ -8,6 +8,21 @@
 
 import UIKit
 
+class FindDoctorObject: NSObject {
+//{"patient_id":"7","user_id":"5","appointment_date":"","appointment_time":"","ill_reason_id":"2","speciality_id":"3","lat":"19.218330","long":"72.978088"}
+    
+    var patient_id : String?
+    var user_id : String?
+    var appointment_date : String?
+    var appointment_time : String?
+    var ill_reason_id : String?
+    var speciality_id : String?
+    var lat : String?
+    var long : String?
+    
+}
+
+
 class FindingDoctorViewController: UIViewController {
     @IBOutlet weak var pulseVIew: UIView!
     @IBOutlet weak var imgvAvatar: UIImageView!

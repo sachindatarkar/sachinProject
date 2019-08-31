@@ -13,10 +13,13 @@ import GooglePlaces
 class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManagerDelegate {
 	@IBOutlet weak var findDoctorButton: GradientButton!
 	@IBOutlet weak var currentUserAddr: UIButton!
-	@IBOutlet weak var patientButton: UIButton!
+    @IBOutlet weak var mapBgView: UIView!
+    @IBOutlet weak var patientButton: UIButton!
 	@IBOutlet weak var dateButton: UITextField!
 	@IBOutlet weak var reasonButton: UIButton!
 	@IBOutlet weak var paymentOptionButton: UIButton!
+    
+    var findDoctorObj : FindDoctorObject?
 	var locationManager = CLLocationManager() {
 		didSet {
 			locationManager.delegate = self
@@ -34,6 +37,12 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 		super.viewDidLoad()
 		locationManager.delegate = self
 		dateButton.delegate = self
+        
+        
+        self.mapBgView.layer.masksToBounds = false
+        self.mapBgView.layer.cornerRadius = 5.0
+        self.mapBgView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.mapBgView.layer.shadowOpacity = 0.5
 //		dateButton.becomeFirstResponder()
 		// Check for Location Services
 		self.locationManager.requestAlwaysAuthorization()
@@ -62,11 +71,29 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 		//Sets the view controller to be the GMSMapView delegate
 		
 		self.mapView.delegate = self;
+        findDoctorObj = FindDoctorObject()
+        
 	}
 	
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
 		setupHomeNavigationBar()
+        
+        if let loginData = UserDefaults.standard.value(forKey: "UserResponse") {
+            do {
+                let loginObj = try JSONDecoder().decode(LoginModal.self, from: loginData as! Data)
+                
+                findDoctorObj?.patient_id = loginObj.data?[0].patient_id
+                findDoctorObj?.user_id = loginObj.data?[0].user_id
+                findDoctorObj?.appointment_date = ""
+                findDoctorObj?.appointment_time = ""
+                
+               
+            } catch let error as NSError {
+                print(error.localizedDescription)
+                print(error.description)
+            }
+        }
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -172,6 +199,7 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
     
     func didselectFamilyMember(familyObj : FamiliListData) {
         patientButton.setTitle("Patient : \(familyObj.relation ?? "")", for: .normal)
+        findDoctorObj?.patient_id = familyObj.family_id
     }
 	@IBAction func onFindDoctorTapped(_ sender: Any) {
 		let isValidReason = validationForReason()

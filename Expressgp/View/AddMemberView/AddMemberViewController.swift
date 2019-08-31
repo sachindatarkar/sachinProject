@@ -42,6 +42,7 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
         self.btn_save.addTarget(self, action: #selector(onClickSubmit), for: .touchUpInside)
         womenBtn.addTarget(self, action: #selector(OnClickWomen), for: .touchUpInside)
         mentBtn.addTarget(self, action: #selector(OnClickMen), for: .touchUpInside)
+        checkBox_btn.addTarget(self, action: #selector(OnClickCheckBox), for: .touchUpInside)
         setInfoToView()
         addMemberViewObj.addFamilySuccess = {
             self.navigationController?.popViewController(animated: true)
@@ -198,6 +199,15 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
         companyProfileObj.gender = "Men"
         womenSelectionImg.image = UIImage(named: "optionUnselect")
         menSelectionImg.image = UIImage(named: "optionSelect")
+    }
+    
+    @objc func OnClickCheckBox(sender:UIButton) {
+        if (checkBox_btn.currentImage?.isEqual(UIImage(named: "unchecked-checkbox-50.png")))! {
+            //do something here
+            checkBox_btn.setImage(UIImage(named: "checked-checkbox-50.png"), for: .normal)
+        }else{
+            checkBox_btn.setImage(UIImage(named: "unchecked-checkbox-50.png"), for: .normal)
+        }
     }
     
     func showActionSheet()  {

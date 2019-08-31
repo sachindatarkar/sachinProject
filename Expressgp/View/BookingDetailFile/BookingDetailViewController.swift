@@ -34,6 +34,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
             do {
                 let loginObj = try JSONDecoder().decode(LoginModal.self, from: loginData as! Data)
                 self.loginModalObj = loginObj.data?[0]
+                LoadingOverlay.shared.showLoaderView(view: self.view)
                 self.bookingDetailViewObj.getBookingList(userObj: self.loginModalObj ?? LoginData(), bookingId: bookingId ?? "")
             } catch let error as NSError {
                 print(error.localizedDescription)
@@ -42,6 +43,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
         }
         
         bookingDetailViewObj.reloadTableView = {
+            LoadingOverlay.shared.hideLoaderView()
             self.bookingDetailTV.reloadData()
         }
         
@@ -73,7 +75,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.bookingDetailViewObj.bookingDetailObj != nil {
-            if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled" {
+            if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled" || self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "completed" {
                 return 1
             }
             return 5
@@ -83,12 +85,13 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled" {
+        if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled" || self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "completed"{
             let cell =  tableView.dequeueReusableCell(withIdentifier: "BookingDetailDrInfoCell") as? BookingDetailDrInfoCell
             cell?.bookingId_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.booking_no
             cell?.grandTotal_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.amount
             cell?.paymentType_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.payment_type
             cell?.location_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.booking_address
+            
             return cell!
             
         }else{
@@ -109,7 +112,9 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
                 let cell =  tableView.dequeueReusableCell(withIdentifier: "DoctorProfileCell") as? DoctorProfileCell
                 cell?.drName.text = self.bookingDetailViewObj.bookingDetailObj?.doctor_name
                 cell?.speciality_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.specialty_name
-                cell?.otp_lbl.text = "Otp : \(self.bookingDetailViewObj.bookingDetailObj?.otp ?? "")"
+                cell?.otp_lbl.text = "OTP : \(self.bookingDetailViewObj.bookingDetailObj?.otp ?? "")"
+                let url = NSURL(string: self.bookingDetailViewObj.bookingDetailObj?.d_profile_pic ?? "")
+                cell?.drProfileImage.setImage(url: url! as URL)
                 cell?.selectionStyle = .none
                 return cell!
             }else if indexPath.row == 2 {
@@ -132,6 +137,8 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
                 cell?.age_lbl.text = "\(self.bookingDetailViewObj.bookingDetailObj?.age ?? "") Yrs"
                 cell?.problem_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.reason
                 cell?.relation_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.relation
+                let url = NSURL(string: self.bookingDetailViewObj.bookingDetailObj?.p_profile_pic ?? "")
+                cell?.profileImage.setImage(url: url! as URL)
                 cell?.selectionStyle = .none
                 return cell!
             }
@@ -140,7 +147,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled"  {
+        if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled" || self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "completed" {
              return UITableView.automaticDimension
         }
         if indexPath.row == 0  {

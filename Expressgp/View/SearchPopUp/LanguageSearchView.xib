@@ -59,7 +59,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="498-GQ-RMa"/>
                         <constraint firstAttribute="height" constant="40" id="SMg-93-heH"/>
                     </constraints>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="0bj-3l-wlt"/>
                     </connections>
@@ -77,7 +77,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cER-Oq-mdP">
                             <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
-                            <color key="backgroundColor" red="0.94275027513504028" green="0.084616642030594866" blue="0.16178647178811481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.94275027513504028" green="0.35088340852494121" blue="0.256782989629326" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro Medium" pointSize="17"/>
                             <state key="normal" title="Cancel">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,7 +85,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAp-oZ-ocK">
                             <rect key="frame" x="207" y="0.0" width="187" height="40"/>
-                            <color key="backgroundColor" red="0.54821992689782184" green="0.81385511160000001" blue="0.45698880746992437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro Medium" pointSize="17"/>
                             <state key="normal" title="Done">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

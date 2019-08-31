@@ -337,29 +337,29 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNL-rr-vOg">
-                                <rect key="frame" x="32" y="20" width="311" height="213"/>
+                                <rect key="frame" x="32" y="20" width="311" height="160"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5C7-sK-Mhh">
-                                        <rect key="frame" x="155" y="38" width="1" height="109"/>
+                                        <rect key="frame" x="155" y="36" width="1" height="63"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="weE-fX-Mg7"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyl-c1-85u">
-                                        <rect key="frame" x="8" y="87" width="30" height="30"/>
+                                        <rect key="frame" x="10" y="76" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="gtk-d6-i5D"/>
                                             <constraint firstAttribute="height" constant="30" id="qio-O7-VGL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" image="clock-30.png">
+                                        <state key="normal" image="searchIcon">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH5-sY-Vh6">
-                                        <rect key="frame" x="164" y="46" width="139" height="25"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="164" y="43" width="139" height="25"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                         <state key="normal" title="Reason for Request" image="searchIcon">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -368,9 +368,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHE-gC-eKr">
-                                        <rect key="frame" x="8" y="46" width="139" height="25"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Patient : Self" image="searchIcon">
+                                        <rect key="frame" x="10" y="43" width="137" height="25"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                        <state key="normal" title="Patient :My Self" image="searchIcon">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -378,15 +379,15 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b31-Ag-FDx">
-                                        <rect key="frame" x="164" y="87" width="139" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="164" y="76" width="139" height="33"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                         <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Payment Option" image="mastercard-50.png">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-uV-WkD" customClass="GradientButton" customModule="Expressgp" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="167" width="123" height="30"/>
+                                        <rect key="frame" x="94" y="114" width="123" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="gje-sG-PoB"/>
                                         </constraints>
@@ -410,12 +411,13 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="ASAP" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9j8-Xj-c0w">
-                                        <rect key="frame" x="42" y="87" width="99" height="30"/>
+                                        <rect key="frame" x="44" y="76" width="97" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Wyh-T6-x2z"/>
                                         </constraints>
                                         <color key="textColor" red="0.0" green="0.63529411759999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O67-LJ-dor">
@@ -430,7 +432,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQW-jl-pco">
-                                        <rect key="frame" x="8" y="12" width="249" height="22"/>
+                                        <rect key="frame" x="8" y="12" width="249" height="16"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="13"/>
                                         <state key="normal" image="place">
                                             <color key="titleColor" red="0.1086372607" green="0.77300313080000005" blue="0.79310193470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -439,35 +442,35 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="213" id="30r-pe-3hD"/>
+                                    <constraint firstAttribute="height" constant="160" id="30r-pe-3hD"/>
                                     <constraint firstItem="9j8-Xj-c0w" firstAttribute="leading" secondItem="Yyl-c1-85u" secondAttribute="trailing" constant="4" id="3Q8-Ab-FXW"/>
                                     <constraint firstItem="FQW-jl-pco" firstAttribute="top" secondItem="UNL-rr-vOg" secondAttribute="top" constant="12" id="4yu-9U-C2q"/>
                                     <constraint firstItem="FQW-jl-pco" firstAttribute="leading" secondItem="UNL-rr-vOg" secondAttribute="leading" constant="8" id="Bnj-ea-Xel"/>
                                     <constraint firstItem="b31-Ag-FDx" firstAttribute="bottom" secondItem="Yyl-c1-85u" secondAttribute="bottom" constant="3" id="EEq-3e-cOb"/>
-                                    <constraint firstItem="Yyl-c1-85u" firstAttribute="top" secondItem="jHE-gC-eKr" secondAttribute="bottom" constant="16" id="FPP-yQ-4l4"/>
+                                    <constraint firstItem="Yyl-c1-85u" firstAttribute="top" secondItem="jHE-gC-eKr" secondAttribute="bottom" constant="8" id="FPP-yQ-4l4"/>
                                     <constraint firstItem="5C7-sK-Mhh" firstAttribute="leading" secondItem="9j8-Xj-c0w" secondAttribute="trailing" constant="14" id="GaQ-Py-9KV"/>
                                     <constraint firstItem="9j8-Xj-c0w" firstAttribute="centerY" secondItem="Yyl-c1-85u" secondAttribute="centerY" id="Hub-Ua-OoR"/>
-                                    <constraint firstItem="w7r-uV-WkD" firstAttribute="top" secondItem="5C7-sK-Mhh" secondAttribute="bottom" constant="20" id="KUl-Kj-aT7"/>
+                                    <constraint firstItem="w7r-uV-WkD" firstAttribute="top" secondItem="5C7-sK-Mhh" secondAttribute="bottom" constant="15" id="KUl-Kj-aT7"/>
                                     <constraint firstItem="w7r-uV-WkD" firstAttribute="centerX" secondItem="UNL-rr-vOg" secondAttribute="centerX" id="LP3-lt-G1J"/>
                                     <constraint firstItem="b31-Ag-FDx" firstAttribute="leading" secondItem="5C7-sK-Mhh" secondAttribute="trailing" constant="8" id="M2I-My-0bd"/>
                                     <constraint firstItem="O67-LJ-dor" firstAttribute="leading" secondItem="FQW-jl-pco" secondAttribute="trailing" constant="8" id="Pow-I0-mJl"/>
                                     <constraint firstItem="IH5-sY-Vh6" firstAttribute="top" secondItem="jHE-gC-eKr" secondAttribute="top" id="Qih-Ey-0cQ"/>
                                     <constraint firstItem="b31-Ag-FDx" firstAttribute="top" secondItem="Yyl-c1-85u" secondAttribute="top" id="QmU-Ju-QYb"/>
-                                    <constraint firstItem="Yyl-c1-85u" firstAttribute="leading" secondItem="UNL-rr-vOg" secondAttribute="leading" constant="8" id="WCo-Qx-mFL"/>
+                                    <constraint firstItem="Yyl-c1-85u" firstAttribute="leading" secondItem="UNL-rr-vOg" secondAttribute="leading" constant="10" id="WCo-Qx-mFL"/>
                                     <constraint firstAttribute="trailing" secondItem="O67-LJ-dor" secondAttribute="trailing" constant="16" id="YZh-5I-xRu"/>
                                     <constraint firstItem="O67-LJ-dor" firstAttribute="top" secondItem="UNL-rr-vOg" secondAttribute="top" constant="4" id="gep-tW-XyM"/>
                                     <constraint firstAttribute="trailing" secondItem="IH5-sY-Vh6" secondAttribute="trailing" constant="8" id="gkE-4F-ldp"/>
                                     <constraint firstItem="IH5-sY-Vh6" firstAttribute="bottom" secondItem="jHE-gC-eKr" secondAttribute="bottom" id="k8g-bi-UbL"/>
                                     <constraint firstItem="w7r-uV-WkD" firstAttribute="leading" secondItem="UNL-rr-vOg" secondAttribute="leading" constant="94" id="lYs-xe-cYB"/>
-                                    <constraint firstItem="jHE-gC-eKr" firstAttribute="leading" secondItem="UNL-rr-vOg" secondAttribute="leading" constant="8" id="mUb-6r-Sig"/>
+                                    <constraint firstItem="jHE-gC-eKr" firstAttribute="leading" secondItem="UNL-rr-vOg" secondAttribute="leading" constant="10" id="mUb-6r-Sig"/>
                                     <constraint firstItem="IH5-sY-Vh6" firstAttribute="leading" secondItem="5C7-sK-Mhh" secondAttribute="trailing" constant="8" id="oLj-9Q-BJa"/>
                                     <constraint firstItem="5C7-sK-Mhh" firstAttribute="leading" secondItem="jHE-gC-eKr" secondAttribute="trailing" constant="8" id="oXj-DS-edS"/>
                                     <constraint firstItem="5C7-sK-Mhh" firstAttribute="centerX" secondItem="UNL-rr-vOg" secondAttribute="centerX" id="oq7-3U-dSV"/>
                                     <constraint firstItem="9j8-Xj-c0w" firstAttribute="top" secondItem="Yyl-c1-85u" secondAttribute="top" id="rRZ-J8-zuk"/>
-                                    <constraint firstItem="jHE-gC-eKr" firstAttribute="top" secondItem="FQW-jl-pco" secondAttribute="bottom" constant="12" id="rw1-Pl-hv0"/>
-                                    <constraint firstItem="5C7-sK-Mhh" firstAttribute="top" secondItem="FQW-jl-pco" secondAttribute="bottom" constant="4" id="uNv-Y5-csy"/>
+                                    <constraint firstItem="jHE-gC-eKr" firstAttribute="top" secondItem="FQW-jl-pco" secondAttribute="bottom" constant="15" id="rw1-Pl-hv0"/>
+                                    <constraint firstItem="5C7-sK-Mhh" firstAttribute="top" secondItem="FQW-jl-pco" secondAttribute="bottom" constant="8" id="uNv-Y5-csy"/>
                                     <constraint firstAttribute="trailing" secondItem="b31-Ag-FDx" secondAttribute="trailing" constant="8" id="vze-01-Otf"/>
                                     <constraint firstAttribute="bottom" secondItem="w7r-uV-WkD" secondAttribute="bottom" constant="16" id="xHh-Mk-Tcz"/>
                                 </constraints>
@@ -496,6 +499,7 @@
                         <outlet property="currentUserAddr" destination="FQW-jl-pco" id="zSa-wb-kWS"/>
                         <outlet property="dateButton" destination="9j8-Xj-c0w" id="Vxb-p1-lp4"/>
                         <outlet property="findDoctorButton" destination="w7r-uV-WkD" id="cew-Jn-V6P"/>
+                        <outlet property="mapBgView" destination="UNL-rr-vOg" id="hMU-vC-oYK"/>
                         <outlet property="mapView" destination="qZw-ac-nV5" id="Sn0-M5-DK9"/>
                         <outlet property="patientButton" destination="jHE-gC-eKr" id="wgj-VC-4p3"/>
                         <outlet property="paymentOptionButton" destination="b31-Ag-FDx" id="b7v-Kb-Cvd"/>
@@ -611,7 +615,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW4-Aa-y6N">
-                                <rect key="frame" x="62.5" y="558" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="543" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.81960784310000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jDk-oB-rSq"/>
@@ -625,7 +629,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dve-Ll-Dhr" firstAttribute="bottom" secondItem="xW4-Aa-y6N" secondAttribute="bottom" constant="10" id="RhJ-xV-lGa"/>
+                            <constraint firstItem="dve-Ll-Dhr" firstAttribute="bottom" secondItem="xW4-Aa-y6N" secondAttribute="bottom" constant="25" id="RhJ-xV-lGa"/>
                             <constraint firstItem="Xvd-Lp-cm9" firstAttribute="leading" secondItem="dve-Ll-Dhr" secondAttribute="leading" id="V8o-qv-gC7"/>
                             <constraint firstItem="xW4-Aa-y6N" firstAttribute="centerX" secondItem="dve-Ll-Dhr" secondAttribute="centerX" id="ZUb-dh-88o"/>
                             <constraint firstItem="Xvd-Lp-cm9" firstAttribute="bottom" secondItem="dve-Ll-Dhr" secondAttribute="bottom" id="dmE-dl-W3M"/>
@@ -1316,7 +1320,6 @@
     <resources>
         <image name="accountIcon" width="25" height="25"/>
         <image name="appointmentIcon" width="25" height="25"/>
-        <image name="clock-30.png" width="30" height="30"/>
         <image name="clock.png" width="384" height="384"/>
         <image name="credit-card.png" width="384" height="384"/>
         <image name="doctor-icon" width="42.666667938232422" height="42.666667938232422"/>

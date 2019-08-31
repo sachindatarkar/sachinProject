@@ -92,6 +92,8 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
             otpViewModalObj.checkOtp(otpText: otpStr ?? 0)
 //            let vc = RegisterViewController()
 //            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Enter OTP")
         }
         
     }

@@ -165,6 +165,7 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                     cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
                 }
             }
+            
             cell.selectedBtn.addTarget(self, action: #selector(onClickSelected), for: .touchUpInside)
             
         }else if fromText == "Existing Allergies" {
@@ -311,5 +312,9 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
         }
         registerTV.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

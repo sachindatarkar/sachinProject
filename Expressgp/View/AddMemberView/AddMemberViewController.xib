@@ -478,7 +478,7 @@
                                                 <constraint firstAttribute="width" constant="40" id="PZK-v2-id3"/>
                                                 <constraint firstAttribute="height" constant="40" id="qRp-92-nhS"/>
                                             </constraints>
-                                            <state key="normal" image="checked-checkbox-50.png"/>
+                                            <state key="normal" image="unchecked-checkbox-50.png"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send invitation to download and use ExpressGP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHz-gc-Xtk">
                                             <rect key="frame" x="75" y="5" width="308" height="70"/>
@@ -589,7 +589,7 @@
     </objects>
     <resources>
         <image name="account-50.png" width="50" height="50"/>
-        <image name="checked-checkbox-50.png" width="50" height="50"/>
         <image name="optionUnselect.png" width="128" height="128"/>
+        <image name="unchecked-checkbox-50.png" width="50" height="50"/>
     </resources>
 </document>

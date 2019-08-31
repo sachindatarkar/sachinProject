@@ -27,7 +27,7 @@ class BookingListCell: UITableViewCell {
         self.contentView.layer.masksToBounds = false
         self.contentView.layer.cornerRadius = 5.0
         self.contentView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        self.contentView.layer.shadowOpacity = 0.5
+        self.contentView.layer.shadowOpacity = 0.3
         bgView.layer.cornerRadius = 5.0
         bgView.layer.masksToBounds = true
         drProfileImage.layer.cornerRadius = drProfileImage.frame.size.width / 2

@@ -22,7 +22,7 @@ class FamilyViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 10
         
         // border
-        contentView.layer.borderWidth = 2.0
+        contentView.layer.borderWidth = 0.5
         contentView.layer.borderColor = UIColor.lightGray.cgColor
         
         // shadow

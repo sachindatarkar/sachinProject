@@ -179,7 +179,20 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
     //MARK:- Delete Member
     
     @objc func onClickDelete(sender:UIButton) {
-        familaViewObj.deleteFamilyMember(userObj: self.loginModalObj ?? LoginData(), memberData: familaViewObj.familyListArry?[sender.tag] ?? FamiliListData())
+        
+        let refreshAlert = UIAlertController(title: "Delete!", message: "Do you really want to delete.", preferredStyle: UIAlertController.Style.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+            self.familaViewObj.deleteFamilyMember(userObj: self.loginModalObj ?? LoginData(), memberData: self.familaViewObj.familyListArry?[sender.tag] ?? FamiliListData())
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+        
     }
     
 }

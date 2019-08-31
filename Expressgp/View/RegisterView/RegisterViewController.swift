@@ -38,6 +38,32 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         logo_img.layer.borderWidth = 1
         logo_img.layer.borderColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0).cgColor
         registerTV.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        if let loginData = UserDefaults.standard.value(forKey: "UserResponse") {
+            do {
+                let loginObj = try JSONDecoder().decode(LoginModal.self, from: loginData as! Data)
+                
+               self.companyProfileObj.firstName = loginObj.data?[0].firstname
+               self.companyProfileObj.lastName = loginObj.data?[0].lastname
+                self.companyProfileObj.emailId = loginObj.data?[0].email
+                self.companyProfileObj.gender = loginObj.data?[0].gender
+                self.companyProfileObj.dateOfBirth = loginObj.data?[0].dob
+                if loginObj.data?[0].gender == "M" {
+                    isMenselected = true
+                    iswomenSelected = false
+                    companyProfileObj.gender = "Men"
+                    registerTV.reloadData()
+                }else{
+                    isMenselected = false
+                    iswomenSelected = true
+                    companyProfileObj.gender = "Women"
+                    registerTV.reloadData()
+                }  
+            } catch let error as NSError {
+                print(error.localizedDescription)
+                print(error.description)
+            }
+        }
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "First Name", secondPlaceHolder: "Last Name", firstText: "", secondText: "",iconImg :"account-50"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: ConstantClass.sharedInstance.mobileNo, secondText: "",iconImg :"mobile_icon"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Email Id", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"new-post-50"))

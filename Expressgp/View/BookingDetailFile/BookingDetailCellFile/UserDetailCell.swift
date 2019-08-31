@@ -28,6 +28,8 @@ class UserDetailCell: UITableViewCell {
         bgView.layer.borderWidth = 0.7
         bgView.layer.borderColor = UIColor.lightGray.cgColor
         bgView.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        //profileImage.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
