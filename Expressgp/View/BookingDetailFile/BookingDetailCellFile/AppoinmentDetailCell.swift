@@ -10,6 +10,7 @@ import UIKit
 
 class AppoinmentDetailCell: UITableViewCell {
 
+    @IBOutlet weak var addressCircle: UIView!
     @IBOutlet weak var expectedTime_lbl: UILabel!
     @IBOutlet weak var distance_lbl: UILabel!
     @IBOutlet weak var address_lbl: UILabel!
@@ -22,7 +23,7 @@ class AppoinmentDetailCell: UITableViewCell {
         self.bgView.layer.cornerRadius = 5.0
         self.bgView.layer.shadowOffset = CGSize(width: -1, height: 1)
         self.bgView.layer.shadowOpacity = 0.3
-        
+        self.addressCircle.layer.cornerRadius = self.addressCircle.frame.size.width / 2
 //        bgView.layer.cornerRadius = 5.0
 //        bgView.layer.borderWidth = 0.7
 //        bgView.layer.borderColor = UIColor.lightGray.cgColor

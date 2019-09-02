@@ -18,6 +18,17 @@ class DoctorProfileCell: UITableViewCell {
     @IBOutlet weak var drProfileImage: UIImageView!
     @IBOutlet weak var otp_lbl: UILabel!
     @IBOutlet weak var bgView: UIView!
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        call_btn.tintColor = UIColor.white
+        call_btn.applyGradient(colours: [UIColor.white])
+        call_btn.layer.cornerRadius = 18
+        call_btn.layer.masksToBounds = true
+        call_btn.frame = call_btn.bounds
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,8 +44,11 @@ class DoctorProfileCell: UITableViewCell {
 //        bgView.layer.masksToBounds = true
         otp_lbl.layer.cornerRadius = 10
         otp_lbl.layer.masksToBounds = true
-        cancel_btn.layer.cornerRadius = 10
-        call_btn.layer.cornerRadius = 10
+        cancel_btn.layer.cornerRadius = 18
+        
+        
+        
+        
         drProfileImage.layer.cornerRadius = drProfileImage.frame.size.width/2
         drProfileImage.layer.masksToBounds = true
     }
@@ -44,5 +58,7 @@ class DoctorProfileCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
     
 }

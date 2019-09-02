@@ -32,8 +32,10 @@ class BookingListCell: UITableViewCell {
         bgView.layer.masksToBounds = true
         drProfileImage.layer.cornerRadius = drProfileImage.frame.size.width / 2
         drProfileImage.layer.masksToBounds = true
-        status_lbl.layer.cornerRadius = 12
+        status_lbl.layer.cornerRadius = 18
         status_lbl.layer.masksToBounds = true
+        status_lbl.titleLabel?.font =  UIFont(name: "MavenPro-Bold", size: 16)
+        addressView.layer.cornerRadius = addressView.frame.size.width / 2
 
     }
 

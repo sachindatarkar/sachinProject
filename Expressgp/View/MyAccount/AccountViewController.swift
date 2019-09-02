@@ -36,6 +36,8 @@ class AccountViewController: UIViewController {
                 self.loginModalObj = loginObj.data?[0]
                 self.userName_lbl.text = "\(self.loginModalObj?.firstname ?? "") \(self.loginModalObj?.lastname ?? "")"
                 self.mobileNo_lbl.text = self.loginModalObj?.phone
+                let url = NSURL(string: loginModalObj?.profile_pic ?? "")
+                self.profileImage.setImage(url: url! as URL)
             } catch let error as NSError {
                 print(error.localizedDescription)
                 print(error.description)
@@ -69,6 +71,7 @@ class AccountViewController: UIViewController {
     
     @objc func onClickUpdate() {
         let vc = RegisterViewController()
+        vc.viewFrom = "account"
          vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

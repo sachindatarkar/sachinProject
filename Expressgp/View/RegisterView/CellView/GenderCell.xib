@@ -82,7 +82,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VK-b8-hPa">
                                 <rect key="frame" x="160.5" y="0.0" width="159.5" height="41.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTx-Jp-uiC">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="women" translatesAutoresizingMaskIntoConstraints="NO" id="bTx-Jp-uiC">
                                         <rect key="frame" x="8" y="6" width="30" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -147,5 +147,6 @@
     </objects>
     <resources>
         <image name="optionUnselect.png" width="128" height="128"/>
+        <image name="women" width="25" height="25"/>
     </resources>
 </document>

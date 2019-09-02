@@ -115,6 +115,8 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
                 cell?.otp_lbl.text = "OTP : \(self.bookingDetailViewObj.bookingDetailObj?.otp ?? "")"
                 let url = NSURL(string: self.bookingDetailViewObj.bookingDetailObj?.d_profile_pic ?? "")
                 cell?.drProfileImage.setImage(url: url! as URL)
+                cell?.call_btn.addTarget(self, action: #selector(onClickCall), for: .touchUpInside)
+                cell?.cancel_btn.addTarget(self, action: #selector(onClickCancel), for: .touchUpInside)
                 cell?.selectionStyle = .none
                 return cell!
             }else if indexPath.row == 2 {
@@ -127,7 +129,7 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
                 return cell!
             }else if indexPath.row == 3 {
                 let cell =  tableView.dequeueReusableCell(withIdentifier: "ConsulationFeeCell") as? ConsulationFeeCell
-                cell?.consulation_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.amount
+                cell?.consulation_lbl.text = "₹ \(self.bookingDetailViewObj.bookingDetailObj?.amount ?? "")"
                 cell?.paymentType_lbl.text = self.bookingDetailViewObj.bookingDetailObj?.payment_type
                 cell?.selectionStyle = .none
                 return cell!
@@ -149,18 +151,38 @@ class BookingDetailViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "cancelled" || self.bookingDetailViewObj.bookingDetailObj?.booking_status?.lowercased() == "completed" {
              return UITableView.automaticDimension
+           // return 350
         }
         if indexPath.row == 0  {
             return 250
         }else if indexPath.row == 1{
-            return 167
+            return UITableView.automaticDimension
         }else if indexPath.row == 2  {
             return UITableView.automaticDimension
         }else if indexPath.row == 3 {
-            return 80
+            return UITableView.automaticDimension
         }else if indexPath.row == 4 {
             return UITableView.automaticDimension
         }
         return 50
+    }
+    
+    @objc func onClickCall() {
+        
+    }
+    
+    @objc func onClickCancel() {
+        let refreshAlert = UIAlertController(title: "Delete!", message: "Do you really want to Cancel Booking.", preferredStyle: UIAlertController.Style.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+            self.bookingDetailViewObj.getBookingCancel(userObj: self.loginModalObj ?? LoginData(), bookingId: self.bookingDetailViewObj.bookingDetailObj?.booking_id ?? "")
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
     }
 }

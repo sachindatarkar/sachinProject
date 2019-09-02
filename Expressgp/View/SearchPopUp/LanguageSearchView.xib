@@ -105,13 +105,13 @@
                 <constraint firstItem="ZeD-fP-jaB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GvH-pH-Fgt"/>
                 <constraint firstAttribute="trailing" secondItem="U5I-Qg-rED" secondAttribute="trailing" constant="10" id="OGc-hU-xrr"/>
                 <constraint firstItem="F2m-mQ-B7G" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Pqe-vm-Xa3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="ZeD-fP-jaB" secondAttribute="bottom" constant="-41" id="Td3-DS-2e7"/>
                 <constraint firstItem="U5I-Qg-rED" firstAttribute="top" secondItem="F2m-mQ-B7G" secondAttribute="bottom" constant="8" id="Vii-9L-a3y"/>
                 <constraint firstItem="v1i-jK-q9Z" firstAttribute="top" secondItem="ZeD-fP-jaB" secondAttribute="bottom" id="ZKy-1e-uqF"/>
                 <constraint firstItem="U5I-Qg-rED" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bK3-RU-zSV"/>
                 <constraint firstItem="v1i-jK-q9Z" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dhR-nC-t73"/>
                 <constraint firstAttribute="bottom" secondItem="U5I-Qg-rED" secondAttribute="bottom" constant="8" id="eDx-mm-Cl6"/>
                 <constraint firstItem="v1i-jK-q9Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fZC-gq-R6p"/>
-                <constraint firstItem="ZeD-fP-jaB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="gIY-uM-9cA"/>
                 <constraint firstItem="ZeD-fP-jaB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gRH-QJ-jgr"/>
                 <constraint firstItem="F2m-mQ-B7G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i0k-fi-4Zd"/>
             </constraints>

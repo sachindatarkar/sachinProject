@@ -53,17 +53,29 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLJ-cr-uu9">
                                     <rect key="frame" x="8" y="0.0" width="398" height="150"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-I7-Xt9">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3fa-I7-Xt9">
                                             <rect key="frame" x="134" y="10" width="130" height="130"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="130" id="eMa-jK-ecQ"/>
                                                 <constraint firstAttribute="height" constant="130" id="kxJ-sb-YZN"/>
                                             </constraints>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjG-fd-bss">
+                                            <rect key="frame" x="134" y="10" width="130" height="130"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="130" id="3fK-O6-jnn"/>
+                                                <constraint firstAttribute="width" constant="130" id="fgm-JJ-9hs"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="onClickSelectImage:" destination="-1" eventType="touchUpInside" id="zdQ-ZU-HHE"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="EjG-fd-bss" firstAttribute="centerX" secondItem="kLJ-cr-uu9" secondAttribute="centerX" id="AMw-HY-zRY"/>
                                         <constraint firstAttribute="height" constant="150" id="LNT-Zm-g6Q"/>
+                                        <constraint firstItem="EjG-fd-bss" firstAttribute="centerY" secondItem="kLJ-cr-uu9" secondAttribute="centerY" id="Lg9-K0-xsg"/>
                                         <constraint firstItem="3fa-I7-Xt9" firstAttribute="centerY" secondItem="kLJ-cr-uu9" secondAttribute="centerY" id="P5f-vH-fM7"/>
                                         <constraint firstItem="3fa-I7-Xt9" firstAttribute="centerX" secondItem="kLJ-cr-uu9" secondAttribute="centerX" id="fWE-tF-OJT"/>
                                     </constraints>
@@ -178,7 +190,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsD-7P-rtO">
                                                     <rect key="frame" x="200" y="0.0" width="198" height="50"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="5zc-Gz-JT5">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="women" translatesAutoresizingMaskIntoConstraints="NO" id="5zc-Gz-JT5">
                                                             <rect key="frame" x="5" y="15" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="BkO-ei-Pfa"/>
@@ -590,6 +602,8 @@
     <resources>
         <image name="account-50.png" width="50" height="50"/>
         <image name="optionUnselect.png" width="128" height="128"/>
+        <image name="profileIcon" width="25" height="25"/>
         <image name="unchecked-checkbox-50.png" width="50" height="50"/>
+        <image name="women" width="25" height="25"/>
     </resources>
 </document>

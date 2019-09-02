@@ -18,6 +18,8 @@ struct CompleteProfile {
 
 class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,LanguageSearchViewDelegate {
 
+    @IBOutlet weak var profileTap_btn: UIButton!
+    @IBOutlet weak var title_lbl: UILabel!
     @IBOutlet weak var registerTV: UITableView!
     @IBOutlet weak var logo_img: UIImageView!
     var completeProfileArry = [CompleteProfile]()
@@ -28,6 +30,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var isMenselected : Bool = false
     var iswomenSelected : Bool = false
     var checkBoxSelected : Bool = false
+    var viewFrom : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         logo_img.layer.borderWidth = 1
         logo_img.layer.borderColor = UIColor(red:0.26, green:0.79, blue:0.66, alpha:1.0).cgColor
         registerTV.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        profileTap_btn.addTarget(self, action: #selector(OnclickPhotoSelect), for: .touchUpInside)
         
         if let loginData = UserDefaults.standard.value(forKey: "UserResponse") {
             do {
@@ -64,6 +68,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 print(error.description)
             }
         }
+        
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "First Name", secondPlaceHolder: "Last Name", firstText: "", secondText: "",iconImg :"account-50"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Mobile Number", secondPlaceHolder: "", firstText: ConstantClass.sharedInstance.mobileNo, secondText: "",iconImg :"mobile_icon"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Email Id", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"new-post-50"))
@@ -73,7 +78,13 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Illness", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"searchIcon"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Existing Allergies", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"searchIcon"))
         completeProfileArry.append(CompleteProfile(firstPlaceHolder: "Upload Insurance", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :"upload-50 (1)"))
-        completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
+        if viewFrom != "account" {
+            completeProfileArry.append(CompleteProfile(firstPlaceHolder: "I Accept Term & Condition", secondPlaceHolder: "", firstText: "", secondText: "",iconImg :""))
+        }else{
+            checkBoxSelected = true
+            self.title_lbl.text = "Update Profile"
+        }
+        
         registerViewModalObj.pushToHomeView = {
             LoadingOverlay.shared.hideLoaderView()
             let vc = UIStoryboard.init(name: "BaseViewController", bundle: nil).instantiateViewController(withIdentifier: "BaseViewController")
@@ -84,9 +95,6 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             LoadingOverlay.shared.hideLoaderView()
             MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: str)
         }
-        
-        
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -106,7 +114,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         registerTV.register(UINib(nibName: "FirstNameLastNameCell", bundle: nil), forCellReuseIdentifier: "FirstNameLastNameCell")
         registerTV.register(UINib(nibName: "GenderCell", bundle: nil), forCellReuseIdentifier: "GenderCell")
         registerTV.register(UINib(nibName: "GeneralRegisterCell", bundle: nil), forCellReuseIdentifier: "GeneralRegisterCell")
-         registerTV.register(UINib(nibName: "TermAndConditionCell", bundle: nil), forCellReuseIdentifier: "TermAndConditionCell")
+        registerTV.register(UINib(nibName: "TermAndConditionCell", bundle: nil), forCellReuseIdentifier: "TermAndConditionCell")
     }
     
     //MARK:- UITableView Delegate and DataSource
@@ -154,7 +162,7 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell?.btn_women.addTarget(self, action: #selector(OnClickWomen), for: .touchUpInside)
             cell?.btn_men.addTarget(self, action: #selector(OnClickMen), for: .touchUpInside)
             cell?.image1.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
-            cell?.image2.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
+           // cell?.image2.image = UIImage(named: (completeProfileArry[indexPath.row].iconImg ?? nil)!)
             if !isMenselected && !iswomenSelected {
                 cell?.womenImageView.image = UIImage(named: "optionUnselect.png")
                 cell?.menImageView.image = UIImage(named: "optionUnselect.png")
@@ -231,7 +239,11 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
         view.backgroundColor = UIColor.white
         let submit_btn = UIButton(type: .custom)
         submit_btn.frame = CGRect(x: 50, y: 25, width: registerTV.frame.width - 100, height: 50)
-        submit_btn.setTitle("Submit", for: .normal)
+        if viewFrom == "account" {
+            submit_btn.setTitle("Update Profile", for: .normal)
+        }else{
+            submit_btn.setTitle("Submit", for: .normal)
+        }
         submit_btn.applyGradient(colours: [UIColor.white])
         submit_btn.layer.cornerRadius = 24
         submit_btn.layer.masksToBounds = true
@@ -252,7 +264,6 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             }else{
                 MyCustomAlert.sharedInstance.ShowAlert(vc: self, myTitle: "", myMessage: "Please accept term And condition")
             }
-
         }
     }
     
@@ -427,6 +438,16 @@ class RegisterViewController: UIViewController,UITableViewDelegate,UITableViewDa
             checkBoxSelected = true
         }
          registerTV.reloadData()
+    }
+    
+    @objc func OnclickPhotoSelect(sender:UIButton) {
+        ImagePickerManager().pickImage(self){ image in
+            //here is the image
+            //let imgStr = image.toBase64()
+            self.logo_img.image = image
+            print("Image Found")
+        }
+        self.view.endEditing(true)
     }
     
 }

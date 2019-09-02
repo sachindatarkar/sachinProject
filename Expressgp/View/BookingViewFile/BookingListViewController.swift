@@ -105,14 +105,14 @@ class BookingListViewController: UIViewController,UITableViewDelegate,UITableVie
         if isActive {
             cell.address_lbl.text = bookinglistViewModalObj.bookingListArry?[indexPath.row].p_address
             cell.date_lbl.text = bookinglistViewModalObj.bookingListArry?[indexPath.row].appointment_date
-            cell.status_lbl.setTitle( bookinglistViewModalObj.bookingListArry?[indexPath.row].booking_status, for: .normal)
+            cell.status_lbl.setTitle( bookinglistViewModalObj.bookingListArry?[indexPath.row].booking_status?.uppercased(), for: .normal)
             cell.drName_lbl.text = bookinglistViewModalObj.bookingListArry?[indexPath.row].doctor_name
             cell.specialty_lbl.text = bookinglistViewModalObj.bookingListArry?[indexPath.row].specialty_name
             cell.rating_lbl.text = bookinglistViewModalObj.bookingListArry?[indexPath.row].rating
         }else{
             cell.address_lbl.text = bookinglistViewModalObj.historyListArry?[indexPath.row].p_address
             cell.date_lbl.text = bookinglistViewModalObj.historyListArry?[indexPath.row].appointment_date
-            cell.status_lbl.setTitle( bookinglistViewModalObj.historyListArry?[indexPath.row].booking_status, for: .normal)
+            cell.status_lbl.setTitle( bookinglistViewModalObj.historyListArry?[indexPath.row].booking_status?.uppercased(), for: .normal)
             cell.drName_lbl.text = bookinglistViewModalObj.historyListArry?[indexPath.row].doctor_name
             cell.specialty_lbl.text = bookinglistViewModalObj.historyListArry?[indexPath.row].specialty_name
             cell.rating_lbl.text = bookinglistViewModalObj.historyListArry?[indexPath.row].rating

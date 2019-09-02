@@ -33,7 +33,7 @@ class AddMemberViewModal: NSObject {
         params["allergy"] = userObj.existingAllergies
         params["language"] = userObj.language_id
         params["relation"] = userObj.relation
-        params["profile_img"] = ""
+        params["profile_img"] = userObj.profile_pic
         apiClient.fetchApiResponse(action: action, param: params) { (dictionary,data) in
             do {
                 if let status : Int = dictionary?.value(forKey: "success") as? Int{

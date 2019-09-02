@@ -13,7 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Expressgp" customModuleProvider="target">
             <connections>
                 <outlet property="logo_img" destination="VMh-WW-yj6" id="36h-5l-rsz"/>
+                <outlet property="profileTap_btn" destination="m4Y-Zp-Mcg" id="8Zs-5E-P9o"/>
                 <outlet property="registerTV" destination="jwR-Q7-d58" id="gol-pk-SJx"/>
+                <outlet property="title_lbl" destination="ZkZ-1b-2hU" id="731-nS-OA3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,20 +25,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqG-pu-gwQ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
-                    <color key="backgroundColor" red="0.2666666667" green="0.79607843140000001" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="rPV-mn-EnR"/>
+                        <constraint firstAttribute="height" constant="50" id="rPV-mn-EnR"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-WW-yj6">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="accountIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-WW-yj6">
                     <rect key="frame" x="137.5" y="45" width="100" height="100"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="IF5-G5-nuO"/>
                         <constraint firstAttribute="width" constant="100" id="XFy-w0-Cf9"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4Y-Zp-Mcg">
+                    <rect key="frame" x="137.5" y="45" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="U1o-pg-Bm7"/>
+                        <constraint firstAttribute="width" constant="100" id="vZ1-Lt-Zpt"/>
+                    </constraints>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkZ-1b-2hU">
                     <rect key="frame" x="10" y="155" width="355" height="23"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
@@ -54,18 +64,22 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="VMh-WW-yj6" firstAttribute="leading" secondItem="m4Y-Zp-Mcg" secondAttribute="leading" id="8BJ-gh-OSw"/>
                 <constraint firstItem="jwR-Q7-d58" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="IaU-uU-qrY"/>
                 <constraint firstItem="VMh-WW-yj6" firstAttribute="centerX" secondItem="bqG-pu-gwQ" secondAttribute="centerX" id="NXU-Ek-kIl"/>
                 <constraint firstItem="bqG-pu-gwQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NiY-9K-OAZ"/>
                 <constraint firstItem="ZkZ-1b-2hU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="PgV-Ed-xXX"/>
                 <constraint firstItem="ZkZ-1b-2hU" firstAttribute="top" secondItem="VMh-WW-yj6" secondAttribute="bottom" constant="10" id="a6c-fR-oL5"/>
                 <constraint firstItem="VMh-WW-yj6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="ajF-v6-a2v"/>
+                <constraint firstItem="m4Y-Zp-Mcg" firstAttribute="top" secondItem="VMh-WW-yj6" secondAttribute="top" id="cD3-KB-MBu"/>
                 <constraint firstItem="bqG-pu-gwQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ddH-af-sue"/>
                 <constraint firstItem="jwR-Q7-d58" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dtr-l4-qnF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jwR-Q7-d58" secondAttribute="bottom" constant="10" id="hCy-2V-5IO"/>
                 <constraint firstItem="jwR-Q7-d58" firstAttribute="top" secondItem="ZkZ-1b-2hU" secondAttribute="bottom" constant="10" id="izV-jd-ry1"/>
+                <constraint firstItem="m4Y-Zp-Mcg" firstAttribute="centerX" secondItem="VMh-WW-yj6" secondAttribute="centerX" id="oBd-xm-O2g"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZkZ-1b-2hU" secondAttribute="trailing" constant="10" id="rct-N0-dRG"/>
                 <constraint firstItem="bqG-pu-gwQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="way-GL-FgX"/>
+                <constraint firstItem="VMh-WW-yj6" firstAttribute="trailing" secondItem="m4Y-Zp-Mcg" secondAttribute="trailing" id="xfG-eR-yCl"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -73,6 +87,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="96" height="57"/>
+        <image name="accountIcon" width="25" height="25"/>
     </resources>
 </document>

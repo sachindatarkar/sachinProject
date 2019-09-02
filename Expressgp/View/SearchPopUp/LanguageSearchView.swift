@@ -133,17 +133,17 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.title_lbl?.text = languagefilterData?[indexPath.row].language_name
                 cell.selectedBtn.tag = indexPath.row
                 if languagefilterData?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "check"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "uncheck"), for: .normal)
                 }
             }else{
                 cell.title_lbl?.text = languageObj.languageArry?[indexPath.row].language_name
                 cell.selectedBtn.tag = indexPath.row
                 if languageObj.languageArry?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "check"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "uncheck"), for: .normal)
                 }
             }
             cell.selectedBtn.addTarget(self, action: #selector(onClickSelected), for: .touchUpInside)
@@ -152,17 +152,17 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.title_lbl?.text = illnessfilterData?[indexPath.row].reason
                 cell.selectedBtn.tag = indexPath.row
                 if illnessfilterData?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "check"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "uncheck"), for: .normal)
                 }
             }else{
                 cell.title_lbl?.text = languageObj.illnessArry?[indexPath.row].reason
                 cell.selectedBtn.tag = indexPath.row
                 if languageObj.illnessArry?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "check"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "uncheck"), for: .normal)
                 }
             }
             
@@ -173,17 +173,17 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cell.title_lbl?.text = allengifilterData?[indexPath.row].allergy
                 cell.selectedBtn.tag = indexPath.row
                 if allengifilterData?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "check"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "uncheck"), for: .normal)
                 }
             }else{
                cell.title_lbl?.text = languageObj.allengiArry?[indexPath.row].allergy
                 cell.selectedBtn.tag = indexPath.row
                 if languageObj.allengiArry?[indexPath.row].isSelected ?? false {
-                    cell.selectedBtn.setImage(UIImage(named: "checked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "check"), for: .normal)
                 }else{
-                    cell.selectedBtn.setImage(UIImage(named: "unchecked-checkbox-50"), for: .normal)
+                    cell.selectedBtn.setImage(UIImage(named: "uncheck"), for: .normal)
                 }
             }
             cell.selectedBtn.addTarget(self, action: #selector(onClickSelected), for: .touchUpInside)
@@ -257,7 +257,6 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                 if languagefilterData?[indexPath].isSelected ?? false {
                     languagefilterData?[indexPath].isSelected = false
                     languageObj.languageArry?[index ?? 0].isSelected = false
-                    
                 }else{
                     languagefilterData?[indexPath].isSelected = true
                     languageObj.languageArry?[index ?? 0].isSelected = true
@@ -283,7 +282,7 @@ class LanguageSearchView: UIViewController,UITableViewDelegate,UITableViewDataSo
                     languageObj.illnessArry?[index ?? 0].isSelected = true
                 }
             }else{
-                if languageObj.languageArry?[indexPath].isSelected ?? false {
+                if languageObj.illnessArry?[indexPath].isSelected ?? false {
                     languageObj.illnessArry?[indexPath].isSelected = false
                 }else{
                     languageObj.illnessArry?[indexPath].isSelected = true

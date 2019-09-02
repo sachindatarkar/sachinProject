@@ -270,4 +270,14 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
         addMemberViewObj.addFamilyMember(userObj: companyProfileObj, userData: loginModalObj ?? LoginData(), singleFamilyObj: singleFamilyObj ?? FamiliListData(), isedit: isEditProfile ?? false)
     }
     
+    @IBAction func onClickSelectImage(_ sender: Any) {
+        ImagePickerManager().pickImage(self){ image in
+            //here is the image
+            let imgStr = image.toBase64()
+            self.companyProfileObj.profile_pic = imgStr
+            self.profileImage.image = image
+            print("Image Found")
+        }
+        self.view.endEditing(true)
+    }
 }

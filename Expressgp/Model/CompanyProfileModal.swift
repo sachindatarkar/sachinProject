@@ -24,4 +24,5 @@ struct CompanyProfileModal : Decodable {
     var acceptCondition : Bool = false
     var insurance : String?
     var relation:String?
+    var profile_pic : String?
 }

@@ -15,7 +15,7 @@ extension UIImageView{
 			if (error != nil) {
 				// Failed to load image
 				//self.image = //Placeholder
-                self.image = UIImage(named: "logo")
+                self.image = UIImage(named: "profileIcon")
 			} else {
 				// Successful in loading image
 				self.image = image
