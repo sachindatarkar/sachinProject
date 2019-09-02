@@ -45,6 +45,7 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
         checkBox_btn.addTarget(self, action: #selector(OnClickCheckBox), for: .touchUpInside)
         setInfoToView()
         addMemberViewObj.addFamilySuccess = {
+            LoadingOverlay.shared.hideLoaderView()
             self.navigationController?.popViewController(animated: true)
         }
         
@@ -267,6 +268,7 @@ class AddMemberViewController: UIViewController,UITextFieldDelegate,LanguageSear
             self.showAlert(title: "", message: "Please select relation")
             return
         }
+        LoadingOverlay.shared.showLoaderView(view: self.view)
         addMemberViewObj.addFamilyMember(userObj: companyProfileObj, userData: loginModalObj ?? LoginData(), singleFamilyObj: singleFamilyObj ?? FamiliListData(), isedit: isEditProfile ?? false)
     }
     
