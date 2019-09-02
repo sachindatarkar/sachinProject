@@ -23,6 +23,7 @@ class FamilyViewController: UIViewController,UICollectionViewDelegate,UICollecti
     private let spacing:CGFloat = 5.0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.addMemberBtn.addTarget(self, action: #selector(onClickAddMember), for: .touchUpInside)
         
         let layout = UICollectionViewFlowLayout()
