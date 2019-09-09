@@ -17,8 +17,8 @@ class FindDoctorObject: NSObject {
     var appointment_time : String?
     var ill_reason_id : String?
     var speciality_id : String?
-    var lat : String?
-    var long : String?
+    var lat : Double?
+    var long : Double?
     
 }
 
@@ -28,6 +28,7 @@ class FindingDoctorViewController: UIViewController {
     @IBOutlet weak var imgvAvatar: UIImageView!
 	@IBOutlet weak var crossButton: UIButton!
 	var viewModel: FindDoctorViewModel = FindDoctorViewModel()
+    var finderModalObj : FindDoctorObject?
 	var pulseArray = [CAShapeLayer]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,16 +48,18 @@ class FindingDoctorViewController: UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         // handling code
         print("Tap on click")
-        self.dismiss(animated: true, completion: nil)
+        getDoctorList()
+      //  self.dismiss(animated: true, completion: nil)
     }
     
 	func getDoctorList(){
 		var loginData: LoginData?
 		getUserData(completionHandler: { (data, _) in
 			loginData = data
+            self.viewModel.getDoctorList(bookingObj: finderModalObj ?? FindDoctorObject(), userObj: loginData ?? LoginData())
 		})
 		
-//		self.viewModel.getDoctorList(bookingObj: BookingListData, userObj: LoginData)
+//
 	}
     func createPulse() {
 		for _ in 0...2 {

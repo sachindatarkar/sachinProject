@@ -167,6 +167,8 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 					{
 						addressString += lineAddr
 						self.currentUserAddr.setTitle("\(addressString)".appending("."), for:.normal)
+                        self.findDoctorObj?.lat = coordinate.latitude
+                        self.findDoctorObj?.long = coordinate.longitude
 					}
 					else
 					{
@@ -205,6 +207,7 @@ class HomeViewController: UIViewController,FamilyViewProtocol, CLLocationManager
 		let isValidReason = validationForReason()
 		if isValidReason{
 			let overLay = FindingDoctorViewController()
+            overLay.finderModalObj = findDoctorObj
 			overLay.modalPresentationStyle = .overFullScreen
 			self.navigationController?.present(overLay, animated: true, completion: nil)
 		} else {

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/RegisterView/RegisterViewController.swift"
-            timestampString = "589738549.352302"
+            timestampString = "589740682.119279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "435"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/RegisterView/RegisterViewController.swift"
-            timestampString = "589738549.3550169"
+            timestampString = "589740682.119773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "174"
@@ -88,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.441541"
+            timestampString = "589740682.120155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
@@ -104,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.44159"
+            timestampString = "589740682.120218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -216,7 +216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/RegisterView/RegisterViewController.swift"
-            timestampString = "589738549.355387"
+            timestampString = "589740682.120373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -264,7 +264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.442827"
+            timestampString = "589740682.12073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
@@ -280,7 +280,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.442876"
+            timestampString = "589740682.12079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -296,7 +296,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.4429229"
+            timestampString = "589740682.120845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "313"
@@ -312,7 +312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.442969"
+            timestampString = "589740682.120948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
@@ -328,7 +328,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expressgp/View/SearchPopUp/LanguageSearchView.swift"
-            timestampString = "589139717.443014"
+            timestampString = "589740682.121021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "285"
@@ -367,6 +367,38 @@
             endingLineNumber = "276"
             landmarkName = "onClickSelectImage(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Expressgp.AddMemberViewController.onClickSelectImage(Any) -&gt; ()"
+                  moduleName = "Expressgp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sachin/Documents/NewExpressGpApp/Express/Expressgp/View/AddMemberView/AddMemberViewController.swift"
+                  timestampString = "589740584.409941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIImage) -&gt; () in Expressgp.AddMemberViewController.onClickSelectImage(Any) -&gt; ()"
+                  moduleName = "Expressgp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sachin/Documents/NewExpressGpApp/Express/Expressgp/View/AddMemberView/AddMemberViewController.swift"
+                  timestampString = "589740584.41269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "278"
+                  endingLineNumber = "278"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -382,6 +414,22 @@
             startingLineNumber = "270"
             endingLineNumber = "270"
             landmarkName = "onClickSubmit()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Expressgp/ModelView/FindDoctorViewModel.swift"
+            timestampString = "589740682.121227"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getDoctorList(bookingObj:userObj:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

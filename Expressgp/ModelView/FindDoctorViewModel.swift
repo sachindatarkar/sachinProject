@@ -13,17 +13,17 @@ final class FindDoctorViewModel: NSObject {
 	var apiClient = ApiClientClass();
     var showErrorMsg : ((String) -> Void)?
 
-	func getDoctorList(bookingObj:BookingListData,userObj:LoginData) {
+	func getDoctorList(bookingObj:FindDoctorObject,userObj:LoginData) {
 		var params: [String:Any] = [:]
 		params = self.GetCommonParrameter()
 		params["patient_id"] = bookingObj.patient_id
 		params["user_id"] = userObj.user_id
 		params["appointment_date"] = bookingObj.appointment_date
-		params["speciality_id"] = userObj.allergy_id
-		params["lat"] = bookingObj.latitude
-		params["long"] = bookingObj.longitude
+		params["speciality_id"] = bookingObj.speciality_id
+		params["lat"] = bookingObj.lat
+		params["long"] = bookingObj.long
 		params["appointment_time"] = bookingObj.appointment_time
-		params["ill_reason_id"] = userObj.illness_id
+        params["ill_reason_id"] = bookingObj.ill_reason_id
 
 		apiClient.fetchApiResponse(action: "booking_request.php", param: params) { (dictionary,data) in
 			do {
